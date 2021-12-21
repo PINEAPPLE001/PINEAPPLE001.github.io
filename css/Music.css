@@ -1,0 +1,65 @@
+body {
+	background: url(../img/musicBGI.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-attachment: fixed;
+	font-weight: 800;
+	
+}
+
+.l-side-nav{
+	margin: 0;
+	padding: 0;
+	width: 100px;
+	position: fixed;
+	/* 透明度设置 */
+	background-color: rgba(255,255,255,.1);
+	border-radius: 8px;
+	box-shadow: 0 20px 40px rgba(0,0,0,.1);
+	border: 1px solid rgba(255,255,255,.2);
+	border-right: 1px solid rgba(255,255,255,.1);
+	border-bottom: 1px solid rgba(255,255,255,.1);
+	backdrop-filter: blur(1px);
+}
+
+.side-nav{
+	margin: 0;
+	padding: 0;
+	height: 550px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	overflow: hidden;
+	list-style-type: none;
+}
+
+.music a{
+	text-decoration: none;
+	display: inline-block;
+	margin: 0;
+	padding:18px;
+	font-size: 13px;
+	font-weight: bolder;
+	color: #FFFFFF;
+}
+
+.music a:hover{
+	color: #FF7C00;
+}
+
+.l-side-nav:hover{
+	opacity: 1;
+}
+/* ---侧边导航栏--- */
+
+/* 音乐展示界面 */
+
+.music_info {
+	margin-left: 130px;
+}
+
+#player {
+	opacity: 0.7;
+}
+

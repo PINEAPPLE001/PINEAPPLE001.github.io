@@ -1,0 +1,115 @@
+@font-face {
+	font-family:许嵩手写体;
+	src: url(../汉仪许嵩体.ttf);
+}
+
+body {
+	text-align: center;
+	background-color: #FF7C00;
+	background:linear-gradient(
+	    to left,
+	    rgb(255, 124, 0),
+	    rgb(255, 170, 0)) ;
+}
+
+.preface {
+	display: inline-flex;
+	margin: 0px auto;
+	flex-direction: row;
+	width: 900px;
+	height: 300px;
+}
+.preface span {
+	margin-top:80px;
+	width: 300px;
+	height: 200px;
+	border-radius: 4px;
+	font: 900 19px 许嵩手写体;
+	color: rgba(0, 0, 0, 0.7);
+	letter-spacing: 3px;
+	background: linear-gradient(
+	    to right bottom,
+	    rgba(255,255,255,.6),
+	    rgba(255,255,255,.3),
+	    rgba(255,255,255,.2)
+	);
+	backdrop-filter: blur(11px);
+	border-top: 1px solid rgba(255,255,255,.8);
+	border-left: 1px solid rgba(255,255,255,.8);
+}
+
+
+
+/* 以下是轮播图的效果 */
+.slideshow {
+	width: 640px;
+	height: 348px;
+	margin: 0px auto;
+	overflow: hidden;
+}
+
+.container {
+	width: 3840px;
+	height: 348px;
+	margin: 0px auto;
+	font-size: 0px;
+	animation:Slide 10s infinite;
+}
+
+.container img {
+	width: 640px;
+	height: 348px;
+	float: left;
+}
+
+@keyframes Slide{
+	0%,10%{
+		margin-left:0px;
+	}
+	20%,30%{
+		margin-left:-640px;
+	}
+	40%,50%{
+		margin-left:-1280px;
+	}
+	60%,70%{
+		margin-left:-1920px;
+	}
+	80%,90%{
+		margin-left:-2560px;
+	}
+}
+
+/* 以下是按钮 */
+
+button {
+  border: none;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+/* Content */
+button {
+  font-family: 许嵩手写体;
+  font-size: 1.5em;
+  padding: .5em 1em;
+  border-radius: 7px;
+  box-shadow: 0 5px 0 0  #322F3D;
+  background: #000000;
+  color: #fff;
+  transition: all .1s ease-out;
+}
+
+button:hover {
+  background: #5aa5ff;
+  box-shadow: 0 4px 0 0 #ffffff;
+  transform: translateY(1px);
+}
+
+button:hover:active {
+  box-shadow: 0 1px 0 0 #F7F7F7;
+  transform: translateY(4px);
+}
+

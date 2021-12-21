@@ -1,0 +1,29 @@
+/* ---顶部导航栏--- */
+.title{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	border-radius: 5px;
+	background-color: rgba(255，255，255,0.5);
+}
+.title ul{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	list-style: none;
+}
+.title ul li {
+	display: inline;
+	margin-left: 40px;
+}
+
+.rate {
+	font-size: 40px;
+	font-weight: 700;
+	text-decoration: none;
+	color: white;
+}
+
+.list .list-item :hover {
+	color: #ff7c00;
+}

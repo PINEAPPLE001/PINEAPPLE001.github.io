@@ -1,0 +1,33 @@
+/* @font-face {
+	font-family:许嵩手写体;
+	src: url(../汉仪许嵩体.ttf);
+} */
+body {
+	background: url(../img/mvBGI.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-attachment: fixed;
+}
+video {
+	width: 600px;
+}
+.MV {
+	margin: auto;
+	width: 900px;
+	height: 450px;
+	display: flex;
+	flex-wrap: wrap;
+	float: center;
+}
+.MV_Player1{
+	
+}
+.mv1,.mv2,.mv3,.mv4 {
+	width: 300px;
+	text-align: center;
+	line-height: 30px;
+	border-radius: 5px;
+	    background: rgba(255, 255, 255, .3);
+	    box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, .3);
+	
+}
