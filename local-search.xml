@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>操作系统</title>
+    <link href="/2023/02/09/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    <url>/2023/02/09/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</url>
+    
+    <content type="html"><![CDATA[<h1 id="2-进程"><a href="#2-进程" class="headerlink" title="2.进程"></a>2.进程</h1><h2 id="进程的定义："><a href="#进程的定义：" class="headerlink" title="进程的定义："></a>进程的定义：</h2><p>进程映像： </p><p><img src="/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.assets/image-20230209145457788.png" alt="image-20230209145457788"></p><p><img src="/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.assets/image-20230209145538850.png" alt="image-20230209145538850"></p><h2 id="进程状态的转换"><a href="#进程状态的转换" class="headerlink" title="进程状态的转换"></a>进程状态的转换</h2><p><img src="/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.assets/image-20230209150430624.png" alt="image-20230209150430624"></p><p><img src="/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.assets/image-20230209150555790.png" alt="image-20230209150555790"></p><h2 id="进程的组织方式"><a href="#进程的组织方式" class="headerlink" title="进程的组织方式"></a>进程的组织方式</h2><ol><li><p>线性方式</p><p>把所有的PCB放置在一张线性表中，每次查找时需要扫描整张表。</p></li><li><p>链接方式</p><p>把所有状态相同的PCB使用链表链接，形成就绪队列、阻塞队列和空白队列等若干队列</p><p><img src="/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.assets/image-20230209151326851.png" alt="image-20230209151326851"></p></li><li><p>索引方式</p><p>系统根据进程的不同状态，创建不同状态的索引表，每张表中存储对应状态的PCB地址</p><p><img src="/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.assets/image-20230209151554990.png" alt="image-20230209151554990"></p></li></ol><h2 id="进程的控制"><a href="#进程的控制" class="headerlink" title="进程的控制"></a>进程的控制</h2><h3 id="原语"><a href="#原语" class="headerlink" title="原语"></a>原语</h3><p>定义：</p><p>原语的执行具有原子性，即执行过程只能一气呵成，期间不允许被中断。原语使用“关中断指令” 和“开中断指令”这两个特权指令实现原子性</p><p>CPU每执行完一条指令后就检查是否有中断信号，如果有的话就执行关中断，然后不再检查中断信号，直到执行开中断信号。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>操作系统</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Nginx 学习历程</title>
     <link href="/2023/02/07/Nginx-%E5%AD%A6%E4%B9%A0%E5%8E%86%E7%A8%8B/"/>
     <url>/2023/02/07/Nginx-%E5%AD%A6%E4%B9%A0%E5%8E%86%E7%A8%8B/</url>
