@@ -23,11 +23,13 @@
 <meta property="og:site_name" content="Junchengの小站">
 <meta property="og:description" content="1. 快速构建spring项目 idea选择maven项目，不勾选模板 导包  1234567891011121314151617181920212223242526272829303132&lt;dependencies&gt;    &lt;dependency&gt;        &lt;groupId&gt;junit&lt;&#x2F;groupId&gt;        &lt;artifac">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://blog.codingxiaofu.com/2023/03/05/Spring%E5%9F%BA%E7%A1%80/TJ%5D9%7DM8%5BX9W%5B9%5DFAII_KQRG.png">
 <meta property="article:published_time" content="2023-03-05T01:51:00.000Z">
-<meta property="article:modified_time" content="2023-03-05T01:53:20.847Z">
+<meta property="article:modified_time" content="2023-03-12T00:59:39.808Z">
 <meta property="article:author" content="Juncheng">
 <meta property="article:tag" content="Spring">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://blog.codingxiaofu.com/2023/03/05/Spring%E5%9F%BA%E7%A1%80/TJ%5D9%7DM8%5BX9W%5B9%5DFAII_KQRG.png">
   
   
   
@@ -232,7 +234,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          5.5k 字
+          7.7k 字
         
       </span>
     
@@ -243,7 +245,7 @@
         
         
         
-          46 分钟
+          64 分钟
         
       </span>
     
@@ -352,6 +354,70 @@
 <p>学生学习 —&gt; 代理类 —&gt; </p>
 <h4 id="动态代理"><a href="#动态代理" class="headerlink" title="动态代理"></a>动态代理</h4><p>利用反射加载类的信息</p>
 <h2 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h2><p>切面–所有的模块，程序在执行前都要执行某个方法。就像在很多模块之间横切一刀</p>
+<p>1.导包：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.aspectj<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>aspectjweaver<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.8.7<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>2.头部文件修改：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-meta">&lt;?xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span>?&gt;</span><br> <span class="hljs-tag">&lt;<span class="hljs-name">beans</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/beans&quot;</span></span><br><span class="hljs-tag">        <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span><br><span class="hljs-tag">        <span class="hljs-attr">xmlns:aop</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/aop&quot;</span></span><br><span class="hljs-tag">        <span class="hljs-attr">xsi:schemaLocation</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/beans</span></span><br><span class="hljs-string"><span class="hljs-tag">         http://www.springframework.org/schema/beans/spring-beans.xsd</span></span><br><span class="hljs-string"><span class="hljs-tag">         http://www.springframework.org/schema/aop</span></span><br><span class="hljs-string"><span class="hljs-tag">         http://www.springframework.org/schema/aop/spring-aop.xsd&quot;</span>&gt;</span><br> <span class="hljs-tag">&lt;/<span class="hljs-name">beans</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>使用方法</p>
+<p>1.实现接口  –  基于Spring API</p>
+<table>
+<thead>
+<tr>
+<th align="center">通知类型</th>
+<th align="center">连接点</th>
+<th align="center">实现接口</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">前置通知</td>
+<td align="center">方法前</td>
+<td align="center">MethodBeforeAdvice</td>
+</tr>
+<tr>
+<td align="center">后置通知</td>
+<td align="center">方法后</td>
+<td align="center">AfterReturningAdvice</td>
+</tr>
+<tr>
+<td align="center">环绕通知</td>
+<td align="center">方法前后</td>
+<td align="center">MethodInterceptor</td>
+</tr>
+<tr>
+<td align="center">异常抛出通知</td>
+<td align="center">方法前后</td>
+<td align="center">ThrowAdvice</td>
+</tr>
+<tr>
+<td align="center">引介通知</td>
+<td align="center">类中增加新的方法属性</td>
+<td align="center">IntroductionInterceptor</td>
+</tr>
+</tbody></table>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">AfterLogoff</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">AfterReturningAdvice</span> &#123;<br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">afterReturning</span><span class="hljs-params">(Object o, Method method, Object[] objects, Object o1)</span> <span class="hljs-keyword">throws</span> Throwable &#123;<br>        System.out.println(<span class="hljs-string">&quot;后置操作&quot;</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>基于扫描：</p>
+<p>​	1. 开启扫描</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">conext:component-scan</span> <span class="hljs-attr">base-package</span>=<span class="hljs-string">&quot;pojo&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">conext:component-scan</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">context:component-scan</span> <span class="hljs-attr">base-package</span>=<span class="hljs-string">&quot;service&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">context:component-scan</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>使用注解把此类注册到容器中</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//表示service层，括号的内容是容器中的id名称</span><br><span class="hljs-meta">@Service(&quot;studentService&quot;)</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">StuServiceImpl</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">StuService</span>&#123;<br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">addStu</span><span class="hljs-params">(String name)</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;学生&quot;</span>+name+<span class="hljs-string">&quot;添加成功&quot;</span>);<br><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>切面类</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//将此类注册到容器中</span><br><span class="hljs-meta">@Component(&quot;logger&quot;)</span><br><span class="hljs-meta">@Aspect</span> <span class="hljs-comment">//表示这是一个切面类</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Logger</span> &#123;<br>    <br>    <span class="hljs-comment">//配置切入表达式</span><br>    <span class="hljs-meta">@Pointcut(&quot;execution(* service.StuServiceImpl.*(..))&quot;)</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">point01</span><span class="hljs-params">()</span>&#123;<br>        System.out.println(<span class="hljs-string">&quot;这是切面&quot;</span>);<br>    &#125;<br>    <br>    <span class="hljs-meta">@Before(&quot;point01()&quot;)</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">operation</span><span class="hljs-params">()</span>&#123;<br>        System.out.println(<span class="hljs-string">&quot;执行方法前&quot;</span>);<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<p>纯注解实现aop，不使用xml文件</p>
+<p>1.先写注解类：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><br><span class="hljs-meta">@Configuration</span> <span class="hljs-comment">//表示这是一个配置类</span><br><span class="hljs-meta">@ComponentScan(basePackages = &quot;*&quot;)</span><br><span class="hljs-meta">@EnableAspectJAutoProxy(proxyTargetClass = true)</span><span class="hljs-comment">//jdk 和 cjlib 的区别！</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">AppConfig</span> &#123;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<p>2.在使用的时候不再是<code>ApplicationContext ctx = new ClassPathXmlApplicationContext(&quot;spring.xml&quot;);</code> 	<code>AnnotationConfigApplicationContext</code></p>
+<img src="/2023/03/05/Spring%E5%9F%BA%E7%A1%80/TJ%5D9%7DM8%5BX9W%5B9%5DFAII_KQRG.png" srcset="/img/loading.gif" lazyload class="" title="img">
 
                 
               </div>
@@ -420,6 +486,12 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2023/03/06/Untitled/" title="">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
