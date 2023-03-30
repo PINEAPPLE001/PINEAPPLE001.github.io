@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>209. 长度最小的子数组</title>
+    <link href="/2023/03/30/209-%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/"/>
+    <url>/2023/03/30/209-%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/</url>
+    
+    <content type="html"><![CDATA[<h4 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h4><p>给定一个含有 <code>n</code> 个正整数的数组和一个正整数 <code>target</code> <strong>。</strong></p><p>找出该数组中满足其和 <code>≥ target</code> 的长度最小的 <strong>连续子数组</strong> <code>[numsl, numsl+1, ..., numsr-1, numsr]</code> ，并返回其长度<strong>。</strong>如果不存在符合条件的子数组，返回 <code>0</code> 。</p><h4 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h4><img src="/2023/03/30/209-%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/209.%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84.gif" class="" title="209.长度最小的子数组"><p>使用滑动窗口：当sum &gt; &#x3D; target 时，我们就把左侧收缩，时sum的值减小；当sum&lt;target 时，我们就扩充右侧，使得sum的值变大；每次收缩之前看看这个区间的长度，如果长度比上次记录的更长的话(<code>第一次把记录的最小长度记为 numSize+1</code>)，那就说明这个区间不是最短的那个。r&lt;numSize时就这样一直向右遍历直至结束。最后判断：<code>minSize == numsSize +1 ? 0 :minSize;</code> </p><h4 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs C"><span class="hljs-type">int</span> <span class="hljs-title function_">minSubArrayLen</span><span class="hljs-params">(<span class="hljs-type">int</span> target, <span class="hljs-type">int</span>* nums, <span class="hljs-type">int</span> numsSize)</span>&#123;<br>    <span class="hljs-type">int</span> left =<span class="hljs-number">0</span>,right = <span class="hljs-number">0</span>;<br>    <span class="hljs-type">int</span> sum = <span class="hljs-number">0</span>;<br>    <span class="hljs-type">int</span> min = numsSize+<span class="hljs-number">1</span>;<br>    <span class="hljs-type">int</span> length = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">while</span>(right&lt;numsSize)&#123;<br>        sum += nums[right];<br>        <span class="hljs-comment">//先扩充窗口</span><br>        <span class="hljs-keyword">while</span>(sum&gt;=target)&#123;<span class="hljs-comment">//扩充完后判断一下还符不符合要求，要不要继续扩充。这里如果不用继续扩充了，循环减去左边的元素再更新区间长度和判断条件。</span><br>            length = right-left+<span class="hljs-number">1</span>;<br>            min = length&lt;min?length:min;<br>            sum-=nums[left];<br>            left++;<br>        &#125;<br>        <span class="hljs-comment">//如果还要继续扩充，r++;</span><br>        right++;<br>    &#125;<br>    <span class="hljs-keyword">return</span> min==numsSize+<span class="hljs-number">1</span>?<span class="hljs-number">0</span>:min;<br><br>&#125;<br></code></pre></td></tr></table></figure><p>参考：<a href="[代码随想录 (programmercarl.com)](https://programmercarl.com/0209.长度最小的子数组.html#滑动窗口)" >代码随想录：0209.长度最小的子数组</a> LeetCode题解：<a href="https://leetcode.cn/problems/minimum-size-subarray-sum/solutions/2162837/209-chang-du-zui-xiao-de-zi-shu-zu-by-qi-epfp/" >LeetCode题解</a> </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>LeetCode</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>LeetCode</tag>
+      
+      <tag>双指针</tag>
+      
+      <tag>滑动窗口</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>27. 移除元素</title>
     <link href="/2023/03/28/27-%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/"/>
     <url>/2023/03/28/27-%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/</url>
