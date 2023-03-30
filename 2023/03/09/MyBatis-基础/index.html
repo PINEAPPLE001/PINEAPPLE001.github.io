@@ -16,15 +16,15 @@
   <meta name="author" content="Juncheng">
   <meta name="keywords" content="">
   
-    <meta name="description" content="MyBatis基础mybatis 结果集映射（javabean对象中的属性集可能和查询出来的结果集字段不完全吻合，因此通过写结果集映射来指定查询结果对应数据库中的具体字段） 映射关系：  id-result映射 1234567891011为什么自动映射 原本的映射关系是什么javabean User -- id name passowrddatabase User -- id username p">
+    <meta name="description" content="MyBatis基础原生mybatis使用方法： mybatis 结果集映射（javabean对象中的属性集可能和查询出来的结果集字段不完全吻合，因此通过写结果集映射来指定查询结果对应数据库中的具体字段） 映射关系：  id-result映射 1234567891011为什么自动映射 原本的映射关系是什么javabean User -- id name passowrddatabase User -">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MyBatis 基础">
 <meta property="og:url" content="http://blog.codingxiaofu.com/2023/03/09/MyBatis-%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="Junchengの小站">
-<meta property="og:description" content="MyBatis基础mybatis 结果集映射（javabean对象中的属性集可能和查询出来的结果集字段不完全吻合，因此通过写结果集映射来指定查询结果对应数据库中的具体字段） 映射关系：  id-result映射 1234567891011为什么自动映射 原本的映射关系是什么javabean User -- id name passowrddatabase User -- id username p">
+<meta property="og:description" content="MyBatis基础原生mybatis使用方法： mybatis 结果集映射（javabean对象中的属性集可能和查询出来的结果集字段不完全吻合，因此通过写结果集映射来指定查询结果对应数据库中的具体字段） 映射关系：  id-result映射 1234567891011为什么自动映射 原本的映射关系是什么javabean User -- id name passowrddatabase User -">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-03-09T06:01:38.000Z">
-<meta property="article:modified_time" content="2023-03-12T02:58:13.861Z">
+<meta property="article:modified_time" content="2023-03-15T00:36:46.640Z">
 <meta property="article:author" content="Juncheng">
 <meta property="article:tag" content="MyBatis">
 <meta name="twitter:card" content="summary_large_image">
@@ -232,7 +232,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          954 字
+          1k 字
         
       </span>
     
@@ -243,7 +243,7 @@
         
         
         
-          8 分钟
+          9 分钟
         
       </span>
     
@@ -286,7 +286,8 @@
             
               <div class="markdown-body">
                 
-                <h1 id="MyBatis基础"><a href="#MyBatis基础" class="headerlink" title="MyBatis基础"></a>MyBatis基础</h1><p>mybatis 结果集映射（javabean对象中的属性集可能和查询出来的结果集字段不完全吻合，因此通过写结果集映射来指定查询结果对应数据库中的具体字段）</p>
+                <h1 id="MyBatis基础"><a href="#MyBatis基础" class="headerlink" title="MyBatis基础"></a>MyBatis基础</h1><p>原生mybatis使用方法：</p>
+<p>mybatis 结果集映射（javabean对象中的属性集可能和查询出来的结果集字段不完全吻合，因此通过写结果集映射来指定查询结果对应数据库中的具体字段）</p>
 <p>映射关系：</p>
 <ol>
 <li><p>id-result映射</p>
@@ -297,6 +298,10 @@
 <p>取别名：核心配置文件中： mybatis-config.xml </p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">typeAliases</span>&gt;</span><br>    <span class="hljs-comment">&lt;!--直接指定--&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">typeAlias</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;com.codingxiaofu.MybatisStudy.pojo.User&quot;</span> <span class="hljs-attr">alias</span>=<span class="hljs-string">&quot;user&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">typeAlias</span>&gt;</span><br>    <span class="hljs-comment">&lt;!--注解自定义名称，指定包，然后在目标类（User）上打注解@Alias(&quot;user&quot;) 即可设置--&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">package</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;com.codingxiaofu.MybatisStudy.pojo&quot;</span>/&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">typeAliases</span>&gt;</span><br></code></pre></td></tr></table></figure>
 
+
+
+<p>spring整合mybatis</p>
+<p>重点：如何获取mybatis生成的代理对象，如何将代理对象注入</p>
 
                 
               </div>
@@ -366,12 +371,18 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2023/03/12/SSM-%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA/" title="SSM 项目构建">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">SSM 项目构建</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/03/06/Untitled/" title="">
-                        <span class="hidden-mobile"></span>
+                      <a href="/2023/03/05/Spring%E5%9F%BA%E7%A1%80/" title="Spring 基础 快速构建项目">
+                        <span class="hidden-mobile">Spring 基础 快速构建项目</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
