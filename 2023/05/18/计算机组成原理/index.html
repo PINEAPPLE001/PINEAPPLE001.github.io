@@ -16,12 +16,12 @@
   <meta name="author" content="Juncheng">
   <meta name="keywords" content="">
   
-    <meta name="description" content="计算机组成原理计算机的硬件结构 早期的冯诺依曼结构提出存储程序的概念：指令以代码的形式事先输入到计算机的主存储器中，然后按其在存储器中的首地址执行程序的第一条指令，以后就按该程序的规定顺序执行其他指令，直至程序执行结束。即按地址访问并顺序执行指令 根据存储程序控制[1]的概念，由运算器、存储器、控制器、输入设备和输出设备五大基本部件组成，以**运算器&lt;span class&#x3D;”hin">
+    <meta name="description" content="计算机组成原理计算机的硬件结构 早期的冯诺依曼结构提出存储程序的概念：指令以代码的形式事先输入到计算机的主存储器中，然后按其在存储器中的首地址执行程序的第一条指令，以后就按该程序的规定顺序执行其他指令，直至程序执行结束。即按地址访问并顺序执行指令 根据存储程序控制[1]的概念，由运算器、存储器、控制器、输入设备和输出设备五大基本部件组成，以**运算器[2]**为中心，指令由操作码和地址码组成，指令">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算机组成原理">
 <meta property="og:url" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/index.html">
 <meta property="og:site_name" content="Junchengの小站">
-<meta property="og:description" content="计算机组成原理计算机的硬件结构 早期的冯诺依曼结构提出存储程序的概念：指令以代码的形式事先输入到计算机的主存储器中，然后按其在存储器中的首地址执行程序的第一条指令，以后就按该程序的规定顺序执行其他指令，直至程序执行结束。即按地址访问并顺序执行指令 根据存储程序控制[1]的概念，由运算器、存储器、控制器、输入设备和输出设备五大基本部件组成，以**运算器&lt;span class&#x3D;”hin">
+<meta property="og:description" content="计算机组成原理计算机的硬件结构 早期的冯诺依曼结构提出存储程序的概念：指令以代码的形式事先输入到计算机的主存储器中，然后按其在存储器中的首地址执行程序的第一条指令，以后就按该程序的规定顺序执行其他指令，直至程序执行结束。即按地址访问并顺序执行指令 根据存储程序控制[1]的概念，由运算器、存储器、控制器、输入设备和输出设备五大基本部件组成，以**运算器[2]**为中心，指令由操作码和地址码组成，指令">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518101825342.png">
 <meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518104058174.png">
@@ -33,7 +33,7 @@
 <meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518133902906.png">
 <meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518155619055.png">
 <meta property="article:published_time" content="2023-05-18T08:35:24.000Z">
-<meta property="article:modified_time" content="2023-05-18T08:37:00.277Z">
+<meta property="article:modified_time" content="2023-05-18T08:43:02.145Z">
 <meta property="article:author" content="Juncheng">
 <meta property="article:tag" content="408">
 <meta property="article:tag" content="计算机组成原理">
@@ -243,7 +243,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.3k 字
+          2.2k 字
         
       </span>
     
@@ -254,7 +254,7 @@
         
         
         
-          20 分钟
+          19 分钟
         
       </span>
     
@@ -299,14 +299,13 @@
                 
                 <h1 id="计算机组成原理"><a href="#计算机组成原理" class="headerlink" title="计算机组成原理"></a>计算机组成原理</h1><h4 id="计算机的硬件结构"><a href="#计算机的硬件结构" class="headerlink" title="计算机的硬件结构"></a>计算机的硬件结构</h4><ol>
 <li><h5 id="早期的冯诺依曼结构"><a href="#早期的冯诺依曼结构" class="headerlink" title="早期的冯诺依曼结构"></a>早期的冯诺依曼结构</h5><p>提出存储程序的概念：指令以代码的形式<strong>事先输入到</strong>计算机的<strong>主存储器中</strong>，然后按其在存储器中的首地址执行程序的第一条指令，以后就<strong>按</strong>该程序的规定<strong>顺序执行</strong>其他<strong>指令</strong>，直至程序执行结束。<strong>即按地址访问并顺序执行指令</strong></p>
-<p>根据<code>存储程序控制</code><sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="冯诺依曼机的基本工作方式为**控制流驱动**方式,是一种 **多指令单数据** 流构型">[1]</span></a></sup>的概念，由<strong>运算器</strong>、<strong>存储器</strong>、<strong>控制器</strong>、<strong>输入设备</strong>和<strong>输出设备</strong>五大基本部件组成，以**运算器<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote">&lt;span class&#x3D;”hint–top hint–rounded” aria-label&#x3D;”由于冯诺依曼计算机以运算器为中心，那么计算效率会降低</p>
+<p>根据<code>存储程序控制</code><sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="冯诺依曼机的基本工作方式为**控制流驱动**方式,是一种 **多指令单数据** 流构型">[1]</span></a></sup>的概念，由<strong>运算器</strong>、<strong>存储器</strong>、<strong>控制器</strong>、<strong>输入设备</strong>和<strong>输出设备</strong>五大基本部件组成，以**运算器<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="由于冯诺依曼计算机以运算器为中心，那么计算效率会降低">[2]</span></a></sup>**为中心，指令由操作码和地址码组成，指令和数据以同等地位存于存储器，可按地址寻访的计算机称为冯诺依曼计算机。</p>
+<img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518101825342.png" srcset="/img/loading.gif" lazyload class="" title="控制器器控制其他部件_数据都经由运算器">
+
+
+
 </li>
-<li><h5 id="现代计算机结构体系”-gt-2-为中心，指令由操作码和地址码组成，指令和数据以同等地位存于存储器，可按地址寻访的计算机称为冯诺依曼计算机。"><a href="#现代计算机结构体系”-gt-2-为中心，指令由操作码和地址码组成，指令和数据以同等地位存于存储器，可按地址寻访的计算机称为冯诺依曼计算机。" class="headerlink" title="现代计算机结构体系”&gt;[2]**为中心，指令由操作码和地址码组成，指令和数据以同等地位存于存储器，可按地址寻访的计算机称为冯诺依曼计算机。"></a>现代计算机结构体系”&gt;[2]</span></a></sup>**为中心，指令由操作码和地址码组成，指令和数据以同等地位存于存储器，可按地址寻访的计算机称为冯诺依曼计算机。</h5><img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518101825342.png" srcset="/img/loading.gif" lazyload class="" title="控制器器控制其他部件_数据都经由运算器">
-
-
-
-
-<img src="计算机组成原理/image-20230518104058174.png" srcset="/img/loading.gif" lazyload alt="image-20230518104058174" style="zoom:80%;" />
+<li><h5 id="现代计算机结构体系"><a href="#现代计算机结构体系" class="headerlink" title="现代计算机结构体系"></a>现代计算机结构体系</h5><img src="计算机组成原理/image-20230518104058174.png" srcset="/img/loading.gif" lazyload alt="image-20230518104058174" style="zoom:80%;" />
 
 <p>数据传输无需经过运算器，可以在控制器的控制下，通过输入设备将程序存储在存储器中，再由<strong>控制器控制运算器和存储器</strong>依次执行每一个计算步骤（指令），最后，<strong>控制器控制输出器</strong>以各种方式从存储器输出计算结果</p>
 <p>特点：以存储器为中心，将运算器和控制器集成在同一个芯片上，它们在计算机中直接完成信息处理任务，合称中央处理机CPU</p>
@@ -378,9 +377,6 @@
 </ol>
 <section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span>冯诺依曼机的基本工作方式为<strong>控制流驱动</strong>方式,是一种 <strong>多指令单数据</strong> 流构型
 <a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span>由于冯诺依曼计算机以运算器为中心，那么计算效率会降低
-<ol start="2">
-<li><h5 id="现代计算机结构体系"><a href="#现代计算机结构体系" class="headerlink" title="现代计算机结构体系"></a>现代计算机结构体系</h5></li>
-</ol>
 <a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
                 
               </div>
