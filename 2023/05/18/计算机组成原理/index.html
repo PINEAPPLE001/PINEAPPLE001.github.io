@@ -16,25 +16,33 @@
   <meta name="author" content="Juncheng">
   <meta name="keywords" content="">
   
-    <meta name="description" content="正则表达式（Regex）字符 ?  — 限定符表示前面这个字符应该出现 0 次或者 1 次  d?  d可有可无 * — 通配符表示前面这个字符应该出现 0 次或者多次 d*  若干个d + — 表示前面这个字符至少应该出现1次以上  例: d+  1个以上的d  &amp;#123;&amp;#125; — 表示前面的字符应该出现花括号里规定的次数，也可以这样用： {3} 三次; {3，6} 三到六次; {3，">
+    <meta name="description" content="计算机组成原理计算机的硬件结构 早期的冯诺依曼结构提出存储程序的概念：指令以代码的形式事先输入到计算机的主存储器中，然后按其在存储器中的首地址执行程序的第一条指令，以后就按该程序的规定顺序执行其他指令，直至程序执行结束。即按地址访问并顺序执行指令 根据存储程序控制[1]的概念，由运算器、存储器、控制器、输入设备和输出设备五大基本部件组成，以**运算器&lt;span class&#x3D;”hin">
 <meta property="og:type" content="article">
-<meta property="og:title" content="正则表达式">
-<meta property="og:url" content="http://blog.codingxiaofu.com/2023/02/26/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/index.html">
+<meta property="og:title" content="计算机组成原理">
+<meta property="og:url" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/index.html">
 <meta property="og:site_name" content="Junchengの小站">
-<meta property="og:description" content="正则表达式（Regex）字符 ?  — 限定符表示前面这个字符应该出现 0 次或者 1 次  d?  d可有可无 * — 通配符表示前面这个字符应该出现 0 次或者多次 d*  若干个d + — 表示前面这个字符至少应该出现1次以上  例: d+  1个以上的d  &amp;#123;&amp;#125; — 表示前面的字符应该出现花括号里规定的次数，也可以这样用： {3} 三次; {3，6} 三到六次; {3，">
+<meta property="og:description" content="计算机组成原理计算机的硬件结构 早期的冯诺依曼结构提出存储程序的概念：指令以代码的形式事先输入到计算机的主存储器中，然后按其在存储器中的首地址执行程序的第一条指令，以后就按该程序的规定顺序执行其他指令，直至程序执行结束。即按地址访问并顺序执行指令 根据存储程序控制[1]的概念，由运算器、存储器、控制器、输入设备和输出设备五大基本部件组成，以**运算器&lt;span class&#x3D;”hin">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://blog.codingxiaofu.com/2023/02/26/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/image-20230226125403553.png">
-<meta property="og:image" content="http://blog.codingxiaofu.com/2023/02/26/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/image-20230226125433870.png">
-<meta property="article:published_time" content="2023-02-26T04:04:02.000Z">
-<meta property="article:modified_time" content="2023-05-09T03:20:11.101Z">
+<meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518101825342.png">
+<meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518104058174.png">
+<meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518134156027.png">
+<meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518134750139.png">
+<meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/MAR%E5%92%8CMDR.png">
+<meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518105243971.png">
+<meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518140451902.png">
+<meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518133902906.png">
+<meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518155619055.png">
+<meta property="article:published_time" content="2023-05-18T08:35:24.000Z">
+<meta property="article:modified_time" content="2023-05-18T08:37:00.277Z">
 <meta property="article:author" content="Juncheng">
-<meta property="article:tag" content="正则表达式">
+<meta property="article:tag" content="408">
+<meta property="article:tag" content="计算机组成原理">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://blog.codingxiaofu.com/2023/02/26/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/image-20230226125403553.png">
+<meta name="twitter:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518101825342.png">
   
   
   
-  <title>正则表达式 - Junchengの小站</title>
+  <title>计算机组成原理 - Junchengの小站</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -212,7 +220,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="正则表达式"></span>
+            <span id="subtitle" data-typed-text="计算机组成原理"></span>
           
         </div>
 
@@ -223,8 +231,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-02-26 12:04" pubdate>
-          2023年2月26日 中午
+        <time datetime="2023-05-18 16:35" pubdate>
+          2023年5月18日 下午
         </time>
       </span>
     
@@ -235,7 +243,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          897 字
+          2.3k 字
         
       </span>
     
@@ -246,7 +254,7 @@
         
         
         
-          8 分钟
+          20 分钟
         
       </span>
     
@@ -284,56 +292,96 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">正则表达式</h1>
+            <h1 style="display: none">计算机组成原理</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="正则表达式（Regex）"><a href="#正则表达式（Regex）" class="headerlink" title="正则表达式（Regex）"></a>正则表达式（Regex）</h1><h4 id="字符"><a href="#字符" class="headerlink" title="字符"></a>字符</h4><ol>
-<li><code>?</code>  — 限定符表示前面这个字符应该出现 0 次或者 1 次  d?  <strong>d可有可无</strong></li>
-<li><code>*</code> — 通配符表示前面这个字符应该出现 0 次或者多次 d*  <strong>若干个d</strong></li>
-<li><code>+</code> — 表示前面这个字符至少应该出现1次以上  例: d+  <strong>1个以上的d</strong> </li>
-<li><code>&#123;&#125;</code> — 表示前面的字符应该出现花括号里规定的次数，也可以这样用： {3} 三次; {3，6} 三到六次; {3，} 三次以上。</li>
-<li><code>()</code> — 用于分组 表示括号里面的内容看作一个整体</li>
-<li><code>[]</code> —表示一个字符，该字符为【】里指定的内容 例: [abc] a、b、c 任一字符，[a]</li>
-<li><code>|</code> — 表示或运算 满足左右任一都能匹配，和普通的或运算一样</li>
-<li><code>^</code> — 脱字符表示 脱字符后面的规则匹配的字符除外，其他字符都匹配 例如[^a-z] 除了小写字符外都匹配（不匹配小写字符，与编程的！类似）</li>
-</ol>
-<h4 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h4><p>正则表达式中已经为我们准备好了一些字符合集（元字符）</p>
+                <h1 id="计算机组成原理"><a href="#计算机组成原理" class="headerlink" title="计算机组成原理"></a>计算机组成原理</h1><h4 id="计算机的硬件结构"><a href="#计算机的硬件结构" class="headerlink" title="计算机的硬件结构"></a>计算机的硬件结构</h4><ol>
+<li><h5 id="早期的冯诺依曼结构"><a href="#早期的冯诺依曼结构" class="headerlink" title="早期的冯诺依曼结构"></a>早期的冯诺依曼结构</h5><p>提出存储程序的概念：指令以代码的形式<strong>事先输入到</strong>计算机的<strong>主存储器中</strong>，然后按其在存储器中的首地址执行程序的第一条指令，以后就<strong>按</strong>该程序的规定<strong>顺序执行</strong>其他<strong>指令</strong>，直至程序执行结束。<strong>即按地址访问并顺序执行指令</strong></p>
+<p>根据<code>存储程序控制</code><sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="冯诺依曼机的基本工作方式为**控制流驱动**方式,是一种 **多指令单数据** 流构型">[1]</span></a></sup>的概念，由<strong>运算器</strong>、<strong>存储器</strong>、<strong>控制器</strong>、<strong>输入设备</strong>和<strong>输出设备</strong>五大基本部件组成，以**运算器<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote">&lt;span class&#x3D;”hint–top hint–rounded” aria-label&#x3D;”由于冯诺依曼计算机以运算器为中心，那么计算效率会降低</p>
+</li>
+<li><h5 id="现代计算机结构体系”-gt-2-为中心，指令由操作码和地址码组成，指令和数据以同等地位存于存储器，可按地址寻访的计算机称为冯诺依曼计算机。"><a href="#现代计算机结构体系”-gt-2-为中心，指令由操作码和地址码组成，指令和数据以同等地位存于存储器，可按地址寻访的计算机称为冯诺依曼计算机。" class="headerlink" title="现代计算机结构体系”&gt;[2]**为中心，指令由操作码和地址码组成，指令和数据以同等地位存于存储器，可按地址寻访的计算机称为冯诺依曼计算机。"></a>现代计算机结构体系”&gt;[2]</span></a></sup>**为中心，指令由操作码和地址码组成，指令和数据以同等地位存于存储器，可按地址寻访的计算机称为冯诺依曼计算机。</h5><img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518101825342.png" srcset="/img/loading.gif" lazyload class="" title="控制器器控制其他部件_数据都经由运算器">
+
+
+
+
+<img src="计算机组成原理/image-20230518104058174.png" srcset="/img/loading.gif" lazyload alt="image-20230518104058174" style="zoom:80%;" />
+
+<p>数据传输无需经过运算器，可以在控制器的控制下，通过输入设备将程序存储在存储器中，再由<strong>控制器控制运算器和存储器</strong>依次执行每一个计算步骤（指令），最后，<strong>控制器控制输出器</strong>以各种方式从存储器输出计算结果</p>
+<p>特点：以存储器为中心，将运算器和控制器集成在同一个芯片上，它们在计算机中直接完成信息处理任务，合称中央处理机CPU</p>
+</li>
+<li><h5 id="五大功能部件的组成"><a href="#五大功能部件的组成" class="headerlink" title="五大功能部件的组成"></a>五大功能部件的组成</h5><h6 id="①运算器："><a href="#①运算器：" class="headerlink" title="①运算器："></a>①运算器：</h6><img src="计算机组成原理/image-20230518134156027.png" srcset="/img/loading.gif" lazyload alt="image-20230518134156027" style="zoom:50%;" />
+
+<p>运算器由ACC(累加器)，MQ(乘商寄存器)，ALU(算术逻辑单元)，x(通用寄存器)组成</p>
+<blockquote>
+<p>其中<strong>ACC</strong>用于存储 被加数、被减数、乘数、被除数等</p>
+<p><strong>MQ</strong>用于存放乘数和商等</p>
+<p><strong>X</strong>是通用寄存器，能存放加数、减数、被乘数和除数等</p>
+<p>以上三个是寄存器，用来存放数据，<strong>ALU</strong>作为它们的老大，通过内部复杂的电路实现<strong>算术运算和逻辑运算</strong></p>
+</blockquote>
+<h6 id="②控制器："><a href="#②控制器：" class="headerlink" title="②控制器："></a>②控制器：</h6><img src="计算机组成原理/image-20230518134750139.png" srcset="/img/loading.gif" lazyload alt="image-20230518134750139" style="zoom:67%;" />
+
+<p>控制器由CU (控制单元)，IR (指令寄存器)， PC(程序计数器)组成</p>
+<blockquote>
+<p><strong>CU</strong> 控制单元，是控制器的核心部件；可以分析指令，给出控制信号，内部集成有复杂的电路</p>
+<p><strong>IR</strong> 指令寄存器，存放当前的指令</p>
+<p><strong>PC</strong> 程序计数器，存放<strong>下一条指令</strong>的<strong>地址</strong>，能自动＋1</p>
+<p><a id="IR"><strong>完成一条指令的步骤</strong></a></p>
 <ol>
-<li><code>\d</code> — 表示数字字符，数字 0-9 相当于 [0-9]</li>
-<li><code>\w</code> — 表示单词字符，所有的英文字符、数字、下划线</li>
-<li><code>\s</code>— 表示空白字符，包括空格和制表符（tab）以及换行符</li>
-<li><code>\b</code> — 表示匹配的字符的边界，可以为开头也可以为结尾</li>
+<li>取指令: PC 根据PC的地址取指令 放到IR</li>
+<li>分析指令: IR CU将分析IR中的指令</li>
+<li>执行指令: CU 分析完之后再控制其他的部件配合完成指令</li>
 </ol>
-<p>以上小写的表示该类集合，大写则表示非该类字符</p>
-<ol>
-<li><code>\D</code> — 表示非数字字符</li>
-<li><code>\W</code> — 表示非单词字符</li>
-<li><code>\S</code> — 表示非空白字符</li>
+<p> <em><strong>IR、MAR、MDR是CPU内部工作寄存器，对用户完全透明</strong></em> </p>
+</blockquote>
+<h6 id="③存储器："><a href="#③存储器：" class="headerlink" title="③存储器："></a>③存储器：</h6><p>主存储器(CPU能直接访问)和辅助存储器(外存储器，容量大，但是需要将信息读入主存中才能被CPU访问)；</p>
+<p>主存储器是按照存储单元的地址寻址的，也称为按地址存取。</p>
+<p>主存储器由 MAR、MDR、存储体和时序控制逻辑构成</p>
+<p>MAR 有k位，不一定要完全使用这k位 ，比如说有MAR 有32位，MDR有8位（一个字 取 1B），2^32*8 &#x3D; 4GB ，也有可能存储器只有1GB的空间。例题: 8位的计算机用16位表示地址，则有2^16 个地址空间，不一定全用 </p>
+<img src="计算机组成原理/MAR和MDR.png" srcset="/img/loading.gif" lazyload alt="MAR和MDR" style="zoom: 50%;" />
+
+<h6 id="④输入设备-amp-amp-输出设备"><a href="#④输入设备-amp-amp-输出设备" class="headerlink" title="④输入设备 &amp;&amp; 输出设备"></a>④输入设备 &amp;&amp; 输出设备</h6><p>输入输出设备统称为I&#x2F;O设备，CPU + 主存储器 + I&#x2F;O设备构成了线代计算机的三大部。CPU和主存构成计算机的主体，称为<strong>主机</strong>或处理机。相应地把I&#x2F;O设备叫做外围设备或外部设备，简称<strong>外设</strong>。</p>
+<img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518105243971.png" srcset="/img/loading.gif" lazyload class="" title="计算机概览">
+</li>
+<li><h5 id="一条指令的具体执行流程以y-x3D-a-b-c为例："><a href="#一条指令的具体执行流程以y-x3D-a-b-c为例：" class="headerlink" title="一条指令的具体执行流程以y&#x3D;a*b+c为例："></a>一条指令的具体执行流程以y&#x3D;a*b+c为例：</h5><blockquote>
+<img src="计算机组成原理/image-20230518140451902.png" srcset="/img/loading.gif" lazyload alt="计算机的工作过程" style="zoom: 45%;" />
+
+
+
+<p>首先 PC 先指向第一条执行的指令的位置（0），再将这个位置给MAR 由MAR去存储体中寻找对应地址的数据，如何将该数据放到MDR中。再传到CPU中的IR，IR中的数据拆分成 操作码和地址码，CU拿到操作码，分析是什么动作–读数– 将地址码放到MAR，MAR取地址中的数据给MDR，MDR再将数据放到ACC累加器中</p>
+<img src="计算机组成原理/image-20230518133902906.png" srcset="/img/loading.gif" lazyload alt="image-20230518133902906" style="zoom: 78%;" />
+
+<p>总结：<a href="#IR">指令的执行过程👆</a> PC –&gt; （MAR + MDR …）–&gt;  IR  –&gt;  CU  –&gt; 具体的执行步骤</p>
+</blockquote>
+</li>
+<li><h5 id="CPU区分指令和数据的依据"><a href="#CPU区分指令和数据的依据" class="headerlink" title="CPU区分指令和数据的依据"></a>CPU区分指令和数据的依据</h5><p><strong>指令和数据都是用二进制数码形式分区域存放在存储器中，为了能区分从存储器中读出的二进制数码是指令还是数据，可以用下列方法判断：</strong></p>
+<p><strong>凡由程序计数器提供的存储单元地址中取出的二进制数码是指令，应送到指令寄存器中；</strong></p>
+<p><strong>凡由指令中地址码部分提供的存储单元地址中取出来的二进制数码是操作数，一般应送到运算器中。</strong></p>
+</li>
 </ol>
-<p>还有一些特殊字符</p>
-<ol>
-<li><code>.</code> — 表示任意字符，但不包括换行符</li>
-<li><code>^</code> — 如果不和其他的规则写在一起，就表示匹配行首的字符</li>
-<li><code>$</code> — 表示匹配行尾的字符</li>
+<h4 id="计算机的软件结构"><a href="#计算机的软件结构" class="headerlink" title="计算机的软件结构"></a>计算机的软件结构</h4><p>系统软件：管理整个计算机系统：操作系统、数据库管理系统、标准程序库（库函数）、网络软件（实现TCP&#x2F;IP协议）、语言处理程序（编译程序、汇编程序）、服务程序（DeBug 程序）</p>
+<p>应用软件：按照任务编制成各种程序：抖音 王者…我们用户日常接触的比较多的软件</p>
+<h4 id="计算机的多级层次结构"><a href="#计算机的多级层次结构" class="headerlink" title="计算机的多级层次结构"></a>计算机的多级层次结构</h4><ol>
+<li><p>计算机的五层结构</p>
+<blockquote>
+<p>在上一节中：在对 y&#x3D;a*b+c  这条指令进行执行时，先是 将它转化成 机器代码 –&gt; 机器代码执行时有分成了 1. 取数  2. 乘  3. 加 等等操作，在这些小操作中，落实到具体的机器上又分成：1.从PC中取地址-&gt;MAR  2.M(MAR)-&gt;MDR  3.MDR-&gt;IR 等步骤，我们将 00000100000000101 称为指令，将它拆分成多个小步骤称为微指令，硬件直接执行微指令。</p>
+</blockquote>
+<p>① 第1级为<strong>微程序级</strong>。它是由硬件直接实现的，执行微程序指令，是计算机系统最底层的硬件系统。 </p>
+<p>② 第2级为<strong>机器指令系统级</strong>。又称传统机器级，执行二进制指令。 通常将第1、2级统称为传统机器级。 </p>
+<p>③ 第3级是<strong>操作系统级</strong>。计算机系统中硬件和硬件资源由该级管理和统一调度，它向上提供广义指令(系统调用)。</p>
+<p>④第4级是<strong>汇编语言级</strong>。 </p>
+<p>⑤第5级为<strong>高级语言级</strong>。 </p>
+<p><em><strong>[注 : 编译汇编和解释程序统称为翻译程序]</strong></em></p>
+<p>三种级别语言的转化：有的高级语言要先编译成 汇编语言 再进一步 由汇编器编译成机器代码，也有能直接通过编译器编译成机器语言的高级语言。除了编译程序之外，还有解释程序，每读取一句就立即执行</p>
+<img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518155619055.png" srcset="/img/loading.gif" lazyload class="" title="image-20230518155619055"></li>
 </ol>
-<hr>
-<h4 id="贪婪匹配和懒惰匹配"><a href="#贪婪匹配和懒惰匹配" class="headerlink" title="贪婪匹配和懒惰匹配"></a>贪婪匹配和懒惰匹配</h4><p>正则表达式默认匹配尽可能多的字符，例如我们想找到代码片段中的标签 <code>&lt;&gt;</code></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>正则表达式<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure>
-
-<p>我们采用 <code>&lt;.+&gt;</code>规则，但是会将所有的字符匹配，因为这里采用了贪婪匹配，<code>.</code>可能匹配为右边的<code>&gt; </code> 这样就会选中第一个<code>&lt;</code> 和最后一个<code>&gt;</code> 的所有内容，显然不合理，我们在规则中加一个<code>?</code>就能将默认的贪婪匹配改成懒惰匹配</p>
-<img src="/2023/02/26/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/image-20230226125403553.png" srcset="/img/loading.gif" lazyload class="" title="贪婪匹配">
-
-
-
-<img src="/2023/02/26/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/image-20230226125433870.png" srcset="/img/loading.gif" lazyload class="" title="懒惰匹配">
-
-<h4 id="实例："><a href="#实例：" class="headerlink" title="实例："></a>实例：</h4><p>匹配手机号(数据库生成11位手机号)：</p>
-<p><code>((13[0-9])|(14[5-7])|(15[0-9])|(166)|(17[3-7])|(18[2-8]))[0-9]&#123;8&#125;</code></p>
-<p>匹配自带答案的word文档试卷</p>
-<p><code>\(*\)</code></p>
-
+<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span>冯诺依曼机的基本工作方式为<strong>控制流驱动</strong>方式,是一种 <strong>多指令单数据</strong> 流构型
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span>由于冯诺依曼计算机以运算器为中心，那么计算效率会降低
+<ol start="2">
+<li><h5 id="现代计算机结构体系"><a href="#现代计算机结构体系" class="headerlink" title="现代计算机结构体系"></a>现代计算机结构体系</h5></li>
+</ol>
+<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
                 
               </div>
             
@@ -351,7 +399,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Basic/" class="category-chain-item">Basic</a>
+  <a href="/categories/408/" class="category-chain-item">408</a>
   
   
 
@@ -366,7 +414,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">#正则表达式</a>
+        <a href="/tags/408/">#408</a>
+      
+        <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">#计算机组成原理</a>
       
     </div>
   
@@ -378,8 +428,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>正则表达式</div>
-      <div>http://blog.codingxiaofu.com/2023/02/26/正则表达式/</div>
+      <div>计算机组成原理</div>
+      <div>http://blog.codingxiaofu.com/2023/05/18/计算机组成原理/</div>
     </div>
     <div class="license-meta">
       
@@ -391,7 +441,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年2月26日</div>
+          <div>2023年5月18日</div>
         </div>
       
       
@@ -423,18 +473,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/03/05/Spring%E5%9F%BA%E7%A1%80/" title="Spring 基础 快速构建项目">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Spring 基础 快速构建项目</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/02/20/53-%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C/" title="53-最大子数组和">
-                        <span class="hidden-mobile">53-最大子数组和</span>
+                      <a href="/2023/04/04/1094%E6%8B%BC%E8%BD%A6/" title="1094拼车">
+                        <span class="hidden-mobile">1094拼车</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
