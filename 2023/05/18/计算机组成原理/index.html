@@ -16,12 +16,12 @@
   <meta name="author" content="Juncheng">
   <meta name="keywords" content="">
   
-    <meta name="description" content="计算机组成原理计算机的硬件结构 早期的冯诺依曼结构提出存储程序的概念：指令以代码的形式事先输入到计算机的主存储器中，然后按其在存储器中的首地址执行程序的第一条指令，以后就按该程序的规定顺序执行其他指令，直至程序执行结束。即按地址访问并顺序执行指令 根据存储程序控制[1]的概念，由运算器、存储器、控制器、输入设备和输出设备五大基本部件组成，以**运算器[2]**为中心，指令由操作码和地址码组成，指令">
+    <meta name="description" content="计算机组成原理计算机的硬件结构 早期的冯诺依曼结构[1]提出存储程序的概念：指令以代码的形式事先输入到计算机的主存储器中，然后按其在存储器中的首地址执行程序的第一条指令，以后就按该程序的规定顺序执行其他指令，直至程序执行结束。即按地址访问并顺序执行指令。计算机按此原理应该有5大功能： 数据传输，数据存储，数据处理，操作控制，操作判断。 根据存储程序控制的概念，由运算器、存储器、控制器、输入设备和输">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算机组成原理">
 <meta property="og:url" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/index.html">
 <meta property="og:site_name" content="Junchengの小站">
-<meta property="og:description" content="计算机组成原理计算机的硬件结构 早期的冯诺依曼结构提出存储程序的概念：指令以代码的形式事先输入到计算机的主存储器中，然后按其在存储器中的首地址执行程序的第一条指令，以后就按该程序的规定顺序执行其他指令，直至程序执行结束。即按地址访问并顺序执行指令 根据存储程序控制[1]的概念，由运算器、存储器、控制器、输入设备和输出设备五大基本部件组成，以**运算器[2]**为中心，指令由操作码和地址码组成，指令">
+<meta property="og:description" content="计算机组成原理计算机的硬件结构 早期的冯诺依曼结构[1]提出存储程序的概念：指令以代码的形式事先输入到计算机的主存储器中，然后按其在存储器中的首地址执行程序的第一条指令，以后就按该程序的规定顺序执行其他指令，直至程序执行结束。即按地址访问并顺序执行指令。计算机按此原理应该有5大功能： 数据传输，数据存储，数据处理，操作控制，操作判断。 根据存储程序控制的概念，由运算器、存储器、控制器、输入设备和输">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518101825342.png">
 <meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518104058174.png">
@@ -32,8 +32,12 @@
 <meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518140451902.png">
 <meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518133902906.png">
 <meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518155619055.png">
+<meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E6%95%B0%E5%88%B6%E8%BD%AC10%E8%BF%9B%E5%88%B6.png">
+<meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230520142014050.png">
+<meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230520142329220.png">
+<meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230520142852931.png">
 <meta property="article:published_time" content="2023-05-18T08:35:24.000Z">
-<meta property="article:modified_time" content="2023-05-19T03:09:21.150Z">
+<meta property="article:modified_time" content="2023-05-20T06:31:12.502Z">
 <meta property="article:author" content="Juncheng">
 <meta property="article:tag" content="408">
 <meta property="article:tag" content="计算机组成原理">
@@ -243,7 +247,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.5k 字
+          3.3k 字
         
       </span>
     
@@ -254,7 +258,7 @@
         
         
         
-          22 分钟
+          28 分钟
         
       </span>
     
@@ -297,19 +301,19 @@
             
               <div class="markdown-body">
                 
-                <h1 id="计算机组成原理"><a href="#计算机组成原理" class="headerlink" title="计算机组成原理"></a>计算机组成原理</h1><h4 id="计算机的硬件结构"><a href="#计算机的硬件结构" class="headerlink" title="计算机的硬件结构"></a>计算机的硬件结构</h4><ol>
-<li><h5 id="早期的冯诺依曼结构"><a href="#早期的冯诺依曼结构" class="headerlink" title="早期的冯诺依曼结构"></a>早期的冯诺依曼结构</h5><p>提出存储程序的概念：指令以代码的形式<strong>事先输入到</strong>计算机的<strong>主存储器中</strong>，然后按其在存储器中的首地址执行程序的第一条指令，以后就<strong>按</strong>该程序的规定<strong>顺序执行</strong>其他<strong>指令</strong>，直至程序执行结束。<strong>即按地址访问并顺序执行指令</strong></p>
-<p>根据<code>存储程序控制</code><sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="冯诺依曼机的基本工作方式为**控制流驱动**方式,是一种 **多指令单数据** 流构型">[1]</span></a></sup>的概念，由<strong>运算器</strong>、<strong>存储器</strong>、<strong>控制器</strong>、<strong>输入设备</strong>和<strong>输出设备</strong>五大基本部件组成，以**运算器<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="由于冯诺依曼计算机以运算器为中心，那么计算效率会降低">[2]</span></a></sup>**为中心，指令由操作码和地址码组成，指令和数据以同等地位存于存储器，可按地址寻访的计算机称为冯诺依曼计算机。</p>
+                <h1 id="计算机组成原理"><a href="#计算机组成原理" class="headerlink" title="计算机组成原理"></a>计算机组成原理</h1><h3 id="计算机的硬件结构"><a href="#计算机的硬件结构" class="headerlink" title="计算机的硬件结构"></a>计算机的硬件结构</h3><ol>
+<li><h4 id="早期的冯诺依曼结构-1"><a href="#早期的冯诺依曼结构-1" class="headerlink" title="早期的冯诺依曼结构[1]"></a>早期的冯诺依曼结构<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="冯诺依曼机的基本工作方式为**控制流驱动**方式,是一种 **单指令单数据流** 构型">[1]</span></a></sup></h4><p>提出存储程序的概念：指令以代码的形式<strong>事先输入到</strong>计算机的<strong>主存储器中</strong>，然后按其在存储器中的首地址执行程序的第一条指令，以后就<strong>按</strong>该程序的规定<strong>顺序执行</strong>其他<strong>指令</strong>，直至程序执行结束。<strong>即按地址访问并顺序执行指令</strong>。计算机按此原理应该有5大功能： 数据传输，数据存储，数据处理，操作控制，操作判断。</p>
+<p>根据<code>存储程序控制</code>的概念，由<strong>运算器</strong>、<strong>存储器</strong>、<strong>控制器</strong>、<strong>输入设备</strong>和<strong>输出设备</strong>五大基本部件组成，以**运算器<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="由于冯诺依曼计算机以运算器为中心，那么计算效率会降低">[2]</span></a></sup>**为中心，指令由操作码和地址码组成，指令和数据以同等地位存于存储器，可按地址寻访的计算机称为冯诺依曼计算机。</p>
 <img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518101825342.png" srcset="/img/loading.gif" lazyload class="" title="控制器器控制其他部件_数据都经由运算器">
 
 
 </li>
-<li><h5 id="现代计算机结构体系"><a href="#现代计算机结构体系" class="headerlink" title="现代计算机结构体系"></a>现代计算机结构体系</h5><img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518104058174.png" srcset="/img/loading.gif" lazyload class="" title="img">
+<li><h4 id="现代计算机结构体系"><a href="#现代计算机结构体系" class="headerlink" title="现代计算机结构体系"></a>现代计算机结构体系</h4><img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518104058174.png" srcset="/img/loading.gif" lazyload class="" title="img">
 
 <p>数据传输无需经过运算器，可以在控制器的控制下，通过输入设备将程序存储在存储器中，再由<strong>控制器控制运算器和存储器</strong>依次执行每一个计算步骤（指令），最后，<strong>控制器控制输出器</strong>以各种方式从存储器输出计算结果</p>
 <p>特点：以存储器为中心，将运算器和控制器集成在同一个芯片上，它们在计算机中直接完成信息处理任务，合称中央处理机CPU</p>
 </li>
-<li><h5 id="五大功能部件的组成"><a href="#五大功能部件的组成" class="headerlink" title="五大功能部件的组成"></a>五大功能部件的组成</h5><h6 id="①运算器："><a href="#①运算器：" class="headerlink" title="①运算器："></a>①运算器：</h6><img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518134156027.png" srcset="/img/loading.gif" lazyload class="" title="img">
+<li><h4 id="五大功能部件的组成"><a href="#五大功能部件的组成" class="headerlink" title="五大功能部件的组成"></a>五大功能部件的组成</h4><h6 id="①运算器："><a href="#①运算器：" class="headerlink" title="①运算器："></a>①运算器：</h6><img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518134156027.png" srcset="/img/loading.gif" lazyload class="" title="img">
 
 <p>运算器由ACC(累加器)，MQ(乘商寄存器)，ALU(算术逻辑单元)，x(通用寄存器)组成</p>
 <blockquote>
@@ -344,7 +348,7 @@
 <h6 id="④输入设备-amp-amp-输出设备"><a href="#④输入设备-amp-amp-输出设备" class="headerlink" title="④输入设备 &amp;&amp; 输出设备"></a>④输入设备 &amp;&amp; 输出设备</h6><p>输入输出设备统称为I&#x2F;O设备，CPU + 主存储器 + I&#x2F;O设备构成了线代计算机的三大部。CPU和主存构成计算机的主体，称为<strong>主机</strong>或处理机。相应地把I&#x2F;O设备叫做外围设备或外部设备，简称<strong>外设</strong>。</p>
 <img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518105243971.png" srcset="/img/loading.gif" lazyload class="" title="计算机概览">
 </li>
-<li><h5 id="一条指令的具体执行流程以y-x3D-a-b-c为例："><a href="#一条指令的具体执行流程以y-x3D-a-b-c为例：" class="headerlink" title="一条指令的具体执行流程以y&#x3D;a*b+c为例："></a>一条指令的具体执行流程以y&#x3D;a*b+c为例：</h5><blockquote>
+<li><h4 id="一条指令的具体执行流程以y-x3D-a-b-c为例："><a href="#一条指令的具体执行流程以y-x3D-a-b-c为例：" class="headerlink" title="一条指令的具体执行流程以y&#x3D;a*b+c为例："></a>一条指令的具体执行流程以y&#x3D;a*b+c为例：</h4><blockquote>
 <img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518140451902.png" srcset="/img/loading.gif" lazyload class="" title="img">
 
 
@@ -355,16 +359,15 @@
 <p>总结：<a href="#IR">指令的执行过程👆</a> PC –&gt; （MAR + MDR …）–&gt;  IR  –&gt;  CU  –&gt; 具体的执行步骤</p>
 </blockquote>
 </li>
-<li><h5 id="CPU区分指令和数据的依据"><a href="#CPU区分指令和数据的依据" class="headerlink" title="CPU区分指令和数据的依据"></a>CPU区分指令和数据的依据</h5><p><strong>指令和数据都是用二进制数码形式分区域存放在存储器中，为了能区分从存储器中读出的二进制数码是指令还是数据，可以用下列方法判断：</strong></p>
+<li><h4 id="CPU区分指令和数据的依据"><a href="#CPU区分指令和数据的依据" class="headerlink" title="CPU区分指令和数据的依据"></a>CPU区分指令和数据的依据</h4><p><strong>指令和数据都是用二进制数码形式分区域存放在存储器中，为了能区分从存储器中读出的二进制数码是指令还是数据，可以用下列方法判断：</strong></p>
 <p><strong>凡由程序计数器提供的存储单元地址中取出的二进制数码是指令，应送到指令寄存器中；</strong></p>
 <p><strong>凡由指令中地址码部分提供的存储单元地址中取出来的二进制数码是操作数，一般应送到运算器中。</strong></p>
 </li>
 </ol>
-<h4 id="计算机的软件结构"><a href="#计算机的软件结构" class="headerlink" title="计算机的软件结构"></a>计算机的软件结构</h4><p>系统软件：管理整个计算机系统：操作系统、数据库管理系统、标准程序库（库函数）、网络软件（实现TCP&#x2F;IP协议）、语言处理程序（编译程序、汇编程序）、服务程序（DeBug 程序）</p>
-<p>应用软件：按照任务编制成各种程序：抖音 王者…我们用户日常接触的比较多的软件</p>
-<h4 id="计算机的多级层次结构"><a href="#计算机的多级层次结构" class="headerlink" title="计算机的多级层次结构"></a>计算机的多级层次结构</h4><ol>
-<li><p>计算机的五层结构</p>
-<blockquote>
+<h3 id="计算机的软件结构"><a href="#计算机的软件结构" class="headerlink" title="计算机的软件结构"></a>计算机的软件结构</h3><p><strong>系统软件</strong>：管理整个计算机系统：操作系统、数据库管理系统、标准程序库（库函数）、网络软件（实现TCP&#x2F;IP协议）、语言处理程序（编译程序、汇编程序）、服务程序（DeBug 程序）</p>
+<p><strong>应用软件</strong>：按照任务编制成各种程序：抖音 王者…我们用户日常接触的比较多的软件</p>
+<h3 id="计算机的多级层次结构"><a href="#计算机的多级层次结构" class="headerlink" title="计算机的多级层次结构"></a>计算机的多级层次结构</h3><ol>
+<li><h4 id="计算机的五层结构"><a href="#计算机的五层结构" class="headerlink" title="计算机的五层结构"></a>计算机的五层结构</h4><blockquote>
 <p>在上一节中：在对 y&#x3D;a*b+c  这条指令进行执行时，先是 将它转化成 机器代码 –&gt; 机器代码执行时有分成了 1. 取数  2. 乘  3. 加 等等操作，在这些小操作中，落实到具体的机器上又分成：1.从PC中取地址-&gt;MAR  2.M(MAR)-&gt;MDR  3.MDR-&gt;IR 等步骤，我们将 00000100000000101 称为指令，将它拆分成多个小步骤称为微指令，硬件直接执行微指令。</p>
 </blockquote>
 <p>① 第1级为<strong>微程序级</strong>。它是由硬件直接实现的，执行微程序指令，是计算机系统最底层的硬件系统。 </p>
@@ -376,7 +379,7 @@
 <p>三种级别语言的转化：有的高级语言要先编译成 汇编语言 再进一步 由汇编器编译成机器代码，也有能直接通过编译器编译成机器语言的高级语言。除了编译程序之外，还有解释程序，每读取一句就立即执行</p>
 <img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518155619055.png" srcset="/img/loading.gif" lazyload class="" title="image-20230518155619055"></li>
 </ol>
-<h4 id="计算机性能指标"><a href="#计算机性能指标" class="headerlink" title="计算机性能指标"></a>计算机性能指标</h4><ol>
+<h3 id="计算机性能指标"><a href="#计算机性能指标" class="headerlink" title="计算机性能指标"></a>计算机性能指标</h3><ol>
 <li><p>存储器的性能指标 (见 五大功能部件 — 存储器)</p>
 <p>总容量 &#x3D; 存储单元个数 * 存储字长 bit  （* 存储字长&#x2F;8 Byte）</p>
 <p>存储单元的个数最多有 &#x3D; $$2^k$$  个	(MAR 的位数 为 k)    存储字长 &#x3D; MDR的长度 (字长)</p>
@@ -384,13 +387,45 @@
 <li><p>CPU的主频</p>
 <p>CPU内数字脉冲信号振荡的频率  __|￣|_<em>|￣|__|￣__|￣|</em>_  每一个周期称作CPU的时钟周期</p>
 <p>$CPU主频 &#x3D; 1&#x2F;CPU时钟周期$ </p>
-<p>还有一个评判指标：CPI – 执行一条指令所需要的时钟周期。不同的指令，CPI有可能不同，例如取数指令要9个周期（一个周期对应一个微指令），乘法指令要11个周期。所以，我们需要一个公平的指标来衡量：<strong>执行一条指令的耗时</strong> &#x3D; CPI * CPU的时钟周期</p>
 </li>
-<li></li>
+<li><p><strong>CPI</strong> – 执行一条指令所需要的<strong>时钟周期数</strong>。不同的指令，CPI有可能不同，例如取数指令要9个周期（一个周期对应一个微指令），乘法指令要11个周期。所以，我们需要一个公平的指标来衡量：<strong>执行一条指令的<code>耗时</code></strong> &#x3D; <strong>CPI * CPU的时钟周期 &#x3D; CPI &#x2F; CPU 主频</strong>。eg: 假设有100条指令 ，CPI是 3，CPU的主频是1000HZ，问执行完这100条指令要花费多久？ 100 * 3 &#x2F; 1000&#x3D; 0.3 s</p>
+</li>
+<li><p>IPS ： 1秒内能执行多少条指令 &#x3D; 主频&#x2F;平均CPI 。</p>
+</li>
+<li><p>FLOPS： 每秒执行多少次浮点运算。</p>
+</li>
+<li><p>在计算机的性能时，$K，M，G，T &#x3D; 10^3 , 10^6, 10^9, 10^{12}  $</p>
+</li>
+<li><p>数据通路带宽： 数据总线一次能传输位数</p>
+</li>
+<li><p>吞吐量:</p>
+</li>
+<li><p>响应时间：</p>
+</li>
+<li><p>计算过程 ：一个程序在机器M上运行的时间 公式： X * CPI&#x2F;主频  ; X是指令的数量，CPI&#x2F;主频是一条指令要的时间，X * CPI&#x2F;主频 就是X条指令所要的时间。</p>
+</li>
 </ol>
 <hr>
 <hr>
-<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span>冯诺依曼机的基本工作方式为<strong>控制流驱动</strong>方式,是一种 <strong>多指令单数据</strong> 流构型
+<h3 id="计算机中的数制及表示方式"><a href="#计算机中的数制及表示方式" class="headerlink" title="计算机中的数制及表示方式"></a>计算机中的数制及表示方式</h3><h4 id="基础知识："><a href="#基础知识：" class="headerlink" title="基础知识："></a>基础知识：</h4><p>r ： 基数，每个数码位所用到的不同符号的个数，r进制的基数为r。</p>
+<p><strong>2进制(Bin)</strong> r&#x3D;2 (0，1)；<strong>10进制(Dec)<strong>基数为r&#x3D;10 (0~9)；</strong>8进制</strong>基数r&#x3D;8 (0<del>7)；**16进制(Hex)**基数r&#x3D;16(0</del>9 A~F  10个数字 6个字母) </p>
+<h4 id="数制的转换："><a href="#数制的转换：" class="headerlink" title="数制的转换："></a>数制的转换：</h4><img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E6%95%B0%E5%88%B6%E8%BD%AC10%E8%BF%9B%E5%88%B6.png" srcset="/img/loading.gif" lazyload class="" title="image-20230520140253504">
+
+<p>2–&gt;8 ：二进制每一位只有2中可能，8进制每一位有8种可能，因此要将3位2进制用来表示一个8进制的位。</p>
+<p>8–&gt;2 : 每一位表示2进制的3位</p>
+<p>2–&gt;16: 同上，4个二进制位表示1个16进制位</p>
+<p>16–&gt;2: 每一个16进制位表示4个二进制位。</p>
+<p>10进制转2进制：</p>
+<img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230520142014050.png" srcset="/img/loading.gif" lazyload class="" title="image-20230520142014050">
+
+<p>10进制不断除以2，取余数就能得到从第0位开始的2进制，同理可得8进制和16进制。</p>
+<p>小数部分如下：</p>
+<img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230520142329220.png" srcset="/img/loading.gif" lazyload class="" title="image-20230520142329220">
+
+<p>小数部分不断乘以2，得到从第-1位开始的二进制位，同理可得8进制和16进制。</p>
+<h4 id="各种进制的书写方式"><a href="#各种进制的书写方式" class="headerlink" title="各种进制的书写方式"></a>各种进制的书写方式</h4><img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230520142852931.png" srcset="/img/loading.gif" lazyload class="" title="image-20230520142852931">
+
+<h4 id="计算机中数值的表示"><a href="#计算机中数值的表示" class="headerlink" title="计算机中数值的表示"></a>计算机中数值的表示</h4><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span>冯诺依曼机的基本工作方式为<strong>控制流驱动</strong>方式,是一种 <strong>单指令单数据流</strong> 构型
 <a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span>由于冯诺依曼计算机以运算器为中心，那么计算效率会降低
 <a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
                 
