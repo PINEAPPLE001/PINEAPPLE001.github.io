@@ -1,0 +1,816 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/note_icon.png">
+  <link rel="icon" href="/img/note_icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Juncheng">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="MindmapTest数据结构 第一章绪论数据结构的三要素逻辑结构基本类型：·    线性结构 •   线性表、栈、队列 ·    非线性结构 •   树、图、集合 存储结构（逻辑结构落实到计算机中就要考虑具体实现的方式：物理结构）·    顺序存储：把逻辑上相邻的元素存储在物理位置上也相邻的存储单元中，元素之间的关系由存储单元的邻接关系来体现。 ·    链式存储：逻辑上相邻的元素在物理位置上可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MindmapTest">
+<meta property="og:url" content="http://blog.codingxiaofu.com/2023/05/23/MindmapTest/index.html">
+<meta property="og:site_name" content="Junchengの小站">
+<meta property="og:description" content="MindmapTest数据结构 第一章绪论数据结构的三要素逻辑结构基本类型：·    线性结构 •   线性表、栈、队列 ·    非线性结构 •   树、图、集合 存储结构（逻辑结构落实到计算机中就要考虑具体实现的方式：物理结构）·    顺序存储：把逻辑上相邻的元素存储在物理位置上也相邻的存储单元中，元素之间的关系由存储单元的邻接关系来体现。 ·    链式存储：逻辑上相邻的元素在物理位置上可">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image002.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image004.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image006.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image008.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image010.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image012.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image014.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image016.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image018.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image020.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image022.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image024.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image026.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image028.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image030.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image032.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image034.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image036.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image038.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image040.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image042.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image044.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image046.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image048.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image050.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image052.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image054.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image056.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image058.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image060.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image062.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image064.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image066.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image068.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image070.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image072.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image074.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image076.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image078.gif">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image080.gif">
+<meta property="article:published_time" content="2023-05-23T02:35:22.000Z">
+<meta property="article:modified_time" content="2023-05-23T02:40:44.162Z">
+<meta property="article:author" content="Juncheng">
+<meta property="article:tag" content="思维导图">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image002.gif">
+  
+  
+  
+  <title>MindmapTest - Junchengの小站</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"blog.codingxiaofu.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":83,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Junchengの笔记空间</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/%E7%A2%8E%E7%A2%8E%E5%BF%B5/">
+                <i class="iconfont icon-bookmark-fill"></i>
+                <span>碎碎念</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="MindmapTest"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-05-23 10:35" pubdate>
+          2023年5月23日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          7k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          59 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">MindmapTest</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="MindmapTest"><a href="#MindmapTest" class="headerlink" title="MindmapTest"></a>MindmapTest</h1><blockquote class="pullquote mindmap mindmap-md"><p><strong>数据结构</strong></p>
+<h1 id="第一章绪论"><a href="#第一章绪论" class="headerlink" title="第一章绪论"></a>第一章绪论</h1><h2 id="数据结构的三要素"><a href="#数据结构的三要素" class="headerlink" title="数据结构的三要素"></a>数据结构的三要素</h2><h3 id="逻辑结构基本类型："><a href="#逻辑结构基本类型：" class="headerlink" title="逻辑结构基本类型："></a>逻辑结构基本类型：</h3><p>·    线性结构</p>
+<p>•   线性表、栈、队列</p>
+<p>·    非线性结构</p>
+<p>•   树、图、集合</p>
+<h3 id="存储结构（逻辑结构落实到计算机中就要考虑具体实现的方式：物理结构）"><a href="#存储结构（逻辑结构落实到计算机中就要考虑具体实现的方式：物理结构）" class="headerlink" title="存储结构（逻辑结构落实到计算机中就要考虑具体实现的方式：物理结构）"></a>存储结构（逻辑结构落实到计算机中就要考虑具体实现的方式：物理结构）</h3><p>·    顺序存储：把逻辑上相邻的元素存储在物理位置上也相邻的存储单元中，元素之间的关系由存储单元的邻接关系来体现。</p>
+<p>·    链式存储：逻辑上相邻的元素在物理位置上可以不相邻，借助指示元素存储地址的指针来表示元素之间的逻辑关系。</p>
+<p>·    索引存储：在存储元素信息的同时，还建立附加的索引表。索引表中的每项称为索引项，索引项的一般形式是(关键字，地址)</p>
+<p>·    散列存储。根据元素的关键字直接计算出该元素的存储地址，又称哈希(Hash) 存储</p>
+<p>·    非顺序存储</p>
+<h3 id="数据的运算-对于一种具体的数据结构，我们要对它进行操作，比如排队的时候要入队出队，输出对长等操作"><a href="#数据的运算-对于一种具体的数据结构，我们要对它进行操作，比如排队的时候要入队出队，输出对长等操作" class="headerlink" title="数据的运算 对于一种具体的数据结构，我们要对它进行操作，比如排队的时候要入队出队，输出对长等操作"></a>数据的运算 对于一种具体的数据结构，我们要对它进行操作，比如排队的时候要入队出队，输出对长等操作</h3><p>·    相同的 数据的运算在不同的数据结构中是不一样的，比如数组和链表操作的实现是不一样的</p>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><h3 id="基本特性"><a href="#基本特性" class="headerlink" title="基本特性"></a>基本特性</h3><p>·    五个特性： 有穷性：在有穷步后结束，每一步在有穷时间内完成、确定性 ：相同的输入得到相同的结果、可行性：可以用代码实现、输入、输出；至少有零个或多个输入，至少有一个或多个输出</p>
+<h3 id="好的算法的特质"><a href="#好的算法的特质" class="headerlink" title="好的算法的特质"></a>好的算法的特质</h3><p>·    正确性</p>
+<p>·    可读性：不要写得像piece of shit，写点注释</p>
+<p>·    健壮性：容错性</p>
+<p>·    高效率低存储</p>
+<h3 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h3><p>·    评估标准：排除外界因素：如机器性能、编程语言、编译程序产生的机器指令质量等等。我们一般事前估计算法的时间开销于问题规模n的关系 – 用于估量算法的好坏</p>
+<p>·    时间复杂度：当问题规模足够大时，我们就只考虑高阶部分，以数量级来做评判标准，用 O( ) 表示法，当n -&gt;∞二者之比为常数</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image002.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<p>·    常见数量级</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image004.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<p>·    一般解题看 ： 1. 循环 如果循环是n 那么这个循环体会执行n次，如果循环每次变量都会变成2倍 i &#x3D; 1（x倍也一样），分析： k次循环后有i*2^k &#x3D; n 此时跳出循环，如果我们求出k就知道循环的时间复杂度 取对数 有 k &#x3D; log2 (n) 。所以就能求出时间复杂度为 O(log n)级别的。</p>
+<p>·    对于递归类型求时间复杂度： 看这个递归调用了多少次，例如求阶乘 递归求 n的阶乘 一共调用n次，他的时间复杂度就是 O(n)</p>
+<h3 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h3><h1 id="第二章线性表"><a href="#第二章线性表" class="headerlink" title="第二章线性表"></a>第二章线性表</h1><h2 id="概述：线性表是一种逻辑上的结构，它描述了一种-数据之间前驱和后继的关系，"><a href="#概述：线性表是一种逻辑上的结构，它描述了一种-数据之间前驱和后继的关系，" class="headerlink" title="概述：线性表是一种逻辑上的结构，它描述了一种 数据之间前驱和后继的关系，"></a>概述：线性表是一种逻辑上的结构，它描述了一种 数据之间前驱和后继的关系，</h2><h2 id="定义：-线性表是具有相同数据类型的n-n≥0-个数据元素的有限序列，其中n为表长，当n-x3D-0时线性表是一个空表。若用L命名线性表，则其一般表示为L-x3D-a1-a2…-ai-ai-1-…-an-注意：相同数据类型和有限序列-–-gt-有次序！"><a href="#定义：-线性表是具有相同数据类型的n-n≥0-个数据元素的有限序列，其中n为表长，当n-x3D-0时线性表是一个空表。若用L命名线性表，则其一般表示为L-x3D-a1-a2…-ai-ai-1-…-an-注意：相同数据类型和有限序列-–-gt-有次序！" class="headerlink" title="定义： 线性表是具有相同数据类型的n (n≥0) 个数据元素的有限序列，其中n为表长，当n&#x3D; 0时线性表是一个空表。若用L命名线性表，则其一般表示为L&#x3D;(a1,a2….. ai, ai+1+…,an)注意：相同数据类型和有限序列 –&gt; 有次序！"></a>定义： 线性表是具有相同数据类型的n (n≥0) 个数据元素的有限序列，其中n为表长，当n&#x3D; 0时线性表是一个空表。若用L命名线性表，则其一般表示为L&#x3D;(a1,a2….. ai, ai+1+…,an)注意：相同数据类型和有限序列 –&gt; 有次序！</h2><h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><h3 id="1-初始化"><a href="#1-初始化" class="headerlink" title="1. 初始化"></a>1. 初始化</h3><h3 id="2-销毁"><a href="#2-销毁" class="headerlink" title="2. 销毁"></a>2. 销毁</h3><h3 id="3-第-i-处插入-e"><a href="#3-第-i-处插入-e" class="headerlink" title="3. 第 i 处插入 e"></a>3. 第 i 处插入 e</h3><h3 id="4-第-i-处删除"><a href="#4-第-i-处删除" class="headerlink" title="4. 第 i 处删除"></a>4. 第 i 处删除</h3><h3 id="5-查找-e"><a href="#5-查找-e" class="headerlink" title="5. 查找 e"></a>5. 查找 e</h3><h3 id="6-第i处查找"><a href="#6-第i处查找" class="headerlink" title="6. 第i处查找"></a>6. 第i处查找</h3><h3 id="7-其他操作：-求表长，打印，判空"><a href="#7-其他操作：-求表长，打印，判空" class="headerlink" title="7. 其他操作： 求表长，打印，判空"></a>7. 其他操作： 求表长，打印，判空</h3><h3 id="注意：-传参数时：-amp-表示要改变的结果要带回来（取地址，然后对地址里面的原值进行操作）C语言不支持，要C-才能使用"><a href="#注意：-传参数时：-amp-表示要改变的结果要带回来（取地址，然后对地址里面的原值进行操作）C语言不支持，要C-才能使用" class="headerlink" title="注意： 传参数时：&amp; 表示要改变的结果要带回来（取地址，然后对地址里面的原值进行操作）C语言不支持，要C++ 才能使用"></a>注意： 传参数时：&amp; 表示要改变的结果要带回来（取地址，然后对地址里面的原值进行操作）C语言不支持，要C++ 才能使用</h3><h3 id="创建-销毁"><a href="#创建-销毁" class="headerlink" title="创建|销毁"></a>创建|销毁</h3><h3 id="增删改（改前-查找）查"><a href="#增删改（改前-查找）查" class="headerlink" title="增删改（改前 查找）查"></a>增删改（改前 查找）查</h3><h2 id="实现方式："><a href="#实现方式：" class="headerlink" title="实现方式："></a>实现方式：</h2><h3 id="一、顺序表-（用顺序存储方式实现的-“线性”-表）"><a href="#一、顺序表-（用顺序存储方式实现的-“线性”-表）" class="headerlink" title="一、顺序表 （用顺序存储方式实现的 “线性” 表）"></a>一、顺序表 （用顺序存储方式实现的 “线性” 表）</h3><p>顺序存储： 逻辑上相邻的元素物理上也按照相邻的方式存起来</p>
+<p>·    </p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image006.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<p>·    特性： 随机存取 ：因为存储的数据类型相同，只需知道起始地址就能根据i*sizeof(ElemType) 计算出存储的位置。存储密度高不方便扩容插入删除元素不方便</p>
+<p>·    实现： 1. 静态分配 定义时设置 MaxSize 为一个固定的值，作为顺序表的最大容量 。但是具有局限性，不能扩容。2. 动态分配 定义时设置一个指针，当我们需要多大内存时，就使用malloc 函数动态分配内存空间。例: L.data &#x3D; (ElemType *) malloc(sizeofo(ElemType)*InitSize)为了动态分配增加内存空间（扩容），我们可以用一个函数来表示：IncreaseSize(SeqList &amp;L,int len) 先malloc 分配MaxSize + len 的空间，然后再把原来的复制过去 for_i; i&lt;length,同时要把原来的地址 free3.释放内存空间 free</p>
+<p>·    插入第i个位置： 先把 i-1 ~ length之间的元素后移一个单位，再在i-1处插入元素e</p>
+<p>·    删除第i个位置： 直接覆盖</p>
+<p>·    查找： 1. 从第一个位置查等于e的元素的位置，找到了就返回位序2. 直接找第i个位置的元素</p>
+<h3 id="自由主题"><a href="#自由主题" class="headerlink" title="自由主题"></a>自由主题</h3><p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image008.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<h3 id="二、链表（用链式存储方式实现的-“线性表”）"><a href="#二、链表（用链式存储方式实现的-“线性表”）" class="headerlink" title="二、链表（用链式存储方式实现的 “线性表”）"></a>二、链表（用链式存储方式实现的 “线性表”）</h3><p>·    每个结点除了存放数据元素外，还要存储指向下一个节点的指针</p>
+<h1 id="栈和队列"><a href="#栈和队列" class="headerlink" title="栈和队列"></a>栈和队列</h1><h2 id="记得敲一遍队列的代码-链队列和循环队列-知识点就看书吧！没啥好说的-多刷题"><a href="#记得敲一遍队列的代码-链队列和循环队列-知识点就看书吧！没啥好说的-多刷题" class="headerlink" title="记得敲一遍队列的代码 链队列和循环队列 知识点就看书吧！没啥好说的 多刷题"></a>记得敲一遍队列的代码 链队列和循环队列 知识点就看书吧！没啥好说的 多刷题</h2><h1 id="串"><a href="#串" class="headerlink" title="串"></a>串</h1><h2 id="串是由0个或多个字符租车呢个的有限序列，一般用引号括起来，引号表示边界符，而不是串中的内容，字符串有几个字符就表示长度为几，空格也算是字符，n-x3D-0时表示空串"><a href="#串是由0个或多个字符租车呢个的有限序列，一般用引号括起来，引号表示边界符，而不是串中的内容，字符串有几个字符就表示长度为几，空格也算是字符，n-x3D-0时表示空串" class="headerlink" title="串是由0个或多个字符租车呢个的有限序列，一般用引号括起来，引号表示边界符，而不是串中的内容，字符串有几个字符就表示长度为几，空格也算是字符，n&#x3D;0时表示空串"></a>串是由0个或多个字符租车呢个的有限序列，一般用引号括起来，引号表示边界符，而不是串中的内容，字符串有几个字符就表示长度为几，空格也算是字符，n&#x3D;0时表示空串</h2><h2 id="任意多个字符组成的子序列叫子串，包含子串的串叫主串，某个字符在该串中的位置是从1-开始数的"><a href="#任意多个字符组成的子序列叫子串，包含子串的串叫主串，某个字符在该串中的位置是从1-开始数的" class="headerlink" title="任意多个字符组成的子序列叫子串，包含子串的串叫主串，某个字符在该串中的位置是从1 开始数的"></a>任意多个字符组成的子序列叫子串，包含子串的串叫主串，某个字符在该串中的位置是从1 开始数的</h2><h2 id="串的逻辑结构和线性表极为相似，区别在于串的数据结构限定为字符集，在基本操作上，线性表主要对单个元素进行增删改查插入等，而串通常以子串为单位进行增删改查"><a href="#串的逻辑结构和线性表极为相似，区别在于串的数据结构限定为字符集，在基本操作上，线性表主要对单个元素进行增删改查插入等，而串通常以子串为单位进行增删改查" class="headerlink" title="串的逻辑结构和线性表极为相似，区别在于串的数据结构限定为字符集，在基本操作上，线性表主要对单个元素进行增删改查插入等，而串通常以子串为单位进行增删改查"></a>串的逻辑结构和线性表极为相似，区别在于串的数据结构限定为字符集，在基本操作上，线性表主要对单个元素进行增删改查插入等，而串通常以子串为单位进行增删改查</h2><h2 id="char类型在C中占用一个B"><a href="#char类型在C中占用一个B" class="headerlink" title="char类型在C中占用一个B"></a>char类型在C中占用一个B</h2><h2 id="基本操作-定位子串-、比较子串"><a href="#基本操作-定位子串-、比较子串" class="headerlink" title="基本操作: 定位子串 、比较子串"></a>基本操作: 定位子串 、比较子串</h2><h2 id="模式匹配-输入一个模式串，在主串中找该模式串的位置"><a href="#模式匹配-输入一个模式串，在主串中找该模式串的位置" class="headerlink" title="模式匹配 输入一个模式串，在主串中找该模式串的位置"></a>模式匹配 输入一个模式串，在主串中找该模式串的位置</h2><h3 id="方法一-暴力匹配：-双层循环，外层循环i遍历长度为n的字符串，内层循环-j-匹配从i位序起始的长度为m的字符串是否与模式串相等-时间复杂度-O-m-n"><a href="#方法一-暴力匹配：-双层循环，外层循环i遍历长度为n的字符串，内层循环-j-匹配从i位序起始的长度为m的字符串是否与模式串相等-时间复杂度-O-m-n" class="headerlink" title="方法一 暴力匹配： 双层循环，外层循环i遍历长度为n的字符串，内层循环 j 匹配从i位序起始的长度为m的字符串是否与模式串相等 时间复杂度 O(m*n)"></a>方法一 暴力匹配： 双层循环，外层循环i遍历长度为n的字符串，内层循环 j 匹配从i位序起始的长度为m的字符串是否与模式串相等 时间复杂度 O(m*n)</h3><h3 id="方法二-KMP算法：遍历主串，当发生匹配失败的时候，充分利用已经匹配成功的字符，设置next数组，表示当该位置的字符匹配失败时，模式串的j回退至一个位置，继续匹配-如图所示。详细看书，时间复杂度为O-n-m"><a href="#方法二-KMP算法：遍历主串，当发生匹配失败的时候，充分利用已经匹配成功的字符，设置next数组，表示当该位置的字符匹配失败时，模式串的j回退至一个位置，继续匹配-如图所示。详细看书，时间复杂度为O-n-m" class="headerlink" title="方法二 KMP算法：遍历主串，当发生匹配失败的时候，充分利用已经匹配成功的字符，设置next数组，表示当该位置的字符匹配失败时，模式串的j回退至一个位置，继续匹配 如图所示。详细看书，时间复杂度为O(n+m)"></a>方法二 KMP算法：遍历主串，当发生匹配失败的时候，充分利用已经匹配成功的字符，设置next数组，表示当该位置的字符匹配失败时，模式串的j回退至一个位置，继续匹配 如图所示。详细看书，时间复杂度为O(n+m)</h3><p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image010.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<p>·    next数组的求法，我们规定next数组长度比模式串长1，然后0序号不用，置为-1，next[i] 表示当第i个字符发生匹配失败时，我们就找最长相等前后缀，next[i] &#x3D; 长度，例如第一个字符匹配失败，模式串置为0，然后两个指针（主串不变，而模式串指向0）同时++（向后），向后匹配。除掉第一个以外，后面的都是找最长前缀，找不到就回退到1，如果1和那个匹配不了的话就会自动i不变，j回退到0，i++，j++ 考研KMP要求是next【0】 &#x3D; -1 然后整体相等的前缀和加一</p>
+<h1 id="树和二叉树"><a href="#树和二叉树" class="headerlink" title="树和二叉树"></a>树和二叉树</h1><h2 id="树：适合用于表示具有层次结构的数据结构-（在这里定义根节点为第一层，所涉及的计算方法都是以此为根据，如果有其他定义则自行调整）"><a href="#树：适合用于表示具有层次结构的数据结构-（在这里定义根节点为第一层，所涉及的计算方法都是以此为根据，如果有其他定义则自行调整）" class="headerlink" title="树：适合用于表示具有层次结构的数据结构 （在这里定义根节点为第一层，所涉及的计算方法都是以此为根据，如果有其他定义则自行调整）"></a>树：适合用于表示具有层次结构的数据结构 （在这里定义根节点为第一层，所涉及的计算方法都是以此为根据，如果有其他定义则自行调整）</h2><h3 id="树的一个结点的孩子个数称为结点的度，树中结点的最大度数称为树的度。度大于0-的结点叫分支结点，度等于0-的结点叫叶子结点。"><a href="#树的一个结点的孩子个数称为结点的度，树中结点的最大度数称为树的度。度大于0-的结点叫分支结点，度等于0-的结点叫叶子结点。" class="headerlink" title="树的一个结点的孩子个数称为结点的度，树中结点的最大度数称为树的度。度大于0 的结点叫分支结点，度等于0 的结点叫叶子结点。"></a>树的一个结点的孩子个数称为结点的度，树中结点的最大度数称为树的度。度大于0 的结点叫分支结点，度等于0 的结点叫叶子结点。</h3><h3 id="树的层次、高度和深度：层次从根节点开始定义，根节点为第一层（也可以为第0层）深度从根节点自顶向下逐层累加的结点的高度是从叶节点开始自底向上逐层累加的树的高度是树中结点最大的层数"><a href="#树的层次、高度和深度：层次从根节点开始定义，根节点为第一层（也可以为第0层）深度从根节点自顶向下逐层累加的结点的高度是从叶节点开始自底向上逐层累加的树的高度是树中结点最大的层数" class="headerlink" title="树的层次、高度和深度：层次从根节点开始定义，根节点为第一层（也可以为第0层）深度从根节点自顶向下逐层累加的结点的高度是从叶节点开始自底向上逐层累加的树的高度是树中结点最大的层数"></a>树的层次、高度和深度：层次从根节点开始定义，根节点为第一层（也可以为第0层）深度从根节点自顶向下逐层累加的结点的高度是从叶节点开始自底向上逐层累加的树的高度是树中结点最大的层数</h3><h3 id="树的性质："><a href="#树的性质：" class="headerlink" title="树的性质："></a>树的性质：</h3><p>·    子主题 1</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image012.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<p>·    子主题 2</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image014.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<p>·    子主题 3</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image016.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<p>·    子主题 4</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image018.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<p>·    子主题 5</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image020.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<p>·    子主题 6</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image022.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<h3 id="计算公式汇总"><a href="#计算公式汇总" class="headerlink" title="计算公式汇总"></a>计算公式汇总</h3><p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image024.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><h3 id="定义：若二叉树用链表来定义：-L-val-R-那么n个结点的二叉树就有-2n-个指针域，因为除根结点外，每个结点都有一条边从双亲结点出发，那么就有-n-1-个指针域，有-2n-n-1-x3D-n-1-个空指针域"><a href="#定义：若二叉树用链表来定义：-L-val-R-那么n个结点的二叉树就有-2n-个指针域，因为除根结点外，每个结点都有一条边从双亲结点出发，那么就有-n-1-个指针域，有-2n-n-1-x3D-n-1-个空指针域" class="headerlink" title="定义：若二叉树用链表来定义：{L , val , R} 那么n个结点的二叉树就有 2n 个指针域，因为除根结点外，每个结点都有一条边从双亲结点出发，那么就有 n-1 个指针域，有   2n-(n-1) &#x3D; n+1 个空指针域"></a>定义：若二叉树用链表来定义：{L , val , R} 那么n个结点的二叉树就有 2n 个指针域，因为除根结点外，每个结点都有一条边从双亲结点出发，那么就有 n-1 个指针域，有   2n-(n-1) &#x3D; n+1 个空指针域</h3><h3 id="二叉树的遍历："><a href="#二叉树的遍历：" class="headerlink" title="二叉树的遍历："></a>二叉树的遍历：</h3><p>·    先序遍历： 根左右中序遍历： 左根右后序遍历： 左右根– 可以看出，对于根节点来说，变换了位置。如果出题时，给出 中序遍历 …a..b.. 后序或者先序遍历它们反了位置，就根据宏观上的遍历顺序，可以判断出，它们的大致位置！！！– 对于有一种情况：先序遍历的顺序和后序遍历的顺序刚好相反，从宏观上分析：要使得它们的顺序刚刚好相反，那么就要舍去 左子树或者右子树得到：根左 | 左根 和 根右 | 右根。在舍去根节点的左&#x2F;右子树后，还要进一步规定：不能同时拥有左右子树。A-B-C 后续遍历BCA会因为左右子树相对位置保持不变，这样就不能得到相反的序列！最后说结论：这棵二叉树是一个链，每一层上只有一个结点。</p>
+<h3 id="几种特殊的二叉树"><a href="#几种特殊的二叉树" class="headerlink" title="几种特殊的二叉树"></a>几种特殊的二叉树</h3><p>·    1. 满二叉树：一颗高度为 h 且含有2^k-1 个结点的二叉树称为满二叉树，即：每层都含有最多的结点，满二叉树的叶子结点都集中在最下面一层。若对满二叉树进行编号，从左至右从上至下，则：对编号为 i 的结点，若有双亲，双亲结点为 i&#x2F;2 向下取整。若这个结点有左右孩子，左孩子：2<em>i，右孩子：2</em>i+1</p>
+<p>·    2. 完全二叉树：在满二叉树的基础上（每个结点的编号都与满二叉树对应），结点优先从左向右排</p>
+<p>·    3. 二叉排序树：左子树结点的值 都小于根节点，右子树结点的值都大于根节点</p>
+<p>·    4. 平衡二叉树：左子树的深度和右子树的深度之差不超过1</p>
+<p>·    5. 线索二叉树： 对于二叉树的遍历序列来说： 若要从中序遍历中选取一个结点，从该节点继续遍历二叉树(或再找后继结点)，就不能实现（暴力时间复杂度非常高），于是我们就将二叉树中的空指针使用起来，一个结点的左空指针指向其前驱（中序遍历的序列中的前驱节点）结点，右空指针指向其后继结点（同上）。这样要访问一个结点的后继结点就只需要访问它的右指针。（此处暂且不讨论没有后继指针的结点）</p>
+<p>•   原二叉树</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image026.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<p>•   线索化 线索化后为了区别指向的是孩子还是前驱&#x2F;后继 修改结点的结构： { left ,int l_pointer ,val ,int r_pointer ,right}</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image028.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<p>•   二叉树线索化的思路：以中序线索化举例：中序遍历的代码框架是 ：</p>
+<h3 id="二叉树性质汇总"><a href="#二叉树性质汇总" class="headerlink" title="二叉树性质汇总"></a>二叉树性质汇总</h3><p>·    二叉树的计算：</p>
+<p>•   1. 通用计算公式： 二叉树的结点个数 n &#x3D; n0 + n1 + n2 (度为k的结点的个数之和)二叉树的结点个数 n &#x3D; 0 * n0 + 1<em>n1+ 2</em>n2 + 1;（度数之和+1）&#x3D;&gt; n0 &#x3D; n2 + 1 二叉树的结点 n ：n &#x3D; n0+n1+n2. 根据上面可知：n0 和 n2 其中有一个为奇数，另一个是偶数，这样就能确定n1 是奇数还是偶数。 如果n为奇数 — n1 偶数。如果n为偶数 — n1 奇数 。</p>
+<p>•   有n个结点的二叉树：高度– 2^h -1 &#x3D; n &#x3D;&#x3D;&gt; h &#x3D; ┍log(n+1)┑ 向上取整高度为h的二叉树：最多有： 2^h -1 个结点</p>
+<h2 id="树、二叉树、森林的转换"><a href="#树、二叉树、森林的转换" class="headerlink" title="树、二叉树、森林的转换"></a>树、二叉树、森林的转换</h2><p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image030.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<h3 id="树转换成二叉树：保留结点的左指针指向第一个子结点，将子节点（右指针）从左到右依次将兄弟结点相连。"><a href="#树转换成二叉树：保留结点的左指针指向第一个子结点，将子节点（右指针）从左到右依次将兄弟结点相连。" class="headerlink" title="树转换成二叉树：保留结点的左指针指向第一个子结点，将子节点（右指针）从左到右依次将兄弟结点相连。"></a>树转换成二叉树：保留结点的左指针指向第一个子结点，将子节点（右指针）从左到右依次将兄弟结点相连。</h3><h3 id="由于根节点没有兄弟节点，因此根节点的右指针为空，把若干个根结点为空的二叉树连接右指针得到一个新的树，就叫森林。"><a href="#由于根节点没有兄弟节点，因此根节点的右指针为空，把若干个根结点为空的二叉树连接右指针得到一个新的树，就叫森林。" class="headerlink" title="由于根节点没有兄弟节点，因此根节点的右指针为空，把若干个根结点为空的二叉树连接右指针得到一个新的树，就叫森林。"></a>由于根节点没有兄弟节点，因此根节点的右指针为空，把若干个根结点为空的二叉树连接右指针得到一个新的树，就叫森林。</h3><h3 id="同理将森林从右子树拆开就得到了二叉树"><a href="#同理将森林从右子树拆开就得到了二叉树" class="headerlink" title="同理将森林从右子树拆开就得到了二叉树"></a>同理将森林从右子树拆开就得到了二叉树</h3><h2 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h2><h3 id="是一种简单的集合，支持：-并（将所属不同类别的集合并成一个集合）-查（查找当前元素的所在集合的根节点）。"><a href="#是一种简单的集合，支持：-并（将所属不同类别的集合并成一个集合）-查（查找当前元素的所在集合的根节点）。" class="headerlink" title="是一种简单的集合，支持： 并（将所属不同类别的集合并成一个集合） 查（查找当前元素的所在集合的根节点）。"></a>是一种简单的集合，支持： 并（将所属不同类别的集合并成一个集合） 查（查找当前元素的所在集合的根节点）。</h3><h3 id="初始化：-一个数组FA用来表示当前结点指向的父节点的下标。FA-i-表示i号元素的父亲结点的下标。置FA所有元素的父结点为-1，表示是自己查找：-一直FA-i-不为-1（当前还没找到根节点，就让-i-x3D-FA-i-）-继续判断FA-i-可以循环也可以递归。此处可以优化：（路径压缩）对于一棵链状的树来说，我们最坏情况时间复杂度为O-n-从底到顶。如果我们能将树的底部查找根结点时，路径上的所有结点都直接指向根节点，这样下次查找时就只需要O-1-合并：-将两个结点合并到一个集合，首先找到-i和j-的祖先节点。将祖先结点合并-FA-i-fa-x3D-j-fa-此处有优化步骤：将根节点的初始值-1-设置成它的高度，这样就能在合并时通过比较-FA-i-fa-和-FA-j-fa-的绝对值大小，将小树合并到大树中，保证树的高度不会增长。该方法构造的树高度不超过-floor-log-n-1-那么在查找的时候-find的时间复杂度为-O-log-n-级别的"><a href="#初始化：-一个数组FA用来表示当前结点指向的父节点的下标。FA-i-表示i号元素的父亲结点的下标。置FA所有元素的父结点为-1，表示是自己查找：-一直FA-i-不为-1（当前还没找到根节点，就让-i-x3D-FA-i-）-继续判断FA-i-可以循环也可以递归。此处可以优化：（路径压缩）对于一棵链状的树来说，我们最坏情况时间复杂度为O-n-从底到顶。如果我们能将树的底部查找根结点时，路径上的所有结点都直接指向根节点，这样下次查找时就只需要O-1-合并：-将两个结点合并到一个集合，首先找到-i和j-的祖先节点。将祖先结点合并-FA-i-fa-x3D-j-fa-此处有优化步骤：将根节点的初始值-1-设置成它的高度，这样就能在合并时通过比较-FA-i-fa-和-FA-j-fa-的绝对值大小，将小树合并到大树中，保证树的高度不会增长。该方法构造的树高度不超过-floor-log-n-1-那么在查找的时候-find的时间复杂度为-O-log-n-级别的" class="headerlink" title="初始化： 一个数组FA用来表示当前结点指向的父节点的下标。FA[i] 表示i号元素的父亲结点的下标。置FA所有元素的父结点为-1，表示是自己查找： 一直FA[i] 不为-1（当前还没找到根节点，就让 i&#x3D; FA[i]） 继续判断FA[i]. ) 可以循环也可以递归。此处可以优化：（路径压缩）对于一棵链状的树来说，我们最坏情况时间复杂度为O(n) 从底到顶。如果我们能将树的底部查找根结点时，路径上的所有结点都直接指向根节点，这样下次查找时就只需要O(1) 合并： 将两个结点合并到一个集合，首先找到 i和j 的祖先节点。将祖先结点合并 FA[i_fa] &#x3D; j_fa; 此处有优化步骤：将根节点的初始值-1 设置成它的高度，这样就能在合并时通过比较 FA[i_fa] 和 FA[j_fa] 的绝对值大小，将小树合并到大树中，保证树的高度不会增长。该方法构造的树高度不超过 floor_(log n) +1 ,那么在查找的时候 find的时间复杂度为 O( log n )级别的"></a>初始化： 一个数组FA用来表示当前结点指向的父节点的下标。FA[i] 表示i号元素的父亲结点的下标。置FA所有元素的父结点为-1，表示是自己查找： 一直FA[i] 不为-1（当前还没找到根节点，就让 i&#x3D; FA[i]） 继续判断FA[i]. ) 可以循环也可以递归。此处可以优化：（路径压缩）对于一棵链状的树来说，我们最坏情况时间复杂度为O(n) 从底到顶。如果我们能将树的底部查找根结点时，路径上的所有结点都直接指向根节点，这样下次查找时就只需要O(1) 合并： 将两个结点合并到一个集合，首先找到 i和j 的祖先节点。将祖先结点合并 FA[i_fa] &#x3D; j_fa; 此处有优化步骤：将根节点的初始值-1 设置成它的高度，这样就能在合并时通过比较 FA[i_fa] 和 FA[j_fa] 的绝对值大小，将小树合并到大树中，保证树的高度不会增长。该方法构造的树高度不超过 floor_(log n) +1 ,那么在查找的时候 find的时间复杂度为 O( log n )级别的</h3><p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image032.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<p>·    查找优化：</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image034.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<p>•   时间复杂度可以看作O(1)</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image036.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<p>·    合并优化</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image038.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<h1 id="图"><a href="#图" class="headerlink" title="图"></a>图</h1><h2 id="图由边集-E-和顶点集-V构成，顶点的个数也叫图的阶"><a href="#图由边集-E-和顶点集-V构成，顶点的个数也叫图的阶" class="headerlink" title="图由边集 E 和顶点集 V构成，顶点的个数也叫图的阶"></a>图由边集 E 和顶点集 V构成，顶点的个数也叫图的阶</h2><h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h2><h3 id="无向图"><a href="#无向图" class="headerlink" title="无向图"></a>无向图</h3><p>·    （v,w） &#x3D; （w,v）</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image040.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<p>·    顶点的度： 顶点的边的个数，一条边产生2个度</p>
+<p>·    路径</p>
+<p>·    环</p>
+<h3 id="有向图"><a href="#有向图" class="headerlink" title="有向图"></a>有向图</h3><p>·    &lt;v,w&gt; 表示一条边（弧），由v指向w，v称为弧尾，w称为弧头，也称为 v邻接到w，w邻接自v</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image042.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<p>·    入度和出度： 出度 发射出去 O –&gt;  入度 接收进来 O&lt;–</p>
+<h2 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h2><h3 id="相邻关系：两个顶点之间存在一条边，则表示两个顶点具有相邻关系"><a href="#相邻关系：两个顶点之间存在一条边，则表示两个顶点具有相邻关系" class="headerlink" title="相邻关系：两个顶点之间存在一条边，则表示两个顶点具有相邻关系"></a>相邻关系：两个顶点之间存在一条边，则表示两个顶点具有相邻关系</h3><h3 id="路径：相邻顶点序偶所构成的序列"><a href="#路径：相邻顶点序偶所构成的序列" class="headerlink" title="路径：相邻顶点序偶所构成的序列"></a>路径：相邻顶点序偶所构成的序列</h3><h3 id="简单路径：在路径序列中，顶点不重复出现的路径称为简单路径。"><a href="#简单路径：在路径序列中，顶点不重复出现的路径称为简单路径。" class="headerlink" title="简单路径：在路径序列中，顶点不重复出现的路径称为简单路径。"></a>简单路径：在路径序列中，顶点不重复出现的路径称为简单路径。</h3><h3 id="环-x2F-回路-若一条路径中第一个顶点和最后一个顶点相同，则为回路"><a href="#环-x2F-回路-若一条路径中第一个顶点和最后一个顶点相同，则为回路" class="headerlink" title="环 &#x2F; 回路: 若一条路径中第一个顶点和最后一个顶点相同，则为回路"></a>环 &#x2F; 回路: 若一条路径中第一个顶点和最后一个顶点相同，则为回路</h3><h3 id="简单回路：除第一个顶点和最后一个顶点外，其余顶点不重复出现的回路称为简单回路。"><a href="#简单回路：除第一个顶点和最后一个顶点外，其余顶点不重复出现的回路称为简单回路。" class="headerlink" title="简单回路：除第一个顶点和最后一个顶点外，其余顶点不重复出现的回路称为简单回路。"></a>简单回路：除第一个顶点和最后一个顶点外，其余顶点不重复出现的回路称为简单回路。</h3><h3 id="路径长度：路径上-边的条数，无法到达则路径长度为-∞"><a href="#路径长度：路径上-边的条数，无法到达则路径长度为-∞" class="headerlink" title="路径长度：路径上 边的条数，无法到达则路径长度为 ∞"></a>路径长度：路径上 边的条数，无法到达则路径长度为 ∞</h3><h3 id="连通：-无向图中，两点-v与w之间有路径，则称v和w连通"><a href="#连通：-无向图中，两点-v与w之间有路径，则称v和w连通" class="headerlink" title="连通： 无向图中，两点 v与w之间有路径，则称v和w连通"></a>连通： 无向图中，两点 v与w之间有路径，则称v和w连通</h3><h3 id="连通图：-任意两点之间都存在路径都可达，非连通图的极大连通子图称为连通分量"><a href="#连通图：-任意两点之间都存在路径都可达，非连通图的极大连通子图称为连通分量" class="headerlink" title="连通图： 任意两点之间都存在路径都可达，非连通图的极大连通子图称为连通分量"></a>连通图： 任意两点之间都存在路径都可达，非连通图的极大连通子图称为连通分量</h3><h3 id="强连通：在有向图中，既有从w到v的路径-w–-gt-v-，也有v到w的路径-v–-gt-w，则称-v和w强连通"><a href="#强连通：在有向图中，既有从w到v的路径-w–-gt-v-，也有v到w的路径-v–-gt-w，则称-v和w强连通" class="headerlink" title="强连通：在有向图中，既有从w到v的路径 w–&gt;v ，也有v到w的路径 v–&gt;w，则称 v和w强连通"></a>强连通：在有向图中，既有从w到v的路径 w–&gt;v ，也有v到w的路径 v–&gt;w，则称 v和w强连通</h3><h3 id="强连通图：-任意两点之间-v-和w-之间都有-v到w的路径也有w到v-的路径-有路径但不一定相邻，所以说这里和完全图有所区别"><a href="#强连通图：-任意两点之间-v-和w-之间都有-v到w的路径也有w到v-的路径-有路径但不一定相邻，所以说这里和完全图有所区别" class="headerlink" title="强连通图： 任意两点之间 v 和w 之间都有 v到w的路径也有w到v 的路径 (有路径但不一定相邻，所以说这里和完全图有所区别)"></a>强连通图： 任意两点之间 v 和w 之间都有 v到w的路径也有w到v 的路径 (有路径但不一定相邻，所以说这里和完全图有所区别)</h3><p>·    强连通图 ：至少有n条边 （形成环路）</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image044.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<h3 id="完全图：-任意两个顶点之间都有边！有向完全图则是任意两个顶点之间存在方向相反的两条弧"><a href="#完全图：-任意两个顶点之间都有边！有向完全图则是任意两个顶点之间存在方向相反的两条弧" class="headerlink" title="完全图： 任意两个顶点之间都有边！有向完全图则是任意两个顶点之间存在方向相反的两条弧"></a>完全图： 任意两个顶点之间都有边！有向完全图则是任意两个顶点之间存在方向相反的两条弧</h3><p>·    完全无向图：有n（n-1）&#x2F;2条边（图中每个顶点和其余n-1个顶点都有边相连）的无向图为无向完全图</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image046.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<p>·    完全有向图：有n（n-1）条边（图中每个顶点和其余n-1个顶点都有弧相连）的有向图为有向完全图。有向完全图一定是强连通图，但是强连通图不一定是完全图</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image048.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<h3 id="生成树，生成森林：由图中所有的顶点构成的无回路的连通图。每个连通分量都可生成树，组成森林。"><a href="#生成树，生成森林：由图中所有的顶点构成的无回路的连通图。每个连通分量都可生成树，组成森林。" class="headerlink" title="生成树，生成森林：由图中所有的顶点构成的无回路的连通图。每个连通分量都可生成树，组成森林。"></a>生成树，生成森林：由图中所有的顶点构成的无回路的连通图。每个连通分量都可生成树，组成森林。</h3><h3 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h3><p>·    连通图和连通分量是针对无向图的</p>
+<p>·    强连通图和强连通分量是针对有向图的</p>
+<h2 id="常考计算："><a href="#常考计算：" class="headerlink" title="常考计算："></a>常考计算：</h2><h3 id="对于n个顶点的无向图G：若G是连通图，则最少有n-1条边-（所有的顶点都与一个顶点相连通）若G是非连通图，则最多可能有-↓-n-1-n-2-x2F-2-条边（n-1-个顶点两两连通，剩余一个顶点不可达）"><a href="#对于n个顶点的无向图G：若G是连通图，则最少有n-1条边-（所有的顶点都与一个顶点相连通）若G是非连通图，则最多可能有-↓-n-1-n-2-x2F-2-条边（n-1-个顶点两两连通，剩余一个顶点不可达）" class="headerlink" title="对于n个顶点的无向图G：若G是连通图，则最少有n-1条边 （所有的顶点都与一个顶点相连通）若G是非连通图，则最多可能有 ↓(n-1)*(n-2)&#x2F;2 条边（n-1 个顶点两两连通，剩余一个顶点不可达）"></a>对于n个顶点的无向图G：若G是连通图，则最少有n-1条边 （所有的顶点都与一个顶点相连通）若G是非连通图，则最多可能有 ↓(n-1)*(n-2)&#x2F;2 条边（n-1 个顶点两两连通，剩余一个顶点不可达）</h3><p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image050.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<h2 id="存储方式："><a href="#存储方式：" class="headerlink" title="存储方式："></a>存储方式：</h2><h3 id="邻接矩阵法：1-对于无向图来说就是沿着对角线对称的（没有方向）2-对于有向图来说，（i-j）有值就表示一条弧-a–-gt-b-3-建议对邻接矩阵进行压缩，用一维的数组来存储：第一行只保存-0-0-第二行保存-1-0-1-1-依次向下保存…4-因为这种保存方法浪费了很多内存，空间复杂度也高，适合用于保存稠密图（e-gt-n-log-n）"><a href="#邻接矩阵法：1-对于无向图来说就是沿着对角线对称的（没有方向）2-对于有向图来说，（i-j）有值就表示一条弧-a–-gt-b-3-建议对邻接矩阵进行压缩，用一维的数组来存储：第一行只保存-0-0-第二行保存-1-0-1-1-依次向下保存…4-因为这种保存方法浪费了很多内存，空间复杂度也高，适合用于保存稠密图（e-gt-n-log-n）" class="headerlink" title="邻接矩阵法：1. 对于无向图来说就是沿着对角线对称的（没有方向）2. 对于有向图来说，（i,j）有值就表示一条弧 a–&gt;b 3. 建议对邻接矩阵进行压缩，用一维的数组来存储：第一行只保存 (0,0) 第二行保存 (1,0) (1,1) 依次向下保存…4. 因为这种保存方法浪费了很多内存，空间复杂度也高，适合用于保存稠密图（e &gt; n log n）"></a>邻接矩阵法：1. 对于无向图来说就是沿着对角线对称的（没有方向）2. 对于有向图来说，（i,j）有值就表示一条弧 a–&gt;b 3. 建议对邻接矩阵进行压缩，用一维的数组来存储：第一行只保存 (0,0) 第二行保存 (1,0) (1,1) 依次向下保存…4. 因为这种保存方法浪费了很多内存，空间复杂度也高，适合用于保存稠密图（e &gt; n log n）</h3><p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image052.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<p>·    无向图中第 i 行 表示结点i的度</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image054.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<p>·    有向图第i行中有值的个数表示结点i的出度有向图的邻接矩阵可能是不对称的顶点的出度&#x3D;第i行元素之和顶点的入度&#x3D;第i列元素之和顶点的度&#x3D;第i行元素之和+第i列元素之和</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image056.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<p>·    压缩后的变换</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image058.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<h3 id="邻接表法：邻接矩阵和邻接表都是保存-结点和边之间的关系，而邻接矩阵则是枚举出所有可能的边，无论当前是否存在，而邻接表则是设置一个数组-顶点表-保存结点信息，然后结点后边跟着一个链表-边表-，用于保存边（该结点和哪些结点相连-记录值为那个结点的下标），通过遍历后面的链表就能得到该结点与哪些结点具有邻接关系。对于有向图而言：链表保存的内容是该结点作为弧尾所指向的边（出度）。"><a href="#邻接表法：邻接矩阵和邻接表都是保存-结点和边之间的关系，而邻接矩阵则是枚举出所有可能的边，无论当前是否存在，而邻接表则是设置一个数组-顶点表-保存结点信息，然后结点后边跟着一个链表-边表-，用于保存边（该结点和哪些结点相连-记录值为那个结点的下标），通过遍历后面的链表就能得到该结点与哪些结点具有邻接关系。对于有向图而言：链表保存的内容是该结点作为弧尾所指向的边（出度）。" class="headerlink" title="邻接表法：邻接矩阵和邻接表都是保存 结点和边之间的关系，而邻接矩阵则是枚举出所有可能的边，无论当前是否存在，而邻接表则是设置一个数组(顶点表)保存结点信息，然后结点后边跟着一个链表(边表)，用于保存边（该结点和哪些结点相连 记录值为那个结点的下标），通过遍历后面的链表就能得到该结点与哪些结点具有邻接关系。对于有向图而言：链表保存的内容是该结点作为弧尾所指向的边（出度）。"></a>邻接表法：邻接矩阵和邻接表都是保存 结点和边之间的关系，而邻接矩阵则是枚举出所有可能的边，无论当前是否存在，而邻接表则是设置一个数组(顶点表)保存结点信息，然后结点后边跟着一个链表(边表)，用于保存边（该结点和哪些结点相连 记录值为那个结点的下标），通过遍历后面的链表就能得到该结点与哪些结点具有邻接关系。对于有向图而言：链表保存的内容是该结点作为弧尾所指向的边（出度）。</h3><p>·    无向图邻接表存储法 空间复杂度为 O（n+2e）</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image060.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<p>·    有向图邻接表存储法，保存的是出度信息，也可以保存入度信息（逆邻接表）！ 空间复杂度为 O（n+e）</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image062.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<h3 id="–掌握–邻接表法与邻接矩阵对比："><a href="#–掌握–邻接表法与邻接矩阵对比：" class="headerlink" title="–掌握–邻接表法与邻接矩阵对比："></a>–掌握–邻接表法与邻接矩阵对比：</h3><p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image064.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<h3 id="十字链表（只能用于存储有向图）-空间复杂度-O-V-E"><a href="#十字链表（只能用于存储有向图）-空间复杂度-O-V-E" class="headerlink" title="十字链表（只能用于存储有向图） 空间复杂度 O(|V|+|E|)"></a>十字链表（只能用于存储有向图） 空间复杂度 O(|V|+|E|)</h3><p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image066.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<h3 id="邻接多重表（只能用于存储无向图）：原理也是模仿十字链表，抽象出结点和边的数据结构，通过指针连接左右两个顶点，空间复杂度也是O-V-E"><a href="#邻接多重表（只能用于存储无向图）：原理也是模仿十字链表，抽象出结点和边的数据结构，通过指针连接左右两个顶点，空间复杂度也是O-V-E" class="headerlink" title="邻接多重表（只能用于存储无向图）：原理也是模仿十字链表，抽象出结点和边的数据结构，通过指针连接左右两个顶点，空间复杂度也是O(|V|+|E|)"></a>邻接多重表（只能用于存储无向图）：原理也是模仿十字链表，抽象出结点和边的数据结构，通过指针连接左右两个顶点，空间复杂度也是O(|V|+|E|)</h3><p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image068.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<h3 id="做了解，不会让你手写代码的"><a href="#做了解，不会让你手写代码的" class="headerlink" title="做了解，不会让你手写代码的"></a>做了解，不会让你手写代码的</h3><h2 id="图的遍历"><a href="#图的遍历" class="headerlink" title="图的遍历"></a>图的遍历</h2><h3 id="广度优先BFS-用队列扩展更多的邻接的点"><a href="#广度优先BFS-用队列扩展更多的邻接的点" class="headerlink" title="广度优先BFS 用队列扩展更多的邻接的点"></a>广度优先BFS 用队列扩展更多的邻接的点</h3><p>·    代码思路： 1. 访问时，先将第一个结点入队，出队结点，将它的–&gt; B,B入队。只要队列不为空就一直出队，访问，将它的邻接结点入队。2. 如果正在访问的结点已经被访问过了，那么就跳过。3. 为了防止有非连通的结点，我们在BFS外面增加一个for循环，默认从i&#x3D;0开始遍历，如果此时队列中为空的话就看看顺序表中哪个结点没有被遍历，让他BFS！</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image070.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<h3 id="深度优先-访问完当前结点优先访问邻接的结点（一条路走到头再回溯）"><a href="#深度优先-访问完当前结点优先访问邻接的结点（一条路走到头再回溯）" class="headerlink" title="深度优先: 访问完当前结点优先访问邻接的结点（一条路走到头再回溯）"></a>深度优先: 访问完当前结点优先访问邻接的结点（一条路走到头再回溯）</h3><p>·    子主题 1</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image072.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<h2 id="生成树"><a href="#生成树" class="headerlink" title="生成树"></a>生成树</h2><h3 id="对于连通的无向图，如果能找到一个子图，包含所有的顶点且所有的顶点连通，只有n-1条边如果一个图本身就是一棵树，那么其最小生成树就是它本身，只有连通图才有生成树，非连通图-只有生成森林"><a href="#对于连通的无向图，如果能找到一个子图，包含所有的顶点且所有的顶点连通，只有n-1条边如果一个图本身就是一棵树，那么其最小生成树就是它本身，只有连通图才有生成树，非连通图-只有生成森林" class="headerlink" title="对于连通的无向图，如果能找到一个子图，包含所有的顶点且所有的顶点连通，只有n-1条边如果一个图本身就是一棵树，那么其最小生成树就是它本身，只有连通图才有生成树，非连通图 只有生成森林"></a>对于连通的无向图，如果能找到一个子图，包含所有的顶点且所有的顶点连通，只有n-1条边如果一个图本身就是一棵树，那么其最小生成树就是它本身，只有连通图才有生成树，非连通图 只有生成森林</h3><h3 id="生成树的算法对于带权的图要求生成一棵树其权值最小（城市修路）："><a href="#生成树的算法对于带权的图要求生成一棵树其权值最小（城市修路）：" class="headerlink" title="生成树的算法对于带权的图要求生成一棵树其权值最小（城市修路）："></a>生成树的算法对于带权的图要求生成一棵树其权值最小（城市修路）：</h3><p>·    prim：从某一点开始构建生成树，每次将代价最小的新顶点纳入生成树中直到所有顶点都纳入为止（同一个图可会有多个最小生成树，但是它们的权值都是相等的）</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image074.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<p>·    克鲁斯卡尔</p>
+<h2 id="最短路径问题："><a href="#最短路径问题：" class="headerlink" title="最短路径问题："></a>最短路径问题：</h2><h3 id="1-Floyed-算法-佛洛依德算法"><a href="#1-Floyed-算法-佛洛依德算法" class="headerlink" title="1. Floyed 算法 (佛洛依德算法)"></a>1. Floyed 算法 (佛洛依德算法)</h3><p>·    目标： 在给定一个图的情况下，求两点（A – B）之间的最短路径</p>
+<p>·    1. 存储图的方法： 邻接矩阵2. 辅助矩阵： e[k][k] 用于存储当前所有两个结点之间的最短路径，初始值为邻接矩阵的值，∞表示没有直接路径。</p>
+<p>·    算法思路： 插点法首先枚举所有的点 k，如果在 i和j 之间通过k能有更短的路径的话（e[i,j]&gt;e[i,k]+e[k,j]）,那么就修改Min矩阵中，[i , j]的值为e[i,k]+e[k,j]。</p>
+<p>·    类似于动态规划，这里是通过遍历（暴力枚举），k个顶点，依次插入邻接矩阵中的每一条边，看看是否有更优解，时间复杂度为 O(n^3)</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image076.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<h3 id="子主题-2"><a href="#子主题-2" class="headerlink" title="子主题 2"></a>子主题 2</h3><h1 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h1><h1 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h1><h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><h1 id=""><a href="#" class="headerlink" title=""></a></h1><p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image078.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+<h1 id="数据结构和对象的关系：-A门店的顾客信息之间存在先后的排队关系，因此A被称为数据结构-B门店的顾客信息和A门店的顾客信息之间没有特定的关系，它们两个合起来称为数据对象（具有相同的性质）"><a href="#数据结构和对象的关系：-A门店的顾客信息之间存在先后的排队关系，因此A被称为数据结构-B门店的顾客信息和A门店的顾客信息之间没有特定的关系，它们两个合起来称为数据对象（具有相同的性质）" class="headerlink" title="数据结构和对象的关系： A门店的顾客信息之间存在先后的排队关系，因此A被称为数据结构; B门店的顾客信息和A门店的顾客信息之间没有特定的关系，它们两个合起来称为数据对象（具有相同的性质）"></a>数据结构和对象的关系： A门店的顾客信息之间存在先后的排队关系，因此A被称为数据结构; B门店的顾客信息和A门店的顾客信息之间没有特定的关系，它们两个合起来称为数据对象（具有相同的性质）</h1><p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/clip_image080.gif" srcset="/img/loading.gif" lazyload alt="desc"></p>
+</blockquote>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/">#思维导图</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>MindmapTest</div>
+      <div>http://blog.codingxiaofu.com/2023/05/23/MindmapTest/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Juncheng</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年5月23日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/05/22/%E8%8B%B1%E8%AF%AD%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/" title="英语语法总结">
+                        <span class="hidden-mobile">英语语法总结</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      赣ICP备2022005946号
+    </a>
+  </span>
+  
+    
+      <span>
+        <a
+          href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=36070302361027"
+          rel="nofollow noopener"
+          class="beian-police"
+          target="_blank"
+        >
+          
+            <span style="visibility: hidden; width: 0">|</span>
+            <img src="/img/police_beian.png" srcset="/img/loading.gif" lazyload alt="police-icon"/>
+          
+          <span>赣公网安备 36070302361027号</span>
+        </a>
+      </span>
+    
+  
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
