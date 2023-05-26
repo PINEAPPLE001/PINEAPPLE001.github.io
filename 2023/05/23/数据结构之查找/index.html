@@ -16,21 +16,19 @@
   <meta name="author" content="Juncheng">
   <meta name="keywords" content="">
   
-    <meta name="description" content="数据结构之查找查找方法： 顺序查找1234567&#x2F;&#x2F;顺序查找作为最简单的查找算法，只需要一个循环遍历就能完成查找for(int i&#x3D;0;i&lt;n;i++)&amp;#123;	if(key &#x3D;&#x3D; keys[i])		return i;&amp;#125;return -1; 平均查找长度 ASL &#x3D; (1+2+3+…+n)&#x2F;n &#x3D;  O(n)  哨兵查找（顺序）哨兵查找通过对数组设置一个哨兵（目标值），通常选">
+    <meta name="description" content="数据结构之查找 查找方法：  顺序查找 1234567&#x2F;&#x2F;顺序查找作为最简单的查找算法，只需要一个循环遍历就能完成查找for(int i&#x3D;0;i&lt;n;i++)&amp;#123;	if(key &#x3D;&#x3D; keys[i])		return i;&amp;#125;return -1; 平均查找长度 ASL &#x3D; (1+2+3+...+n)&#x2F;n &#x3D; O(n) 哨兵查找（顺序） 哨兵查找通过对数组设置一个">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构之查找">
 <meta property="og:url" content="http://blog.codingxiaofu.com/2023/05/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E6%9F%A5%E6%89%BE/index.html">
 <meta property="og:site_name" content="Junchengの小站">
-<meta property="og:description" content="数据结构之查找查找方法： 顺序查找1234567&#x2F;&#x2F;顺序查找作为最简单的查找算法，只需要一个循环遍历就能完成查找for(int i&#x3D;0;i&lt;n;i++)&amp;#123;	if(key &#x3D;&#x3D; keys[i])		return i;&amp;#125;return -1; 平均查找长度 ASL &#x3D; (1+2+3+…+n)&#x2F;n &#x3D;  O(n)  哨兵查找（顺序）哨兵查找通过对数组设置一个哨兵（目标值），通常选">
+<meta property="og:description" content="数据结构之查找 查找方法：  顺序查找 1234567&#x2F;&#x2F;顺序查找作为最简单的查找算法，只需要一个循环遍历就能完成查找for(int i&#x3D;0;i&lt;n;i++)&amp;#123;	if(key &#x3D;&#x3D; keys[i])		return i;&amp;#125;return -1; 平均查找长度 ASL &#x3D; (1+2+3+...+n)&#x2F;n &#x3D; O(n) 哨兵查找（顺序） 哨兵查找通过对数组设置一个">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/%25E5%2588%2586%25E5%259D%2597%25E6%259F%25A5%25E6%2589%25BE.png">
 <meta property="article:published_time" content="2023-05-22T17:33:33.000Z">
 <meta property="article:modified_time" content="2023-05-23T02:42:32.115Z">
 <meta property="article:author" content="Juncheng">
 <meta property="article:tag" content="408">
 <meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/%25E5%2588%2586%25E5%259D%2597%25E6%259F%25A5%25E6%2589%25BE.png">
   
   
   
@@ -289,38 +287,43 @@
             
               <div class="markdown-body">
                 
-                <h1 id="数据结构之查找"><a href="#数据结构之查找" class="headerlink" title="数据结构之查找"></a>数据结构之查找</h1><h3 id="查找方法："><a href="#查找方法：" class="headerlink" title="查找方法："></a>查找方法：</h3><ol>
-<li><h4 id="顺序查找"><a href="#顺序查找" class="headerlink" title="顺序查找"></a>顺序查找</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">//顺序查找作为最简单的查找算法，只需要一个循环遍历就能完成查找</span><br><br><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)&#123;<br>	<span class="hljs-keyword">if</span>(key == keys[i])<br>		<span class="hljs-keyword">return</span> i;<br>&#125;<br><span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;<br></code></pre></td></tr></table></figure>
-<p>平均查找长度 ASL = (1+2+3+…+n)/n =  O(n)</p>
-</li>
-<li><h4 id="哨兵查找（顺序）"><a href="#哨兵查找（顺序）" class="headerlink" title="哨兵查找（顺序）"></a>哨兵查找（顺序）</h4><p>哨兵查找通过对数组设置一个哨兵（目标值），通常选用头部或尾部</p>
+                <h1 id="数据结构之查找">数据结构之查找</h1>
+<h3 id="查找方法">查找方法：</h3>
+<ol type="1">
+<li><h4 id="顺序查找">顺序查找</h4>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">//顺序查找作为最简单的查找算法，只需要一个循环遍历就能完成查找</span><br><br><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)&#123;<br>	<span class="hljs-keyword">if</span>(key == keys[i])<br>		<span class="hljs-keyword">return</span> i;<br>&#125;<br><span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;<br></code></pre></td></tr></table></figure>
+<p>平均查找长度 ASL = (1+2+3+...+n)/n = O(n)</p></li>
+<li><h4 id="哨兵查找顺序">哨兵查找（顺序）</h4>
+<p>哨兵查找通过对数组设置一个哨兵（目标值），通常选用头部或尾部</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">querySearch</span><span class="hljs-params">(<span class="hljs-type">int</span>[] arr,<span class="hljs-type">int</span> n,<span class="hljs-type">int</span> target)</span></span>&#123;<br>    arr[<span class="hljs-number">0</span>]=target; <span class="hljs-comment">//目标值存储在数组头部</span><br>	<span class="hljs-keyword">while</span>(arr[<span class="hljs-number">0</span>]!=arr[--n])<br>        <span class="hljs-keyword">continue</span>;<br>    <span class="hljs-keyword">return</span> n;<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>最终如果未成功查找，则当n=0时跳出循环。    </p>
-<p>时间复杂度O(n)</p>
-</li>
-<li><h4 id="折半查找（二分）"><a href="#折半查找（二分）" class="headerlink" title="折半查找（二分）"></a>折半查找（二分）</h4><blockquote>
-<p>二分查找使用前提是数组有序，通过有序比较中间那个数和target的大小关系，来缩小查找范围（可以理解为 一个猜数字的游戏，先猜中间值，每次没猜中就根据猜大了还是猜小了，到另一半的区间继续猜）</p>
+<p>最终如果未成功查找，则当n=0时跳出循环。</p>
+<p>时间复杂度O(n)</p></li>
+<li><h4 id="折半查找二分">折半查找（二分）</h4>
+<blockquote>
+<p>二分查找使用前提是数组有序，通过有序比较中间那个数和target的大小关系，来缩小查找范围（可以理解为
+一个猜数字的游戏，先猜中间值，每次没猜中就根据猜大了还是猜小了，到另一半的区间继续猜）</p>
 </blockquote>
-<p>1.基本使用—-查找一个数</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">binarySearch</span><span class="hljs-params">(<span class="hljs-type">int</span> * a,<span class="hljs-type">int</span> a_Size,<span class="hljs-type">int</span> target)</span></span>&#123;<br>	<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>,j = a_Size<span class="hljs-number">-1</span>;<br>	<br>	<span class="hljs-keyword">while</span>(i&lt;=j)&#123;<br>		<span class="hljs-type">int</span> mid = i+(j-i)/<span class="hljs-number">2</span>;<br>		<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;i = %d  j = %d  mid = %d \n&quot;</span>,i,j,mid);<br>		<span class="hljs-keyword">if</span>(a[mid] == target)&#123;<br>			<span class="hljs-keyword">return</span> mid+<span class="hljs-number">1</span>; <br>		&#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(a[mid]&gt;target)&#123;<span class="hljs-comment">//假设猜数字 [0-500] 先猜250 猜大了，那么下一次猜就从 [0-250) 或者 [0-249] 我们采用第一种 做判断，第二种做计算mid </span><br>			j = mid<span class="hljs-number">-1</span>;<br>			mid = i+(j-i)/<span class="hljs-number">2</span>;  <span class="hljs-comment">//取半 ， 其实等于 mid = (j+i)/2 --&gt; mid = (j-i +2i)/2 这样做是为了防止int的mid超出范围 </span><br>		&#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(a[mid]&lt;target)&#123;<span class="hljs-comment">//这个地方就是猜小了，就应该从大的部分猜了 (250-500] 或者 [251-500] 这样 i = 251 即 (mid + 1); j保持不变,mid 重新取半</span><br>			i=mid+<span class="hljs-number">1</span>;<br>			mid = i+(j-i)/<span class="hljs-number">2</span>;<br>		&#125;<br>	&#125;<br>	<span class="hljs-comment">//最后我们还要讨论猜不到的情况 （实际上我们解题的时候不一定猜的集合是所有整数，也可能是质数集中让你找偶数，</span><br>	<span class="hljs-comment">//自然是找不出来，这样一直取半就会出现i&gt;j的情况）那我们就让循环内能找到，出了循环还没找到的话就直接证明没找到 </span><br>	<span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;<br>&#125;<br>  <br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>	<span class="hljs-type">int</span> a[] = &#123;<span class="hljs-number">1</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>,<span class="hljs-number">7</span>,<span class="hljs-number">9</span>,<span class="hljs-number">23</span>,<span class="hljs-number">54</span>,<span class="hljs-number">71</span>,<span class="hljs-number">88</span>,<span class="hljs-number">94</span>&#125;;<br>	<span class="hljs-type">int</span> queryNum = <span class="hljs-number">2</span>; <br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;寻找 %d 的位置为： %d&quot;</span>,queryNum,<span class="hljs-built_in">binarySearch</span>(a,<span class="hljs-number">10</span>,queryNum)); <br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-</li>
-</ol>
-<ol>
-<li><h4 id="分块查找（顺序索引表）"><a href="#分块查找（顺序索引表）" class="headerlink" title="分块查找（顺序索引表）"></a>分块查找（顺序索引表）</h4><p>分块查找需要先建立一个索引表（类似于目录），目录中对应的每一个值映射到大的表的一个区间，这个值可以是区间中的最大值，也可以是最小值，例如要查找58， 对应的索引表为  20 |  30  |  40  |  50 |  60  | 77</p>
+<p>1.基本使用---查找一个数</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">binarySearch</span><span class="hljs-params">(<span class="hljs-type">int</span> * a,<span class="hljs-type">int</span> a_Size,<span class="hljs-type">int</span> target)</span></span>&#123;<br>	<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>,j = a_Size<span class="hljs-number">-1</span>;<br>	<br>	<span class="hljs-keyword">while</span>(i&lt;=j)&#123;<br>		<span class="hljs-type">int</span> mid = i+(j-i)/<span class="hljs-number">2</span>;<br>		<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;i = %d  j = %d  mid = %d \n&quot;</span>,i,j,mid);<br>		<span class="hljs-keyword">if</span>(a[mid] == target)&#123;<br>			<span class="hljs-keyword">return</span> mid+<span class="hljs-number">1</span>; <br>		&#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(a[mid]&gt;target)&#123;<span class="hljs-comment">//假设猜数字 [0-500] 先猜250 猜大了，那么下一次猜就从 [0-250) 或者 [0-249] 我们采用第一种 做判断，第二种做计算mid </span><br>			j = mid<span class="hljs-number">-1</span>;<br>			mid = i+(j-i)/<span class="hljs-number">2</span>;  <span class="hljs-comment">//取半 ， 其实等于 mid = (j+i)/2 --&gt; mid = (j-i +2i)/2 这样做是为了防止int的mid超出范围 </span><br>		&#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(a[mid]&lt;target)&#123;<span class="hljs-comment">//这个地方就是猜小了，就应该从大的部分猜了 (250-500] 或者 [251-500] 这样 i = 251 即 (mid + 1); j保持不变,mid 重新取半</span><br>			i=mid+<span class="hljs-number">1</span>;<br>			mid = i+(j-i)/<span class="hljs-number">2</span>;<br>		&#125;<br>	&#125;<br>	<span class="hljs-comment">//最后我们还要讨论猜不到的情况 （实际上我们解题的时候不一定猜的集合是所有整数，也可能是质数集中让你找偶数，</span><br>	<span class="hljs-comment">//自然是找不出来，这样一直取半就会出现i&gt;j的情况）那我们就让循环内能找到，出了循环还没找到的话就直接证明没找到 </span><br>	<span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;<br>&#125;<br>  <br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>	<span class="hljs-type">int</span> a[] = &#123;<span class="hljs-number">1</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>,<span class="hljs-number">7</span>,<span class="hljs-number">9</span>,<span class="hljs-number">23</span>,<span class="hljs-number">54</span>,<span class="hljs-number">71</span>,<span class="hljs-number">88</span>,<span class="hljs-number">94</span>&#125;;<br>	<span class="hljs-type">int</span> queryNum = <span class="hljs-number">2</span>; <br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;寻找 %d 的位置为： %d&quot;</span>,queryNum,<span class="hljs-built_in">binarySearch</span>(a,<span class="hljs-number">10</span>,queryNum)); <br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li><h4 id="分块查找顺序索引表">分块查找（顺序索引表）</h4>
+<p>分块查找需要先建立一个索引表（类似于目录），目录中对应的每一个值映射到大的表的一个区间，这个值可以是区间中的最大值，也可以是最小值，例如要查找58，
+对应的索引表为 20 | 30 | 40 | 50 | 60 | 77</p>
 <p>这样就能在对应的区间中查找</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">//下面是对索引表的定义：</span><br><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Data</span>&#123;<br>    <span class="hljs-type">int</span> Val;<span class="hljs-comment">//区间的最大值</span><br>    <span class="hljs-type">int</span> index;<span class="hljs-comment">//区间的起始</span><br>&#125;Data,ST;<br></code></pre></td></tr></table></figure>
-<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/%25E5%2588%2586%25E5%259D%2597%25E6%259F%25A5%25E6%2589%25BE.png" srcset="/img/loading.gif" lazyload alt="分块查找"></p>
+<figure>
+<img
+src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/%25E5%2588%2586%25E5%259D%2597%25E6%259F%25A5%25E6%2589%25BE.png" srcset="/img/loading.gif" lazyload
+alt="分块查找" />
+<figcaption aria-hidden="true">分块查找</figcaption>
+</figure>
 <p>分块查找的代码及思路：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-number">1.</span> 获取区间： <br>    顺序查找和二分查找的不同之处在于： 采用顺序查找判定条件是 Data.Val&gt;=target;<br>	采用二分查找的判定条件是：low == high；<br><br><br></code></pre></td></tr></table></figure>
-</li>
-</ol>
-<ol>
-<li><h4 id="树形查找"><a href="#树形查找" class="headerlink" title="树形查找"></a>树形查找</h4><p>二叉排序树 </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-number">1.</span> 获取区间： <br>    顺序查找和二分查找的不同之处在于： 采用顺序查找判定条件是 Data.Val&gt;=target;<br>	采用二分查找的判定条件是：low == high；<br><br><br></code></pre></td></tr></table></figure></li>
+<li><h4 id="树形查找">树形查找</h4>
+<p>二叉排序树</p>
 <p>二叉平衡树</p>
 <p>红黑树</p>
 <p>B树，B+树</p>
-<p>hash查找</p>
-</li>
+<p>hash查找</p></li>
 </ol>
 <script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
                 
