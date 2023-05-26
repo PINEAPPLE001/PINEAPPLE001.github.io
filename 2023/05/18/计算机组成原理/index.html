@@ -23,27 +23,34 @@
 <meta property="og:site_name" content="Junchengの小站">
 <meta property="og:description" content="计算机组成原理计算机的硬件结构 早期的冯诺依曼结构[1]提出存储程序的概念：指令以代码的形式事先输入到计算机的主存储器中，然后按其在存储器中的首地址执行程序的第一条指令，以后就按该程序的规定顺序执行其他指令，直至程序执行结束。即按地址访问并顺序执行指令。计算机按此原理应该有5大功能： 数据传输，数据存储，数据处理，操作控制，操作判断。 根据存储程序控制的概念，由运算器、存储器、控制器、输入设备和输">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518101825342.png">
-<meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518104058174.png">
-<meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518134156027.png">
-<meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518134750139.png">
-<meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/MAR%E5%92%8CMDR.png">
-<meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518105243971.png">
-<meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518140451902.png">
-<meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518133902906.png">
-<meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518155619055.png">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230518101825342.png">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230518104058174.png">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230518134156027.png">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230518134750139.png">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/MAR%E5%92%8CMDR.png">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230518105243971.png">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230518140451902.png">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230518133902906.png">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230518155619055.png">
 <meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230521232338388.png">
-<meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E6%95%B0%E5%88%B6%E8%BD%AC10%E8%BF%9B%E5%88%B6.png">
-<meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230520142014050.png">
-<meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230520142329220.png">
-<meta property="og:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230520142852931.png">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E5%88%B6%E8%BD%AC10%E8%BF%9B%E5%88%B6.png">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230520142014050.png">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230520142329220.png">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230520142852931.png">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230525112402101.png">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230525112707425.png">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F.png">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230526104457409.png">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/%E8%A1%A5%E7%A0%81%E7%9A%84%E8%A1%A8%E7%A4%BA%E8%8C%83%E5%9B%B4.png">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230526111931954.png">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230525101720823.png">
 <meta property="article:published_time" content="2023-05-18T08:35:24.000Z">
-<meta property="article:modified_time" content="2023-05-21T15:25:30.006Z">
+<meta property="article:modified_time" content="2023-05-26T06:30:49.205Z">
 <meta property="article:author" content="Juncheng">
 <meta property="article:tag" content="408">
 <meta property="article:tag" content="计算机组成原理">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://blog.codingxiaofu.com/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518101825342.png">
+<meta name="twitter:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230518101825342.png">
   
   
   
@@ -248,7 +255,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.3k 字
+          5.5k 字
         
       </span>
     
@@ -259,7 +266,7 @@
         
         
         
-          28 分钟
+          46 分钟
         
       </span>
     
@@ -305,17 +312,13 @@
                 <h1 id="计算机组成原理"><a href="#计算机组成原理" class="headerlink" title="计算机组成原理"></a>计算机组成原理</h1><h3 id="计算机的硬件结构"><a href="#计算机的硬件结构" class="headerlink" title="计算机的硬件结构"></a>计算机的硬件结构</h3><ol>
 <li><h4 id="早期的冯诺依曼结构-1"><a href="#早期的冯诺依曼结构-1" class="headerlink" title="早期的冯诺依曼结构[1]"></a>早期的冯诺依曼结构<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="冯诺依曼机的基本工作方式为**控制流驱动**方式,是一种 **单指令单数据流** 构型">[1]</span></a></sup></h4><p>提出存储程序的概念：指令以代码的形式<strong>事先输入到</strong>计算机的<strong>主存储器中</strong>，然后按其在存储器中的首地址执行程序的第一条指令，以后就<strong>按</strong>该程序的规定<strong>顺序执行</strong>其他<strong>指令</strong>，直至程序执行结束。<strong>即按地址访问并顺序执行指令</strong>。计算机按此原理应该有5大功能： 数据传输，数据存储，数据处理，操作控制，操作判断。</p>
 <p>根据<code>存储程序控制</code>的概念，由<strong>运算器</strong>、<strong>存储器</strong>、<strong>控制器</strong>、<strong>输入设备</strong>和<strong>输出设备</strong>五大基本部件组成，以**运算器<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="由于冯诺依曼计算机以运算器为中心，那么计算效率会降低">[2]</span></a></sup>**为中心，指令由操作码和地址码组成，指令和数据以同等地位存于存储器，可按地址寻访的计算机称为冯诺依曼计算机。</p>
-<img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518101825342.png" srcset="/img/loading.gif" lazyload class="" title="控制器器控制其他部件_数据都经由运算器">
-
-
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230518101825342.png" srcset="/img/loading.gif" lazyload alt="控制器器控制其他部件_数据都经由运算器"></p>
 </li>
-<li><h4 id="现代计算机结构体系"><a href="#现代计算机结构体系" class="headerlink" title="现代计算机结构体系"></a>现代计算机结构体系</h4><img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518104058174.png" srcset="/img/loading.gif" lazyload class="" title="img">
-
+<li><h4 id="现代计算机结构体系"><a href="#现代计算机结构体系" class="headerlink" title="现代计算机结构体系"></a>现代计算机结构体系</h4><p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230518104058174.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>数据传输无需经过运算器，可以在控制器的控制下，通过输入设备将程序存储在存储器中，再由<strong>控制器控制运算器和存储器</strong>依次执行每一个计算步骤（指令），最后，<strong>控制器控制输出器</strong>以各种方式从存储器输出计算结果</p>
 <p>特点：以存储器为中心，将运算器和控制器集成在同一个芯片上，它们在计算机中直接完成信息处理任务，合称中央处理机CPU</p>
 </li>
-<li><h4 id="五大功能部件的组成"><a href="#五大功能部件的组成" class="headerlink" title="五大功能部件的组成"></a>五大功能部件的组成</h4><h6 id="①运算器："><a href="#①运算器：" class="headerlink" title="①运算器："></a>①运算器：</h6><img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518134156027.png" srcset="/img/loading.gif" lazyload class="" title="img">
-
+<li><h4 id="五大功能部件的组成"><a href="#五大功能部件的组成" class="headerlink" title="五大功能部件的组成"></a>五大功能部件的组成</h4><h6 id="①运算器："><a href="#①运算器：" class="headerlink" title="①运算器："></a>①运算器：</h6><p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230518134156027.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>运算器由ACC(累加器)，MQ(乘商寄存器)，ALU(算术逻辑单元)，x(通用寄存器)组成</p>
 <blockquote>
 <p>其中<strong>ACC</strong>用于存储 被加数、被减数、乘数、被除数等</p>
@@ -323,10 +326,7 @@
 <p><strong>X</strong>是通用寄存器，能存放加数、减数、被乘数和除数等</p>
 <p>以上三个是寄存器，用来存放数据，<strong>ALU</strong>作为它们的老大，通过内部复杂的电路实现<strong>算术运算和逻辑运算</strong></p>
 </blockquote>
-<h6 id="②控制器："><a href="#②控制器：" class="headerlink" title="②控制器："></a>②控制器：</h6><img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518134750139.png" srcset="/img/loading.gif" lazyload class="" title="img">
-
-
-
+<h6 id="②控制器："><a href="#②控制器：" class="headerlink" title="②控制器："></a>②控制器：</h6><p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230518134750139.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>控制器由CU (控制单元)，IR (指令寄存器)， PC(程序计数器)组成</p>
 <blockquote>
 <p><strong>CU</strong> 控制单元，是控制器的核心部件；可以分析指令，给出控制信号，内部集成有复杂的电路</p>
@@ -344,19 +344,14 @@
 <p>主存储器是按照存储单元的地址寻址的，也称为按地址存取。</p>
 <p>主存储器由 MAR、MDR、存储体和时序控制逻辑构成</p>
 <p>MAR 有k位，不一定要完全使用这k位 ，比如说有MAR 有32位，MDR有8位（一个字 取 1B），2^32*8 &#x3D; 4GB ，也有可能存储器只有1GB的空间。例题: 8位的计算机用16位表示地址，则有2^16 个地址空间，不一定全用 </p>
-<img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/MAR%E5%92%8CMDR.png" srcset="/img/loading.gif" lazyload class="" title="img">
-
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/MAR%E5%92%8CMDR.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <h6 id="④输入设备-amp-amp-输出设备"><a href="#④输入设备-amp-amp-输出设备" class="headerlink" title="④输入设备 &amp;&amp; 输出设备"></a>④输入设备 &amp;&amp; 输出设备</h6><p>输入输出设备统称为I&#x2F;O设备，CPU + 主存储器 + I&#x2F;O设备构成了线代计算机的三大部。CPU和主存构成计算机的主体，称为<strong>主机</strong>或处理机。相应地把I&#x2F;O设备叫做外围设备或外部设备，简称<strong>外设</strong>。</p>
-<img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518105243971.png" srcset="/img/loading.gif" lazyload class="" title="计算机概览">
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230518105243971.png" srcset="/img/loading.gif" lazyload alt="计算机概览"></p>
 </li>
 <li><h4 id="一条指令的具体执行流程以y-x3D-a-b-c为例："><a href="#一条指令的具体执行流程以y-x3D-a-b-c为例：" class="headerlink" title="一条指令的具体执行流程以y&#x3D;a*b+c为例："></a>一条指令的具体执行流程以y&#x3D;a*b+c为例：</h4><blockquote>
-<img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518140451902.png" srcset="/img/loading.gif" lazyload class="" title="img">
-
-
-
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230518140451902.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>首先 PC 先指向第一条执行的指令的位置（0），再将这个位置给MAR 由MAR去存储体中寻找对应地址的数据，如何将该数据放到MDR中。再传到CPU中的IR，IR中的数据拆分成 操作码和地址码，CU拿到操作码，分析是什么动作–读数– 将地址码放到MAR，MAR取地址中的数据给MDR，MDR再将数据放到ACC累加器中</p>
-<img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518133902906.png" srcset="/img/loading.gif" lazyload class="" title="img">
-
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230518133902906.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>总结：<a href="#IR">指令的执行过程👆</a> PC –&gt; （MAR + MDR …）–&gt;  IR  –&gt;  CU  –&gt; 具体的执行步骤</p>
 </blockquote>
 </li>
@@ -378,7 +373,8 @@
 <p>⑤第5级为<strong>高级语言级</strong>。 </p>
 <p><em><strong>[注 : 编译汇编和解释程序统称为翻译程序]</strong></em></p>
 <p>三种级别语言的转化：有的高级语言要先编译成 汇编语言 再进一步 由汇编器编译成机器代码，也有能直接通过编译器编译成机器语言的高级语言。除了编译程序之外，还有解释程序，每读取一句就立即执行</p>
-<img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230518155619055.png" srcset="/img/loading.gif" lazyload class="" title="image-20230518155619055"></li>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230518155619055.png" srcset="/img/loading.gif" lazyload alt="image-20230518155619055"></p>
+</li>
 </ol>
 <h3 id="计算机性能指标"><a href="#计算机性能指标" class="headerlink" title="计算机性能指标"></a>计算机性能指标</h3><ol>
 <li><p>存储器的性能指标 (见 五大功能部件 — 存储器)</p>
@@ -411,24 +407,76 @@
 <hr>
 <h3 id="计算机中的数制及表示方式"><a href="#计算机中的数制及表示方式" class="headerlink" title="计算机中的数制及表示方式"></a>计算机中的数制及表示方式</h3><h4 id="基础知识："><a href="#基础知识：" class="headerlink" title="基础知识："></a>基础知识：</h4><p>r ： 基数，每个数码位所用到的不同符号的个数，r进制的基数为r。</p>
 <p><strong>2进制(Bin)</strong> r&#x3D;2 (0，1)；<strong>10进制(Dec)<strong>基数为r&#x3D;10 (0~9)；</strong>8进制</strong>基数r&#x3D;8 (0~7)；**16进制(Hex)**基数r&#x3D;16(0<del>9) A\</del>F  10个数字 6个字母) </p>
-<h4 id="数制的转换："><a href="#数制的转换：" class="headerlink" title="数制的转换："></a>数制的转换：</h4><img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E6%95%B0%E5%88%B6%E8%BD%AC10%E8%BF%9B%E5%88%B6.png" srcset="/img/loading.gif" lazyload class="" title="image-20230520140253504">
-
+<h4 id="数制的转换："><a href="#数制的转换：" class="headerlink" title="数制的转换："></a>数制的转换：</h4><p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E5%88%B6%E8%BD%AC10%E8%BF%9B%E5%88%B6.png" srcset="/img/loading.gif" lazyload alt="image-20230520140253504"></p>
 <p>2–&gt;8 ：二进制每一位只有2中可能，8进制每一位有8种可能，因此要将3位2进制用来表示一个8进制的位。</p>
 <p>8–&gt;2 : 每一位表示2进制的3位</p>
 <p>2–&gt;16: 同上，4个二进制位表示1个16进制位</p>
 <p>16–&gt;2: 每一个16进制位表示4个二进制位。</p>
 <p>10进制转2进制：</p>
-<img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230520142014050.png" srcset="/img/loading.gif" lazyload class="" title="image-20230520142014050">
-
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230520142014050.png" srcset="/img/loading.gif" lazyload alt="image-20230520142014050"></p>
 <p>10进制不断除以2，取余数就能得到从第0位开始的2进制，同理可得8进制和16进制。</p>
 <p>小数部分如下：（有的小数不能被精确表示 如0.3？？)</p>
-<img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230520142329220.png" srcset="/img/loading.gif" lazyload class="" title="image-20230520142329220">
-
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230520142329220.png" srcset="/img/loading.gif" lazyload alt="image-20230520142329220"></p>
 <p>小数部分不断乘以2，得到从第-1位开始的二进制位，同理可得8进制和16进制。</p>
-<h4 id="各种进制的书写方式"><a href="#各种进制的书写方式" class="headerlink" title="各种进制的书写方式"></a>各种进制的书写方式</h4><img src="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/image-20230520142852931.png" srcset="/img/loading.gif" lazyload class="" title="image-20230520142852931">
+<h4 id="各种进制的书写方式"><a href="#各种进制的书写方式" class="headerlink" title="各种进制的书写方式"></a>各种进制的书写方式</h4><p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230520142852931.png" srcset="/img/loading.gif" lazyload alt="image-20230520142852931"></p>
+<h4 id="计算机中数值的表示格式"><a href="#计算机中数值的表示格式" class="headerlink" title="计算机中数值的表示格式"></a>计算机中数值的表示格式</h4><p>计算机中数值分为 定点数和浮点数，没有用来表示小数点的元器件，小数点一般隐含在数中</p>
+<p><strong>定点数： 分为定点小数和定点整数</strong></p>
+<p><code>定点小数：</code></p>
+<p>小数点隐含，固定在<strong>最高数据位</strong>的左边，<strong>整数位则用于表示符号位</strong>0正 1负，用于表示纯小数 </p>
+<p>例如: + 0.001 –&gt;  0.001 | -0.001 –&gt; 1.001</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230525112402101.png" srcset="/img/loading.gif" lazyload alt="定点小数表示"></p>
+<p><code>定点整数：</code></p>
+<p>小 数点位置隐含，固定在<strong>最低位</strong>之后，<strong>最高位为符号位</strong> 0正 1负，用于表示纯整数 </p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230525112707425.png" srcset="/img/loading.gif" lazyload alt="定点整数的表示"></p>
+<p><strong>浮点数</strong>：既有整数部分也有小数部分，可以通过改变阶码来改变小数点的位置</p>
+<p>例如：计算机中的 $$(1101.011) &#x3D; (0.1101011)* 2^{100} &#x3D; 13.375$$ 阶码就是科学计数法中10的x次方中的x，阶符就是阶码的正负，数符表示数的正负，尾数一般要规格化。</p>
+<img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F.png" srcset="/img/loading.gif" lazyload alt="计算机中浮点数的存储格式" style="zoom:50%;" />
 
-<h4 id="计算机中数值的表示"><a href="#计算机中数值的表示" class="headerlink" title="计算机中数值的表示"></a>计算机中数值的表示</h4><p>计算机中数值分为 定点数和浮点数</p>
-<p>定点数： 小数点固定，</p>
+<p>表示的范围：</p>
+<p>n位<strong>无符号数</strong>的表示范围 全0 ~ 全1 ：00000000 ~ 11111111 -&gt; 0~255 &#x3D;  ( $$2^8 -1$$) </p>
+<p><strong>n+1位有符号数</strong>的表示范围：</p>
+<p>有符号整数：最高位为符号位 （0正 1负）剩余n位范围为 $$0  到 2^{n}$$ ，由此可见 有符号整数（原码）： 【1(负数)  $$2^{n}$$  到 负0; 正0 到 正 $$2^{n}$$】</p>
+<p>**n+1位有符号小数(纯小数)**：一样同上  数码部分(n位的话)全0 ： 0 ，全1： $$2^{-1}+2^{-2}+2{-3}+…+2^{-n} &#x3D; 1-2^{-n}$$  范围是同样有 正0 和负0之分 【1(负数)  $$1-2^{-n}$$  到 负0; 正0 到 正 $$1-2^{-n}$$】</p>
+<h3 id="原码、反码、补码和移码"><a href="#原码、反码、补码和移码" class="headerlink" title="原码、反码、补码和移码"></a>原码、反码、补码和移码</h3><p>原码：最高位表示符号，其余各位表示数的绝对值(正常表示)</p>
+<p>反码：对于（符号位为0）<strong>正数</strong>，反码是<strong>它本身</strong>；对于（符号位为1）<strong>负数</strong>，反码是<strong>数值位取反</strong>  【从定义可以看出，反码依旧没有解决+0 和 -0 的表示问题0,0000 &#x3D; 0；1,0000&#x3D;1,1111,其实反码是原码转化成补码的中间状态，没什么用，重点还是看下面的补码！】</p>
+<p>补码：正数（符号位为0）的补码是它本身，负数（符号位为1）的补码为反码<strong>末位+1</strong> （小数要在最后一位加1）。</p>
+<img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230526104457409.png" srcset="/img/loading.gif" lazyload alt="补码的表示方法" style="zoom:67%;" />
+
+<p>关于补码在+0 和 -0 的处理方法上的分析：补码的正0 为它本身 0,0000000，－0 的补码是：[1,0000000]_原 –&gt; [1,1111111]_反 –&gt; 末位加1 [0,00000000] (最高位符号位的进位被舍弃)。这样下来原码的1,0000 和 0,0000 的补码是一样的，那么我们就把后者作为0正数的补码是它本身，前者规定为 2^k k为数值位的位数，例如：$$1,0000000 &#x3D; -2^{7}$$，这样一来补码的范围就从原来正常的范围将其中一个重复的0给到负数最小一位如下图所示：</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/%E8%A1%A5%E7%A0%81%E7%9A%84%E8%A1%A8%E7%A4%BA%E8%8C%83%E5%9B%B4.png" srcset="/img/loading.gif" lazyload alt="补码的表示范围"></p>
+<p>同理对于小数的 1.0000000 我们规定它为-1；0.0000000 表示为0</p>
+<p>补码转换成原码的方法：负数：<strong>尾数</strong>取反再在<strong>末位</strong>+1</p>
+<p>已知x的补码，求-x的补码：符号位和数值位全部取反，然后末位+1</p>
+<p>移码： 在补码的基础上将符号位取反 且移码只能作用于整数。移码的表示范围和补码一样 $$-2^{n} 到 2^{n}-1$$ 且移码和补码都只有一个0</p>
+<p><code>为什么要有移码！？？？</code></p>
+<img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230526111931954.png" srcset="/img/loading.gif" lazyload alt="移码的作用" style="zoom: 50%;" />
+
+<p>通过列出所有的移码，我们不难发现：当我们所表示的数在不断增大时，移码的值也在不断增大，因此，在对二进制整数比较大小时，从左往右，只要谁先出现了1，谁就更大，这样的特性很方便的让计算机对整数进行比较。（下文的 浮点数运算中阶码就是用移码表示的）</p>
+<h3 id="为什么要有这些奇怪的编码"><a href="#为什么要有这些奇怪的编码" class="headerlink" title="为什么要有这些奇怪的编码?"></a>为什么要有这些奇怪的编码?</h3><h4 id="相反数相加的问题"><a href="#相反数相加的问题" class="headerlink" title="相反数相加的问题"></a>相反数相加的问题</h4><p>对于一个二进制相反数相加，符号位 1+ 0 不产生进位，就意味着不会得到0</p>
+<hr>
+<h3 id="存储系统"><a href="#存储系统" class="headerlink" title="存储系统"></a>存储系统</h3><h4 id="层次结构："><a href="#层次结构：" class="headerlink" title="层次结构："></a>层次结构：</h4><blockquote>
+<p>按照速度 从快到慢：CPU中的寄存器&gt; Cache&gt;主存&gt;磁盘&gt;磁带 、光盘</p>
+<p><code>cache 到 主存</code> 这级解决了<strong>主存速度与CPU速度不匹配</strong>的问题，<code>主存和辅存</code> 这一级解决了<strong>主存容量不够</strong>的问题（虚拟存储器）</p>
+</blockquote>
+<h4 id="按照存储介质分类："><a href="#按照存储介质分类：" class="headerlink" title="按照存储介质分类："></a>按照存储介质分类：</h4><p><strong>半导体</strong>存储器：主存、cache  采用半导体元器件存储数据，速度极快</p>
+<p><strong>磁性</strong>存储器：软盘、磁带、磁盘（机械硬盘）采用磁性材料制成，速度稍慢</p>
+<p><strong>光</strong>存储器： DVD CVD 光盘，以光介质存储信息</p>
+<h4 id="还可以按照存取方式分类："><a href="#还可以按照存取方式分类：" class="headerlink" title="还可以按照存取方式分类："></a>还可以按照存取方式分类：</h4><p>随机存取：读写任何一个存储单元所需的时间都相同，与位置无关，例如固态硬盘，内存</p>
+<p>顺序存取：磁带（录音带，必须顺序的读取，读取某个存储单元所花费的时间取决于它所在的位置）</p>
+<p>直接存取存储器：既可以随机存取也可以顺序存取，机械硬盘：先选择读哪里，磁头移动–&gt;找道–&gt;磁盘旋转，当要读的数据转过来就能读出存储的内容</p>
+<p>按内容访问：相联存储器，可以按照内容检索道存储位置进行读写，快表就是一种相相联存储器</p>
+<p><em>前三个都是按地址访问，最后一个按地址访问</em></p>
+<h4 id="根据所存储的信息是否能被更改"><a href="#根据所存储的信息是否能被更改" class="headerlink" title="根据所存储的信息是否能被更改"></a>根据所存储的信息是否能被更改</h4><p>读写存储器：可读 也可写（磁盘，内存，cache）</p>
+<p>只读存储器（ROM）：例如音乐专辑 CD-ROM，电影的蓝光光碟，以及BIOS也是写在ROM中</p>
+<h4 id="根据所存储的信息可保存性分类："><a href="#根据所存储的信息可保存性分类：" class="headerlink" title="根据所存储的信息可保存性分类："></a>根据所存储的信息可保存性分类：</h4><p>断电后，存储的信息立刻消失–易失性存储器（主存、cache）</p>
+<p>断电后，存储的信息依然能保持的存储器–非易失性存储器（磁盘，光盘）</p>
+<p>信息读出后，原来的信息被破坏–<strong>破坏性读出</strong>，例如DRAM 芯片，读出后要重新写入（重新加高低电平，形成电子）</p>
+<p>非破坏性读出 – </p>
+<h4 id="存储器的性能指标"><a href="#存储器的性能指标" class="headerlink" title="存储器的性能指标"></a>存储器的性能指标</h4><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230525101720823.png" srcset="/img/loading.gif" lazyload alt="image-20230525101720823" style="zoom: 50%;" />
+
+<p>注意：</p>
+<p>存储速度：存储字长（存储单元的字长）&#x2F;存储周期</p>
+<p> 存取周期指一次完整的读写操作所需要的时间，连续两次独立的访问存储器之间最小的时间<strong>长度</strong>（间隔）因为要算上<strong>恢复时间</strong></p>
 <section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span>冯诺依曼机的基本工作方式为<strong>控制流驱动</strong>方式,是一种 <strong>单指令单数据流</strong> 构型
 <a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span>由于冯诺依曼计算机以运算器为中心，那么计算效率会降低
 <a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
