@@ -16,12 +16,12 @@
   <meta name="author" content="Juncheng">
   <meta name="keywords" content="">
   
-    <meta name="description" content="正则表达式（Regex）字符 ?  —- 限定符表示前面这个字符应该出现 0 次或者 1 次  d?  d可有可无 * —- 通配符表示前面这个字符应该出现 0 次或者多次 d*  若干个d + —- 表示前面这个字符至少应该出现1次以上  例: d+  1个以上的d  &amp;#123;&amp;#125; —- 表示前面的字符应该出现花括号里规定的次数，也可以这样用： {3} 三次; {3，6} 三到六次;">
+    <meta name="description" content="正则表达式（Regex）字符 ?  — 限定符表示前面这个字符应该出现 0 次或者 1 次  d?  d可有可无 * — 通配符表示前面这个字符应该出现 0 次或者多次 d*  若干个d + — 表示前面这个字符至少应该出现1次以上  例: d+  1个以上的d  &amp;#123;&amp;#125; — 表示前面的字符应该出现花括号里规定的次数，也可以这样用： {3} 三次; {3，6} 三到六次; {3，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="正则表达式">
 <meta property="og:url" content="http://blog.codingxiaofu.com/2023/02/26/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/index.html">
 <meta property="og:site_name" content="Junchengの小站">
-<meta property="og:description" content="正则表达式（Regex）字符 ?  —- 限定符表示前面这个字符应该出现 0 次或者 1 次  d?  d可有可无 * —- 通配符表示前面这个字符应该出现 0 次或者多次 d*  若干个d + —- 表示前面这个字符至少应该出现1次以上  例: d+  1个以上的d  &amp;#123;&amp;#125; —- 表示前面的字符应该出现花括号里规定的次数，也可以这样用： {3} 三次; {3，6} 三到六次;">
+<meta property="og:description" content="正则表达式（Regex）字符 ?  — 限定符表示前面这个字符应该出现 0 次或者 1 次  d?  d可有可无 * — 通配符表示前面这个字符应该出现 0 次或者多次 d*  若干个d + — 表示前面这个字符至少应该出现1次以上  例: d+  1个以上的d  &amp;#123;&amp;#125; — 表示前面的字符应该出现花括号里规定的次数，也可以这样用： {3} 三次; {3，6} 三到六次; {3，">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://blog.codingxiaofu.com/2023/02/26/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/image-20230226125403553.png">
 <meta property="og:image" content="http://blog.codingxiaofu.com/2023/02/26/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/image-20230226125433870.png">
@@ -235,7 +235,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          915 字
+          897 字
         
       </span>
     
@@ -290,40 +290,45 @@
               <div class="markdown-body">
                 
                 <h1 id="正则表达式（Regex）"><a href="#正则表达式（Regex）" class="headerlink" title="正则表达式（Regex）"></a>正则表达式（Regex）</h1><h4 id="字符"><a href="#字符" class="headerlink" title="字符"></a>字符</h4><ol>
-<li><code>?</code>  —- 限定符表示前面这个字符应该出现 0 次或者 1 次  d?  <strong>d可有可无</strong></li>
-<li><code>*</code> —- 通配符表示前面这个字符应该出现 0 次或者多次 d*  <strong>若干个d</strong></li>
-<li><code>+</code> —- 表示前面这个字符至少应该出现1次以上  例: d+  <strong>1个以上的d</strong> </li>
-<li><code>&#123;&#125;</code> —- 表示前面的字符应该出现花括号里规定的次数，也可以这样用： {3} 三次; {3，6} 三到六次; {3，} 三次以上。</li>
-<li><code>()</code> —- 用于分组 表示括号里面的内容看作一个整体</li>
-<li><code>[]</code> —-表示一个字符，该字符为【】里指定的内容 例: [abc] a、b、c 任一字符，[a]</li>
-<li><code>|</code> —- 表示或运算 满足左右任一都能匹配，和普通的或运算一样</li>
-<li><code>^</code> —- 脱字符表示 脱字符后面的规则匹配的字符除外，其他字符都匹配 例如[^a-z] 除了小写字符外都匹配（不匹配小写字符，与编程的！类似）</li>
+<li><code>?</code>  — 限定符表示前面这个字符应该出现 0 次或者 1 次  d?  <strong>d可有可无</strong></li>
+<li><code>*</code> — 通配符表示前面这个字符应该出现 0 次或者多次 d*  <strong>若干个d</strong></li>
+<li><code>+</code> — 表示前面这个字符至少应该出现1次以上  例: d+  <strong>1个以上的d</strong> </li>
+<li><code>&#123;&#125;</code> — 表示前面的字符应该出现花括号里规定的次数，也可以这样用： {3} 三次; {3，6} 三到六次; {3，} 三次以上。</li>
+<li><code>()</code> — 用于分组 表示括号里面的内容看作一个整体</li>
+<li><code>[]</code> —表示一个字符，该字符为【】里指定的内容 例: [abc] a、b、c 任一字符，[a]</li>
+<li><code>|</code> — 表示或运算 满足左右任一都能匹配，和普通的或运算一样</li>
+<li><code>^</code> — 脱字符表示 脱字符后面的规则匹配的字符除外，其他字符都匹配 例如[^a-z] 除了小写字符外都匹配（不匹配小写字符，与编程的！类似）</li>
 </ol>
 <h4 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h4><p>正则表达式中已经为我们准备好了一些字符合集（元字符）</p>
 <ol>
-<li><code>\d</code> —- 表示数字字符，数字 0-9 相当于 [0-9]</li>
-<li><code>\w</code> —- 表示单词字符，所有的英文字符、数字、下划线</li>
-<li><code>\s</code>—- 表示空白字符，包括空格和制表符（tab）以及换行符</li>
-<li><code>\b</code> —- 表示匹配的字符的边界，可以为开头也可以为结尾</li>
+<li><code>\d</code> — 表示数字字符，数字 0-9 相当于 [0-9]</li>
+<li><code>\w</code> — 表示单词字符，所有的英文字符、数字、下划线</li>
+<li><code>\s</code>— 表示空白字符，包括空格和制表符（tab）以及换行符</li>
+<li><code>\b</code> — 表示匹配的字符的边界，可以为开头也可以为结尾</li>
 </ol>
 <p>以上小写的表示该类集合，大写则表示非该类字符</p>
 <ol>
-<li><code>\D</code> —- 表示非数字字符</li>
-<li><code>\W</code> —- 表示非单词字符</li>
-<li><code>\S</code> —- 表示非空白字符</li>
+<li><code>\D</code> — 表示非数字字符</li>
+<li><code>\W</code> — 表示非单词字符</li>
+<li><code>\S</code> — 表示非空白字符</li>
 </ol>
 <p>还有一些特殊字符</p>
 <ol>
-<li><code>.</code> —- 表示任意字符，但不包括换行符</li>
-<li><code>^</code> —- 如果不和其他的规则写在一起，就表示匹配行首的字符</li>
-<li><code>$</code> —- 表示匹配行尾的字符</li>
+<li><code>.</code> — 表示任意字符，但不包括换行符</li>
+<li><code>^</code> — 如果不和其他的规则写在一起，就表示匹配行首的字符</li>
+<li><code>$</code> — 表示匹配行尾的字符</li>
 </ol>
 <hr>
 <h4 id="贪婪匹配和懒惰匹配"><a href="#贪婪匹配和懒惰匹配" class="headerlink" title="贪婪匹配和懒惰匹配"></a>贪婪匹配和懒惰匹配</h4><p>正则表达式默认匹配尽可能多的字符，例如我们想找到代码片段中的标签 <code>&lt;&gt;</code></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>正则表达式<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure>
-<p>我们采用 <code>&lt;.+&gt;</code>规则，但是会将所有的字符匹配，因为这里采用了贪婪匹配，<code>.</code>可能匹配为右边的<code>&gt;</code> 这样就会选中第一个<code>&lt;</code> 和最后一个<code>&gt;</code> 的所有内容，显然不合理，我们在规则中加一个<code>?</code>就能将默认的贪婪匹配改成懒惰匹配</p>
+
+<p>我们采用 <code>&lt;.+&gt;</code>规则，但是会将所有的字符匹配，因为这里采用了贪婪匹配，<code>.</code>可能匹配为右边的<code>&gt; </code> 这样就会选中第一个<code>&lt;</code> 和最后一个<code>&gt;</code> 的所有内容，显然不合理，我们在规则中加一个<code>?</code>就能将默认的贪婪匹配改成懒惰匹配</p>
 <img src="/2023/02/26/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/image-20230226125403553.png" srcset="/img/loading.gif" lazyload class="" title="贪婪匹配">
+
+
+
 <img src="/2023/02/26/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/image-20230226125433870.png" srcset="/img/loading.gif" lazyload class="" title="懒惰匹配">
+
 <h4 id="实例："><a href="#实例：" class="headerlink" title="实例："></a>实例：</h4><p>匹配手机号(数据库生成11位手机号)：</p>
 <p><code>((13[0-9])|(14[5-7])|(15[0-9])|(166)|(17[3-7])|(18[2-8]))[0-9]&#123;8&#125;</code></p>
 <p>匹配自带答案的word文档试卷</p>
