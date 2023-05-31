@@ -244,7 +244,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/05/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84408/" target="_self">
         <div>
-          408-数据结构         .post-svg-container{           display: flex;           overflow-x: auto;           overflow-y: hidden;         }         .post-svg-container > object{               justify-content:
+          408-数据结构        .post-svg-container{          display: flex;          overflow-x: auto;          overflow-y: hidden;        }        .post-svg-container &gt; object{              justify-content: cent
         </div>
       </a>
 
@@ -284,7 +284,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/05/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E6%9F%A5%E6%89%BE/" target="_self">
         <div>
-          数据结构之查找查找方法： 顺序查找1234567//顺序查找作为最简单的查找算法，只需要一个循环遍历就能完成查找for(int i=0;i&lt;n;i++)&#123;	if(key == keys[i])		return i;&#125;return -1;  平均查找长度 ASL &#x3D; (1+2+3+…+n)&#x2F;n &#x3D;  O(n)  哨兵查找（顺序）哨兵查找通过对数
+          数据结构之查找查找方法： 顺序查找1234567//顺序查找作为最简单的查找算法，只需要一个循环遍历就能完成查找for(int i=0;i&lt;n;i++)&#123;	if(key == keys[i])		return i;&#125;return -1; 平均查找长度 ASL = (1+2+3+…+n)/n =  O(n)  哨兵查找（顺序）哨兵查找通过对数组设置一个哨兵（目标值），通常选
         </div>
       </a>
 
@@ -504,7 +504,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/04/04/1094%E6%8B%BC%E8%BD%A6/" target="_self">
         <div>
-          差分数组：在一些题目中，需要对数组的某个区间进行加减同一个数的操作，如果我们取遍历它，依次对它进行增加和减去，当操作次数非常多，操作区间非常长时，时间复杂度将会非常高。所以我们需要转换思路，用一个辅助描绘这个数组相邻两个数之间的差值，例如：  [ 8,2,6,3,1] &#x3D;&#x3D;&gt; 转换为：[8,-6,4,-3,-2]  diff[i] 就是 nums[i]与nums[i-1]
+          差分数组：在一些题目中，需要对数组的某个区间进行加减同一个数的操作，如果我们取遍历它，依次对它进行增加和减去，当操作次数非常多，操作区间非常长时，时间复杂度将会非常高。所以我们需要转换思路，用一个辅助描绘这个数组相邻两个数之间的差值，例如：  [ 8,2,6,3,1] ==&gt; 转换为：[8,-6,4,-3,-2]  diff[i] 就是 nums[i]与nums[i-1]的差值，这里我们规定
         </div>
       </a>
 
@@ -630,7 +630,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/03/30/209-%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/" target="_self">
         <div>
-          题目：给定一个含有 n 个正整数的数组和一个正整数 target 。 找出该数组中满足其和 ≥ target 的长度最小的 连续子数组 [numsl, numsl+1, ..., numsr-1, numsr] ，并返回其长度。如果不存在符合条件的子数组，返回 0 。 解题思路：  使用滑动窗口：当sum &gt; &#x3D; target 时，我们就把左侧收缩，时sum的值减小；当sum&lt
+          题目：给定一个含有 n 个正整数的数组和一个正整数 target 。 找出该数组中满足其和 ≥ target 的长度最小的 连续子数组 [numsl, numsl+1, ..., numsr-1, numsr] ，并返回其长度。如果不存在符合条件的子数组，返回 0 。 解题思路： 使用滑动窗口：当sum &gt; = target 时，我们就把左侧收缩，时sum的值减小；当sum&lt;targe
         </div>
       </a>
 
@@ -758,7 +758,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/03/27/26-%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9/" target="_self">
         <div>
-          题目：给你一个 升序排列 的数组 nums ，请你** 原地** 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。元素的 相对顺序 应该保持 一致 。 由于在某些语言中不能改变数组的长度，所以必须将结果放在数组nums的第一部分。更规范地说，如果在删除重复项之后有 k 个元素，那么 nums 的前 k 个元素应该保存最终结果。 将最终结果插入 nums 的前 k 个位置后返回
+          题目：给你一个 升序排列 的数组 nums ，请你 原地 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。元素的 相对顺序 应该保持 一致 。 由于在某些语言中不能改变数组的长度，所以必须将结果放在数组nums的第一部分。更规范地说，如果在删除重复项之后有 k 个元素，那么 nums 的前 k 个元素应该保存最终结果。 将最终结果插入 nums 的前 k 个位置后返回 k 。
         </div>
       </a>
 
