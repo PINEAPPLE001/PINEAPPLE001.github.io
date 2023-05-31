@@ -16,12 +16,12 @@
   <meta name="author" content="Juncheng">
   <meta name="keywords" content="">
   
-    <meta name="description" content="题目：给你一个 升序排列 的数组 nums ，请你 原地 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。元素的 相对顺序 应该保持 一致 。 由于在某些语言中不能改变数组的长度，所以必须将结果放在数组nums的第一部分。更规范地说，如果在删除重复项之后有 k 个元素，那么 nums 的前 k 个元素应该保存最终结果。 将最终结果插入 nums 的前 k 个位置后返回 k 。">
+    <meta name="description" content="题目：给你一个 升序排列 的数组 nums ，请你** 原地** 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。元素的 相对顺序 应该保持 一致 。 由于在某些语言中不能改变数组的长度，所以必须将结果放在数组nums的第一部分。更规范地说，如果在删除重复项之后有 k 个元素，那么 nums 的前 k 个元素应该保存最终结果。 将最终结果插入 nums 的前 k 个位置后返回">
 <meta property="og:type" content="article">
 <meta property="og:title" content="26. 删除排序数组中的重复项">
 <meta property="og:url" content="http://blog.codingxiaofu.com/2023/03/27/26-%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9/index.html">
 <meta property="og:site_name" content="Junchengの小站">
-<meta property="og:description" content="题目：给你一个 升序排列 的数组 nums ，请你 原地 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。元素的 相对顺序 应该保持 一致 。 由于在某些语言中不能改变数组的长度，所以必须将结果放在数组nums的第一部分。更规范地说，如果在删除重复项之后有 k 个元素，那么 nums 的前 k 个元素应该保存最终结果。 将最终结果插入 nums 的前 k 个位置后返回 k 。">
+<meta property="og:description" content="题目：给你一个 升序排列 的数组 nums ，请你** 原地** 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。元素的 相对顺序 应该保持 一致 。 由于在某些语言中不能改变数组的长度，所以必须将结果放在数组nums的第一部分。更规范地说，如果在删除重复项之后有 k 个元素，那么 nums 的前 k 个元素应该保存最终结果。 将最终结果插入 nums 的前 k 个位置后返回">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://blog.codingxiaofu.com/2023/03/27/26-%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9/mwo1eg.gif">
 <meta property="article:published_time" content="2023-03-27T02:24:52.000Z">
@@ -235,7 +235,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          703 字
+          707 字
         
       </span>
     
@@ -289,13 +289,15 @@
             
               <div class="markdown-body">
                 
-                <h4 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h4><p>给你一个 <strong>升序排列</strong> 的数组 <code>nums</code> ，请你<strong><a target="_blank" rel="noopener" href="http://baike.baidu.com/item/原地算法"> 原地</a></strong> 删除重复出现的元素，使每个元素 <strong>只出现一次</strong> ，返回删除后数组的新长度。元素的 <strong>相对顺序</strong> 应该保持 <strong>一致</strong> 。</p>
+                <h4 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h4><p>给你一个 <strong>升序排列</strong> 的数组 <code>nums</code> ，请你**<a target="_blank" rel="noopener" href="http://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95"> 原地</a>** 删除重复出现的元素，使每个元素 <strong>只出现一次</strong> ，返回删除后数组的新长度。元素的 <strong>相对顺序</strong> 应该保持 <strong>一致</strong> 。</p>
 <p>由于在某些语言中不能改变数组的长度，所以必须将结果放在数组nums的第一部分。更规范地说，如果在删除重复项之后有 <code>k</code> 个元素，那么 <code>nums</code> 的前 <code>k</code> 个元素应该保存最终结果。</p>
 <p>将最终结果插入 <code>nums</code> 的前 <code>k</code> 个位置后返回 <code>k</code> 。</p>
-<p>不要使用额外的空间，你必须在 <strong><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/原地算法">原地 </a>修改输入数组</strong> 并在使用 O(1) 额外空间的条件下完成。</p>
+<p>不要使用额外的空间，你必须在 <strong><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95">原地 </a>修改输入数组</strong> 并在使用 O(1) 额外空间的条件下完成。</p>
 <h4 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h4><img src="/2023/03/27/26-%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9/mwo1eg.gif" srcset="/img/loading.gif" lazyload class="" title="img">
+
 <p>在排序数组中，重复的元素都相邻，因此利用两个指针，起始时两个指针下标为0和1，在快指针不越界的条件下，当两个指针所指的元素相同时，快指针向前寻找不同的元素 $快指针j++$ ，慢指针原地等待。当两个指针所指元素不同时，就把快指针赋值给慢指针后面一个元素，然后两个指针都$++$ 。</p>
 <h4 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">removeDuplicates</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums)</span> &#123;<br>        <span class="hljs-keyword">if</span> (nums == <span class="hljs-literal">null</span> | nums.length == <span class="hljs-number">0</span>) &#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        &#125;<span class="hljs-comment">//特殊条件</span><br>        <span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">while</span> (j &lt; nums.length) &#123;<span class="hljs-comment">//快指针不越界</span><br>            <span class="hljs-keyword">if</span> (nums[i] != nums[j]) &#123;<span class="hljs-comment">//不相等就说明要覆盖前面重复的元素（位置在慢指针后面） 没有重复元素也可以覆盖</span><br>                nums[i + <span class="hljs-number">1</span>] = nums[j];<br>                i++;<br>            &#125;<br>            j++;<span class="hljs-comment">//相等时快指针向前寻找，不相等时他们两个一起向前。</span><br>        &#125;<br>        <span class="hljs-keyword">return</span> i + <span class="hljs-number">1</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
 <script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
                 
               </div>

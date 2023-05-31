@@ -52,7 +52,7 @@
 <meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230530225001867.png">
 <meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230531104930684.png">
 <meta property="article:published_time" content="2023-05-18T08:35:24.000Z">
-<meta property="article:modified_time" content="2023-05-31T03:03:43.805Z">
+<meta property="article:modified_time" content="2023-05-31T03:20:26.438Z">
 <meta property="article:author" content="Juncheng">
 <meta property="article:tag" content="408">
 <meta property="article:tag" content="计算机组成原理">
@@ -262,7 +262,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          7.9k 字
+          8.4k 字
         
       </span>
     
@@ -273,7 +273,7 @@
         
         
         
-          67 分钟
+          70 分钟
         
       </span>
     
@@ -318,11 +318,9 @@
                 
                 <h1 id="计算机组成原理"><a href="#计算机组成原理" class="headerlink" title="计算机组成原理"></a>计算机组成原理</h1><h2 id="计算机的硬件结构"><a href="#计算机的硬件结构" class="headerlink" title="计算机的硬件结构"></a>计算机的硬件结构</h2><ol>
 <li><h3 id="早期的冯诺依曼结构-1"><a href="#早期的冯诺依曼结构-1" class="headerlink" title="早期的冯诺依曼结构[1]"></a>早期的冯诺依曼结构<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="冯诺依曼机的基本工作方式为**控制流驱动**方式,是一种 **单指令单数据流** 构型">[1]</span></a></sup></h3><p>提出存储程序的概念：指令以代码的形式<strong>事先输入到</strong>计算机的<strong>主存储器中</strong>，然后按其在存储器中的首地址执行程序的第一条指令，以后就<strong>按</strong>该程序的规定<strong>顺序执行</strong>其他<strong>指令</strong>，直至程序执行结束。<strong>即按地址访问并顺序执行指令</strong>。计算机按此原理应该有5大功能： 数据传输，数据存储，数据处理，操作控制，操作判断。</p>
-<p>根据<code>存储程序控制</code>的概念，由<strong>运算器</strong>、<strong>存储器</strong>、<strong>控制器</strong>、<strong>输入设备</strong>和<strong>输出设备</strong>五大基本部件组成，以<strong>运算器<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="由于冯诺依曼计算机以运算器为中心，那么计算效率会降低">[2]</span></a></sup></strong>为中心，指令由操作码和地址码组成，指令和数据以同等地位存于存储器，可按地址寻访的计算机称为冯诺依曼计算机。</p>
+<p>根据<code>存储程序控制</code>的概念，由<strong>运算器</strong>、<strong>存储器</strong>、<strong>控制器</strong>、<strong>输入设备</strong>和<strong>输出设备</strong>五大基本部件组成，以**运算器<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="由于冯诺依曼计算机以运算器为中心，那么计算效率会降低">[2]</span></a></sup>**为中心，指令由操作码和地址码组成，指令和数据以同等地位存于存储器，可按地址寻访的计算机称为冯诺依曼计算机。</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230518101825342.png" srcset="/img/loading.gif" lazyload alt="控制器器控制其他部件_数据都经由运算器"></p>
 </li>
-</ol>
-<p>   <img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230518101825342.png" srcset="/img/loading.gif" lazyload alt="控制器器控制其他部件_数据都经由运算器"></p>
-<ol>
 <li><h3 id="现代计算机结构体系"><a href="#现代计算机结构体系" class="headerlink" title="现代计算机结构体系"></a>现代计算机结构体系</h3><p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230518104058174.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>数据传输无需经过运算器，可以在控制器的控制下，通过输入设备将程序存储在存储器中，再由<strong>控制器控制运算器和存储器</strong>依次执行每一个计算步骤（指令），最后，<strong>控制器控制输出器</strong>以各种方式从存储器输出计算结果</p>
 <p>特点：以存储器为中心，将运算器和控制器集成在同一个芯片上，它们在计算机中直接完成信息处理任务，合称中央处理机CPU</p>
@@ -336,9 +334,7 @@
 <p>以上三个是寄存器，用来存放数据，<strong>ALU</strong>作为它们的老大，通过内部复杂的电路实现<strong>算术运算和逻辑运算</strong></p>
 </blockquote>
 <h6 id="②控制器："><a href="#②控制器：" class="headerlink" title="②控制器："></a>②控制器：</h6><p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230518134750139.png" srcset="/img/loading.gif" lazyload alt="img"></p>
-</li>
-</ol>
-<p>   控制器由CU (控制单元)，IR (指令寄存器)， PC(程序计数器)组成</p>
+<p>控制器由CU (控制单元)，IR (指令寄存器)， PC(程序计数器)组成</p>
 <blockquote>
 <p><strong>CU</strong> 控制单元，是控制器的核心部件；可以分析指令，给出控制信号，内部集成有复杂的电路</p>
 <p><strong>IR</strong> 指令寄存器，存放当前的指令</p>
@@ -347,63 +343,62 @@
 <ol>
 <li>取指令: PC 根据PC的地址取指令 放到IR</li>
 <li>分析指令: IR CU将分析IR中的指令</li>
-<li><p>执行指令: CU 分析完之后再控制其他的部件配合完成指令</p>
-<p><strong><em>IR、MAR、MDR是CPU内部工作寄存器，对用户完全透明</em></strong> </p>
-</li>
+<li>执行指令: CU 分析完之后再控制其他的部件配合完成指令</li>
 </ol>
+<p> <em><strong>IR、MAR、MDR是CPU内部工作寄存器，对用户完全透明</strong></em> </p>
 </blockquote>
-<h6 id="③存储器："><a href="#③存储器：" class="headerlink" title="③存储器："></a>③存储器：</h6><p>   主存储器(CPU能直接访问)和辅助存储器(外存储器，容量大，但是需要将信息读入主存中才能被CPU访问)；</p>
-<p>   主存储器是按照存储单元的地址寻址的，也称为按地址存取。</p>
-<p>   主存储器由 MAR、MDR、存储体和时序控制逻辑构成</p>
-<p>   MAR 有k位，不一定要完全使用这k位 ，比如说有MAR 有32位，MDR有8位（一个字 取 1B），2^32*8 = 4GB ，也有可能存储器只有1GB的空间。例题: 8位的计算机用16位表示地址，则有2^16 个地址空间，不一定全用 </p>
-<p>   <img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/MAR%E5%92%8CMDR.png" srcset="/img/loading.gif" lazyload alt="img"></p>
-<h6 id="④输入设备-amp-amp-输出设备"><a href="#④输入设备-amp-amp-输出设备" class="headerlink" title="④输入设备 &amp;&amp; 输出设备"></a>④输入设备 &amp;&amp; 输出设备</h6><p>   输入输出设备统称为I/O设备，CPU + 主存储器 + I/O设备构成了线代计算机的三大部。CPU和主存构成计算机的主体，称为<strong>主机</strong>或处理机。相应地把I/O设备叫做外围设备或外部设备，简称<strong>外设</strong>。</p>
-<p>   <img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230518105243971.png" srcset="/img/loading.gif" lazyload alt="计算机概览"></p>
-<ol>
-<li><h3 id="一条指令的具体执行流程以y-a-b-c为例："><a href="#一条指令的具体执行流程以y-a-b-c为例：" class="headerlink" title="一条指令的具体执行流程以y=a*b+c为例："></a>一条指令的具体执行流程以y=a*b+c为例：</h3><blockquote>
+<h6 id="③存储器："><a href="#③存储器：" class="headerlink" title="③存储器："></a>③存储器：</h6><p>主存储器(CPU能直接访问)和辅助存储器(外存储器，容量大，但是需要将信息读入主存中才能被CPU访问)；</p>
+<p>主存储器是按照存储单元的地址寻址的，也称为按地址存取。</p>
+<p>主存储器由 MAR、MDR、存储体和时序控制逻辑构成</p>
+<p>MAR 有k位，不一定要完全使用这k位 ，比如说有MAR 有32位，MDR有8位（一个字 取 1B），2^32*8 &#x3D; 4GB ，也有可能存储器只有1GB的空间。例题: 8位的计算机用16位表示地址，则有2^16 个地址空间，不一定全用 </p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/MAR%E5%92%8CMDR.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h6 id="④输入设备-amp-amp-输出设备"><a href="#④输入设备-amp-amp-输出设备" class="headerlink" title="④输入设备 &amp;&amp; 输出设备"></a>④输入设备 &amp;&amp; 输出设备</h6><p>输入输出设备统称为I&#x2F;O设备，CPU + 主存储器 + I&#x2F;O设备构成了线代计算机的三大部。CPU和主存构成计算机的主体，称为<strong>主机</strong>或处理机。相应地把I&#x2F;O设备叫做外围设备或外部设备，简称<strong>外设</strong>。</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230518105243971.png" srcset="/img/loading.gif" lazyload alt="计算机概览"></p>
+</li>
+<li><h3 id="一条指令的具体执行流程以y-x3D-a-b-c为例："><a href="#一条指令的具体执行流程以y-x3D-a-b-c为例：" class="headerlink" title="一条指令的具体执行流程以y&#x3D;a*b+c为例："></a>一条指令的具体执行流程以y&#x3D;a*b+c为例：</h3><blockquote>
 <p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230518140451902.png" srcset="/img/loading.gif" lazyload alt="img"></p>
-<p>首先 PC 先指向第一条执行的指令的位置（0），再将这个位置给MAR 由MAR去存储体中寻找对应地址的数据，如何将该数据放到MDR中。再传到CPU中的IR，IR中的数据拆分成 操作码和地址码，CU拿到操作码，分析是什么动作—读数— 将地址码放到MAR，MAR取地址中的数据给MDR，MDR再将数据放到ACC累加器中</p>
+<p>首先 PC 先指向第一条执行的指令的位置（0），再将这个位置给MAR 由MAR去存储体中寻找对应地址的数据，如何将该数据放到MDR中。再传到CPU中的IR，IR中的数据拆分成 操作码和地址码，CU拿到操作码，分析是什么动作–读数– 将地址码放到MAR，MAR取地址中的数据给MDR，MDR再将数据放到ACC累加器中</p>
 <p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230518133902906.png" srcset="/img/loading.gif" lazyload alt="img"></p>
-<p>总结：<a href="#IR">指令的执行过程👆</a> PC —&gt; （MAR + MDR …）—&gt;  IR  —&gt;  CU  —&gt; 具体的执行步骤</p>
+<p>总结：<a href="#IR">指令的执行过程👆</a> PC –&gt; （MAR + MDR …）–&gt;  IR  –&gt;  CU  –&gt; 具体的执行步骤</p>
 </blockquote>
 </li>
 <li><h4 id="CPU区分指令和数据的依据"><a href="#CPU区分指令和数据的依据" class="headerlink" title="CPU区分指令和数据的依据"></a>CPU区分指令和数据的依据</h4><p><strong>指令和数据都是用二进制数码形式分区域存放在存储器中，为了能区分从存储器中读出的二进制数码是指令还是数据，可以用下列方法判断：</strong></p>
 <p><strong>凡由程序计数器提供的存储单元地址中取出的二进制数码是指令，应送到指令寄存器中；</strong></p>
-<p><strong>凡由指令中地址码部分提供的存储单元地址中取出来的二进制数码是操作数，一般应送到运算器中。</strong> </p>
+<p><strong>凡由指令中地址码部分提供的存储单元地址中取出来的二进制数码是操作数，一般应送到运算器中。</strong></p>
 </li>
 </ol>
-<h2 id="计算机的软件结构"><a href="#计算机的软件结构" class="headerlink" title="计算机的软件结构"></a>计算机的软件结构</h2><p><strong>系统软件</strong>：管理整个计算机系统：操作系统、数据库管理系统、标准程序库（库函数）、网络软件（实现TCP/IP协议）、语言处理程序（编译程序、汇编程序）、服务程序（DeBug 程序）</p>
+<h2 id="计算机的软件结构"><a href="#计算机的软件结构" class="headerlink" title="计算机的软件结构"></a>计算机的软件结构</h2><p><strong>系统软件</strong>：管理整个计算机系统：操作系统、数据库管理系统、标准程序库（库函数）、网络软件（实现TCP&#x2F;IP协议）、语言处理程序（编译程序、汇编程序）、服务程序（DeBug 程序）</p>
 <p><strong>应用软件</strong>：按照任务编制成各种程序：抖音 王者…我们用户日常接触的比较多的软件</p>
 <h2 id="计算机的多级层次结构"><a href="#计算机的多级层次结构" class="headerlink" title="计算机的多级层次结构"></a>计算机的多级层次结构</h2><ol>
 <li><h3 id="计算机的五层结构"><a href="#计算机的五层结构" class="headerlink" title="计算机的五层结构"></a>计算机的五层结构</h3><blockquote>
-<p>在上一节中：在对 y=a*b+c  这条指令进行执行时，先是 将它转化成 机器代码 —&gt; 机器代码执行时有分成了 1. 取数  2. 乘  3. 加 等等操作，在这些小操作中，落实到具体的机器上又分成：1.从PC中取地址-&gt;MAR  2.M(MAR)-&gt;MDR  3.MDR-&gt;IR 等步骤，我们将 00000100000000101 称为指令，将它拆分成多个小步骤称为微指令，硬件直接执行微指令。</p>
+<p>在上一节中：在对 y&#x3D;a*b+c  这条指令进行执行时，先是 将它转化成 机器代码 –&gt; 机器代码执行时有分成了 1. 取数  2. 乘  3. 加 等等操作，在这些小操作中，落实到具体的机器上又分成：1.从PC中取地址-&gt;MAR  2.M(MAR)-&gt;MDR  3.MDR-&gt;IR 等步骤，我们将 00000100000000101 称为指令，将它拆分成多个小步骤称为微指令，硬件直接执行微指令。</p>
 </blockquote>
 <p>① 第1级为<strong>微程序级</strong>。它是由硬件直接实现的，执行微程序指令，是计算机系统最底层的硬件系统。 </p>
 <p>② 第2级为<strong>机器指令系统级</strong>。又称传统机器级，执行二进制指令。 通常将第1、2级统称为传统机器级。 </p>
 <p>③ 第3级是<strong>操作系统级</strong>。计算机系统中硬件和硬件资源由该级管理和统一调度，它向上提供广义指令(系统调用)。</p>
 <p>④第4级是<strong>汇编语言级</strong>。 </p>
 <p>⑤第5级为<strong>高级语言级</strong>。 </p>
-<p><strong><em>[注 : 编译汇编和解释程序统称为翻译程序]</em></strong></p>
+<p><em><strong>[注 : 编译汇编和解释程序统称为翻译程序]</strong></em></p>
 <p>三种级别语言的转化：有的高级语言要先编译成 汇编语言 再进一步 由汇编器编译成机器代码，也有能直接通过编译器编译成机器语言的高级语言。除了编译程序之外，还有解释程序，每读取一句就立即执行</p>
 <p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230518155619055.png" srcset="/img/loading.gif" lazyload alt="image-20230518155619055"></p>
 </li>
 </ol>
 <h2 id="计算机性能指标"><a href="#计算机性能指标" class="headerlink" title="计算机性能指标"></a>计算机性能指标</h2><ol>
-<li><p>存储器的性能指标 (见 五大功能部件 —- 存储器)</p>
-<p>总容量 = 存储单元个数 <em> 存储字长 bit  （</em> 存储字长/8 Byte）</p>
-<p>存储单元的个数最多有 = <script type="math/tex">2^k</script>  个    (MAR 的位数 为 k)    存储字长 = MDR的长度 (字长)</p>
+<li><p>存储器的性能指标 (见 五大功能部件 — 存储器)</p>
+<p>总容量 &#x3D; 存储单元个数 * 存储字长 bit  （* 存储字长&#x2F;8 Byte）</p>
+<p>存储单元的个数最多有 &#x3D; $$2^k$$  个	(MAR 的位数 为 k)    存储字长 &#x3D; MDR的长度 (字长)</p>
 </li>
 <li><p>CPU的主频</p>
-<p>CPU内数字脉冲信号振荡的频率  __|￣|_<em>|￣|\</em>_|￣__|￣|__  每一个周期称作CPU的时钟周期</p>
-<p>$CPU主频 = 1/CPU时钟周期$ </p>
+<p>CPU内数字脉冲信号振荡的频率  __|￣|_<em>|￣|__|￣__|￣|</em>_  每一个周期称作CPU的时钟周期</p>
+<p>$CPU主频 &#x3D; 1&#x2F;CPU时钟周期$ </p>
 </li>
-<li><p><strong>CPI</strong> — 执行一条指令所需要的<strong>时钟周期数</strong>。不同的指令，CPI有可能不同，例如取数指令要9个周期（一个周期对应一个微指令），乘法指令要11个周期。所以，我们需要一个公平的指标来衡量：<strong>执行一条指令的<code>耗时</code></strong> = <strong>CPI * CPU的时钟周期 = CPI / CPU 主频</strong>。eg: 假设有100条指令 ，CPI是 3，CPU的主频是1000HZ，问执行完这100条指令要花费多久？ 100 * 3 / 1000= 0.3 s</p>
+<li><p><strong>CPI</strong> – 执行一条指令所需要的<strong>时钟周期数</strong>。不同的指令，CPI有可能不同，例如取数指令要9个周期（一个周期对应一个微指令），乘法指令要11个周期。所以，我们需要一个公平的指标来衡量：<strong>执行一条指令的<code>耗时</code></strong> &#x3D; <strong>CPI * CPU的时钟周期 &#x3D; CPI &#x2F; CPU 主频</strong>。eg: 假设有100条指令 ，CPI是 3，CPU的主频是1000HZ，问执行完这100条指令要花费多久？ 100 * 3 &#x2F; 1000&#x3D; 0.3 s</p>
 </li>
-<li><p>IPS ： 1秒内能执行多少条指令 = 主频/平均CPI 。</p>
+<li><p>IPS ： 1秒内能执行多少条指令 &#x3D; 主频&#x2F;平均CPI 。</p>
 </li>
 <li><p>FLOPS： 每秒执行多少次浮点运算。</p>
 </li>
-<li><p>在计算机的性能时，$K，M，G，T = 10^3 , 10^6, 10^9, 10^{12}  $</p>
+<li><p>在计算机的性能时，$K，M，G，T &#x3D; 10^3 , 10^6, 10^9, 10^{12}  $</p>
 </li>
 <li><p>数据通路带宽： 数据总线一次能传输位数</p>
 </li>
@@ -411,19 +406,19 @@
 </li>
 <li><p>响应时间：</p>
 </li>
-<li><p>计算过程 ：一个程序在机器M上运行的时间 公式： X <em> CPI/主频  ; X是指令的数量，CPI/主频是一条指令要的时间，X </em> CPI/主频 就是X条指令所要的时间。</p>
+<li><p>计算过程 ：一个程序在机器M上运行的时间 公式： X * CPI&#x2F;主频  ; X是指令的数量，CPI&#x2F;主频是一条指令要的时间，X * CPI&#x2F;主频 就是X条指令所要的时间。</p>
 </li>
 </ol>
 <p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230521232338388.png" srcset="/img/loading.gif" lazyload alt="image-20230521232338388"></p>
 <hr>
 <hr>
 <h2 id="计算机中的数制及表示方式"><a href="#计算机中的数制及表示方式" class="headerlink" title="计算机中的数制及表示方式"></a>计算机中的数制及表示方式</h2><h4 id="基础知识："><a href="#基础知识：" class="headerlink" title="基础知识："></a>基础知识：</h4><p>r ： 基数，每个数码位所用到的不同符号的个数，r进制的基数为r。</p>
-<p><strong>2进制(Bin)</strong> r=2 (0，1)；<strong>10进制(Dec)</strong>基数为r=10 (0~9)；<strong>8进制</strong>基数r=8 (0~7)；<strong>16进制(Hex)</strong>基数r=16(0~9) A~F  10个数字 6个字母) </p>
+<p><strong>2进制(Bin)</strong> r&#x3D;2 (0，1)；<strong>10进制(Dec)<strong>基数为r&#x3D;10 (0~9)；</strong>8进制</strong>基数r&#x3D;8 (0~7)；**16进制(Hex)**基数r&#x3D;16(0<del>9) A\</del>F  10个数字 6个字母) </p>
 <h4 id="数制的转换："><a href="#数制的转换：" class="headerlink" title="数制的转换："></a>数制的转换：</h4><p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/%E6%95%B0%E5%88%B6%E8%BD%AC10%E8%BF%9B%E5%88%B6.png" srcset="/img/loading.gif" lazyload alt="image-20230520140253504"></p>
-<p>2—&gt;8 ：二进制每一位只有2中可能，8进制每一位有8种可能，因此要将3位2进制用来表示一个8进制的位。</p>
-<p>8—&gt;2 : 每一位表示2进制的3位</p>
-<p>2—&gt;16: 同上，4个二进制位表示1个16进制位</p>
-<p>16—&gt;2: 每一个16进制位表示4个二进制位。</p>
+<p>2–&gt;8 ：二进制每一位只有2中可能，8进制每一位有8种可能，因此要将3位2进制用来表示一个8进制的位。</p>
+<p>8–&gt;2 : 每一位表示2进制的3位</p>
+<p>2–&gt;16: 同上，4个二进制位表示1个16进制位</p>
+<p>16–&gt;2: 每一个16进制位表示4个二进制位。</p>
 <p>10进制转2进制：</p>
 <p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230520142014050.png" srcset="/img/loading.gif" lazyload alt="image-20230520142014050"></p>
 <p>10进制不断除以2，取余数就能得到从第0位开始的2进制，同理可得8进制和16进制。</p>
@@ -435,38 +430,42 @@
 <p><strong>定点数： 分为定点小数和定点整数</strong></p>
 <p><code>定点小数：</code></p>
 <p>小数点隐含，固定在<strong>最高数据位</strong>的左边，<strong>整数位则用于表示符号位</strong>0正 1负，用于表示纯小数 </p>
-<p>例如: + 0.001 —&gt;  0.001 | -0.001 —&gt; 1.001</p>
+<p>例如: + 0.001 –&gt;  0.001 | -0.001 –&gt; 1.001</p>
 <p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230525112402101.png" srcset="/img/loading.gif" lazyload alt="定点小数表示"></p>
 <p><code>定点整数：</code></p>
 <p>小 数点位置隐含，固定在<strong>最低位</strong>之后，<strong>最高位为符号位</strong> 0正 1负，用于表示纯整数 </p>
 <p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230525112707425.png" srcset="/img/loading.gif" lazyload alt="定点整数的表示"></p>
 <p><strong>浮点数</strong>：既有整数部分也有小数部分，可以通过改变阶码来改变小数点的位置</p>
-<p>例如：计算机中的 <script type="math/tex">(1101.011) = (0.1101011)* 2^{100} = 13.375</script> 阶码就是科学计数法中10的x次方中的x，阶符就是阶码的正负，数符表示数的正负，尾数一般要规格化。</p>
-<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F.png" srcset="/img/loading.gif" lazyload alt="计算机中浮点数的存储格式" style="zoom:50%;" /></p>
+<p>例如：计算机中的 $$(1101.011) &#x3D; (0.1101011)* 2^{100} &#x3D; 13.375$$ 阶码就是科学计数法中10的x次方中的x，阶符就是阶码的正负，数符表示数的正负，尾数一般要规格化。</p>
+<img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F.png" srcset="/img/loading.gif" lazyload alt="计算机中浮点数的存储格式" style="zoom:50%;" />
+
 <p>表示的范围：</p>
-<p>n位<strong>无符号数</strong>的表示范围 全0 ~ 全1 ：00000000 ~ 11111111 -&gt; 0~255 =  ( <script type="math/tex">2^8 -1</script>) </p>
+<p>n位<strong>无符号数</strong>的表示范围 全0 ~ 全1 ：00000000 ~ 11111111 -&gt; 0~255 &#x3D;  ( $$2^8 -1$$) </p>
 <p><strong>n+1位有符号数</strong>的表示范围：</p>
-<p>有符号整数：最高位为符号位 （0正 1负）剩余n位范围为 <script type="math/tex">0  到 2^{n}</script> ，由此可见 有符号整数（原码）： 【1(负数)  <script type="math/tex">2^{n}</script>  到 负0; 正0 到 正 <script type="math/tex">2^{n}</script>】</p>
-<p><strong>n+1位有符号小数(纯小数)</strong>：一样同上  数码部分(n位的话)全0 ： 0 ，全1： <script type="math/tex">2^{-1}+2^{-2}+2{-3}+...+2^{-n} = 1-2^{-n}</script>  范围是同样有 正0 和负0之分 【1(负数)  <script type="math/tex">1-2^{-n}</script>  到 负0; 正0 到 正 <script type="math/tex">1-2^{-n}</script>】</p>
+<p>有符号整数：最高位为符号位 （0正 1负）剩余n位范围为 $$0  到 2^{n}$$ ，由此可见 有符号整数（原码）： 【1(负数)  $$2^{n}$$  到 负0; 正0 到 正 $$2^{n}$$】</p>
+<p>**n+1位有符号小数(纯小数)**：一样同上  数码部分(n位的话)全0 ： 0 ，全1： $$2^{-1}+2^{-2}+2{-3}+…+2^{-n} &#x3D; 1-2^{-n}$$  范围是同样有 正0 和负0之分 【1(负数)  $$1-2^{-n}$$  到 负0; 正0 到 正 $$1-2^{-n}$$】</p>
 <h3 id="原码、反码、补码和移码"><a href="#原码、反码、补码和移码" class="headerlink" title="原码、反码、补码和移码"></a>原码、反码、补码和移码</h3><p>原码：最高位表示符号，其余各位表示数的绝对值(正常表示)</p>
-<p>反码：对于（符号位为0）<strong>正数</strong>，反码是<strong>它本身</strong>；对于（符号位为1）<strong>负数</strong>，反码是<strong>数值位取反</strong>  【从定义可以看出，反码依旧没有解决+0 和 -0 的表示问题0,0000 = 0；1,0000=1,1111,其实反码是原码转化成补码的中间状态，没什么用，重点还是看下面的补码！】</p>
+<p>反码：对于（符号位为0）<strong>正数</strong>，反码是<strong>它本身</strong>；对于（符号位为1）<strong>负数</strong>，反码是<strong>数值位取反</strong>  【从定义可以看出，反码依旧没有解决+0 和 -0 的表示问题0,0000 &#x3D; 0；1,0000&#x3D;1,1111,其实反码是原码转化成补码的中间状态，没什么用，重点还是看下面的补码！】</p>
 <p>补码：正数（符号位为0）的补码是它本身，负数（符号位为1）的补码为反码<strong>末位+1</strong> （小数要在最后一位加1）。</p>
-<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230526104457409.png" srcset="/img/loading.gif" lazyload alt="补码的表示方法" style="zoom:67%;" /></p>
-<p>关于补码在+0 和 -0 的处理方法上的分析：补码的正0 为它本身 0,0000000，－0 的补码是：[1,0000000]<em>原 —&gt; [1,1111111]\</em>反 —&gt; 末位加1 [0,00000000] (最高位符号位的进位被舍弃)。这样下来原码的1,0000 和 0,0000 的补码是一样的，那么我们就把后者作为0正数的补码是它本身，前者规定为 2^k k为数值位的位数，例如：<script type="math/tex">1,0000000 = -2^{7}</script>，这样一来补码的范围就从原来正常的范围将其中一个重复的0给到负数最小一位如下图所示：</p>
+<img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230526104457409.png" srcset="/img/loading.gif" lazyload alt="补码的表示方法" style="zoom:67%;" />
+
+<p>关于补码在+0 和 -0 的处理方法上的分析：补码的正0 为它本身 0,0000000，－0 的补码是：[1,0000000]_原 –&gt; [1,1111111]_反 –&gt; 末位加1 [0,00000000] (最高位符号位的进位被舍弃)。这样下来原码的1,0000 和 0,0000 的补码是一样的，那么我们就把后者作为0正数的补码是它本身，前者规定为 2^k k为数值位的位数，例如：$$1,0000000 &#x3D; -2^{7}$$，这样一来补码的范围就从原来正常的范围将其中一个重复的0给到负数最小一位如下图所示：</p>
 <p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/%E8%A1%A5%E7%A0%81%E7%9A%84%E8%A1%A8%E7%A4%BA%E8%8C%83%E5%9B%B4.png" srcset="/img/loading.gif" lazyload alt="补码的表示范围"></p>
 <p>同理对于小数的 1.0000000 我们规定它为-1；0.0000000 表示为0</p>
 <p><strong>补码转换成原码的方法</strong>：负数：<strong>尾数</strong>取反再在<strong>末位</strong>+1  或者 <strong>负数补码</strong>最右边的1及其右边同原码保持一致，最右边的1 左边同反码保持一致(<strong>不包括符号位</strong>)</p>
-<p>例如：10011000是补码，它的原码为：数值位取反 +1 ，1,1100111 +1 = 1, 1101000；或者 1,0011000 最右边的 1 及其右边和原码保持一致：1000 它的左边和反码保持一致，取反得到 0,110；组合起来就是：1,1101000</p>
+<p>例如：10011000是补码，它的原码为：数值位取反 +1 ，1,1100111 +1 &#x3D; 1, 1101000；或者 1,0011000 最右边的 1 及其右边和原码保持一致：1000 它的左边和反码保持一致，取反得到 0,110；组合起来就是：1,1101000</p>
 <p>已知x的补码，求-x的补码：符号位和数值位全部取反，然后末位+1</p>
-<p>移码： 在补码的基础上将符号位取反 且移码只能作用于整数。移码的表示范围和补码一样 <script type="math/tex">-2^{n} 到 2^{n}-1</script> 且移码和补码都只有一个0</p>
+<p>移码： 在补码的基础上将符号位取反 且移码只能作用于整数。移码的表示范围和补码一样 $$-2^{n} 到 2^{n}-1$$ 且移码和补码都只有一个0</p>
 <p><code>为什么要有移码！？？？</code></p>
-<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230526111931954.png" srcset="/img/loading.gif" lazyload alt="移码的作用" style="zoom: 50%;" /></p>
+<img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230526111931954.png" srcset="/img/loading.gif" lazyload alt="移码的作用" style="zoom: 50%;" />
+
 <p>通过列出所有的移码，我们不难发现：当我们所表示的数在不断增大时，移码的值也在不断增大，因此，在对二进制整数比较大小时，从左往右，只要谁先出现了1，谁就更大，这样的特性很方便的让计算机对整数进行比较。（下文的 浮点数运算中阶码就是用移码表示的）</p>
 <h3 id="为什么要有这些奇怪的编码"><a href="#为什么要有这些奇怪的编码" class="headerlink" title="为什么要有这些奇怪的编码?"></a>为什么要有这些奇怪的编码?</h3><p><strong>相反数相加的问题</strong></p>
 <p>对于有符号的二进制数相加减运算时，符号位 1 + 0 有时不产生进位，【原码相反数之和不得0，正数加正数有可能得到负数，即上溢出，负数加负数也可能得到正数，下溢】就意味着不会得到正确的答案,要实现这个功能，我们要设置加法器或者减法器，加法器设计成本低，但是减法器复杂、成本高。所以可以尝试用加法代替减法。 </p>
-<p>这里提出模运算等价的概念：例如时钟有12个点，我们将所有的时间对12取余 — x mod 12，根据得到的余数不同将数分成12类（余数分别为 0 ~ 11），这样就意味着 12 -3 和12 +9 等价【9%12 = 0*12 + 9；-3%12 = -1*12+9 】。这里引出补数的概念：补数 即两个数的绝对值之和 = 模 （abs(-3) + abs(9) = 12）</p>
-<p>补数的性质： 在时钟里 一共有12个值，10 -3 = 10 + 9；在9位有符号整数中， 任何运算结果在 mod 2^8 后只保留最低8位，如果要进行减法运算 x-a = x+(-a)，可以用<strong>模 - a的绝对值 = a的补数</strong>，这里给出：<strong>a的补数就是a的补码</strong> [这里是要求 （-a）的补数，然后与x相加就能得到原码的正确形式的加法]</p>
-<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/1685105970549.jpg" srcset="/img/loading.gif" lazyload alt="补码用于加法运算" style="zoom: 33%;" /></p>
+<p>这里提出模运算等价的概念：例如时钟有12个点，我们将所有的时间对12取余 – x mod 12，根据得到的余数不同将数分成12类（余数分别为 0 ~ 11），这样就意味着 12 -3 和12 +9 等价【9%12 &#x3D; 0*12 + 9；-3%12 &#x3D; -1*12+9 】。这里引出补数的概念：补数 即两个数的绝对值之和 &#x3D; 模 （abs(-3) + abs(9) &#x3D; 12）</p>
+<p>补数的性质： 在时钟里 一共有12个值，10 -3 &#x3D; 10 + 9；在9位有符号整数中， 任何运算结果在 mod 2^8 后只保留最低8位，如果要进行减法运算 x-a &#x3D; x+(-a)，可以用<strong>模 - a的绝对值 &#x3D; a的补数</strong>，这里给出：<strong>a的补数就是a的补码</strong> [这里是要求 （-a）的补数，然后与x相加就能得到原码的正确形式的加法]</p>
+<img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/1685105970549.jpg" srcset="/img/loading.gif" lazyload alt="补码用于加法运算" style="zoom: 33%;" />
+
 <p>补码：让减法操作转变位加法操作，节省硬件成本</p>
 <p><strong>乘除问题</strong></p>
 <p>算术移位： </p>
@@ -483,7 +482,7 @@
 <p>数据左移的时候，左边多出移位，原本被舍弃，但是现在不在低位补0，将多出的那个高位放到低位。实现循环补位。如果是含有进位位的计算机，记录低位的运算有没有产生进位，如果产生就会把1放到进位位，原来进位位中的值复制到最低位。</p>
 </blockquote>
 <p>判断溢出：</p>
-<p>//todo </p>
+<p>&#x2F;&#x2F;todo </p>
 <hr>
 <h2 id="存储系统"><a href="#存储系统" class="headerlink" title="存储系统"></a>存储系统</h2><h3 id="层次结构："><a href="#层次结构：" class="headerlink" title="层次结构："></a>层次结构：</h3><blockquote>
 <p>按照速度 从快到慢：CPU中的寄存器&gt; Cache&gt;主存&gt;磁盘&gt;磁带 、光盘</p>
@@ -494,46 +493,41 @@
 <p><strong>光</strong>存储器： DVD CVD 光盘，以光介质存储信息</p>
 <h3 id="还可以按照存取方式分类："><a href="#还可以按照存取方式分类：" class="headerlink" title="还可以按照存取方式分类："></a>还可以按照存取方式分类：</h3><p>随机存取：读写任何一个存储单元所需的时间都相同，与位置无关，例如固态硬盘，内存</p>
 <p>顺序存取：磁带（录音带，必须顺序的读取，读取某个存储单元所花费的时间取决于它所在的位置）</p>
-<p>直接存取存储器：既可以随机存取也可以顺序存取，机械硬盘：先选择读哪里，磁头移动—&gt;找道—&gt;磁盘旋转，当要读的数据转过来就能读出存储的内容</p>
+<p>直接存取存储器：既可以随机存取也可以顺序存取，机械硬盘：先选择读哪里，磁头移动–&gt;找道–&gt;磁盘旋转，当要读的数据转过来就能读出存储的内容</p>
 <p>按内容访问：相联存储器，可以按照内容检索道存储位置进行读写，快表就是一种相相联存储器</p>
 <p><em>前三个都是按地址访问，最后一个按地址访问</em></p>
 <h3 id="根据所存储的信息是否能被更改"><a href="#根据所存储的信息是否能被更改" class="headerlink" title="根据所存储的信息是否能被更改"></a>根据所存储的信息是否能被更改</h3><p>读写存储器：可读 也可写（磁盘，内存，cache）</p>
 <p>只读存储器（ROM）：例如音乐专辑 CD-ROM，电影的蓝光光碟，以及BIOS也是写在ROM中</p>
-<h3 id="根据所存储的信息可保存性分类："><a href="#根据所存储的信息可保存性分类：" class="headerlink" title="根据所存储的信息可保存性分类："></a>根据所存储的信息可保存性分类：</h3><p>断电后，存储的信息立刻消失—易失性存储器（主存、cache）</p>
-<p>断电后，存储的信息依然能保持的存储器—非易失性存储器（磁盘，光盘）</p>
-<p>信息读出后，原来的信息被破坏—<strong>破坏性读出</strong>，例如DRAM 芯片，读出后要重新写入（重新加高低电平，形成电子）</p>
-<p>非破坏性读出 — </p>
-<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230530160528379.png" srcset="/img/loading.gif" lazyload alt="存储器之间的关系" style="zoom:80%;" /></p>
-<h3 id="存储器的性能指标"><a href="#存储器的性能指标" class="headerlink" title="存储器的性能指标"></a>存储器的性能指标</h3><p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230525101720823.png" srcset="/img/loading.gif" lazyload alt="image-20230525101720823" style="zoom: 50%;" /></p>
+<h3 id="根据所存储的信息可保存性分类："><a href="#根据所存储的信息可保存性分类：" class="headerlink" title="根据所存储的信息可保存性分类："></a>根据所存储的信息可保存性分类：</h3><p>断电后，存储的信息立刻消失–易失性存储器（主存、cache）</p>
+<p>断电后，存储的信息依然能保持的存储器–非易失性存储器（磁盘，光盘）</p>
+<p>信息读出后，原来的信息被破坏–<strong>破坏性读出</strong>，例如DRAM 芯片，读出后要重新写入（重新加高低电平，形成电子）</p>
+<p>非破坏性读出 – </p>
+<img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230530160528379.png" srcset="/img/loading.gif" lazyload alt="存储器之间的关系" style="zoom:80%;" />
+
+<h3 id="存储器的性能指标"><a href="#存储器的性能指标" class="headerlink" title="存储器的性能指标"></a>存储器的性能指标</h3><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230525101720823.png" srcset="/img/loading.gif" lazyload alt="image-20230525101720823" style="zoom: 50%;" />
+
 <p>注意：</p>
-<p>存储速度：存储字长（存储单元的字长）/存储周期</p>
+<p>存储速度：存储字长（存储单元的字长）&#x2F;存储周期</p>
 <p> 存取周期指一次完整的读写操作所需要的时间，连续两次独立的访问存储器之间最小的时间<strong>长度</strong>（间隔）因为要算上<strong>恢复时间</strong></p>
 <h3 id="存储器读写数据的原理"><a href="#存储器读写数据的原理" class="headerlink" title="存储器读写数据的原理"></a>存储器读写数据的原理</h3><p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230530155248450.png" srcset="/img/loading.gif" lazyload alt="存储器读写数据的原理"></p>
 <p>主存中，每个存储元有一个mos管开关和一个电容，多个存储元和并成一组，叫存储字，红线连接一组存储元的mos管，当在红线上加高电平，就能导通mos管，电容中的电荷顺着绿线导出，就能根据是否有电荷判断存储的是0还是1。因此存储器读写的单位是存储字。一般一次读8位16位或32位64位等等。</p>
 <h3 id="CPU和存储芯片的连接"><a href="#CPU和存储芯片的连接" class="headerlink" title="CPU和存储芯片的连接"></a>CPU和存储芯片的连接</h3><ol>
-<li><p>存储芯片读取数据： 存储器通过地址总线与CPU相连，MAR给出一个地址到地址总线上，这个地址经过译码器可以映射到一根字选线，对应一个待读取/写入的存储字，读取的存储字会经过数据总线读出。 例如 MAR中的是00100100 表示第 36根片选线。MAR中有n位表示一共有<script type="math/tex">2^n</script>个存储单元。读控制线和写控制线 表示当前是读操作还是写操作 ：两根：<script type="math/tex">\overline{WE}</script> （低电平） 允许写，<script type="math/tex">\overline{OE}</script>允许读。一根表示读写：<script type="math/tex">\overline{WE}</script>  低电平写，高电平读。片选线：作用是在多块存储芯片构成的存储器中，通过片选线控制读取哪块芯片。</p>
+<li><p>存储芯片读取数据： 存储器通过地址总线与CPU相连，MAR给出一个地址到地址总线上，这个地址经过译码器可以映射到一根字选线，对应一个待读取&#x2F;写入的存储字，读取的存储字会经过数据总线读出。 例如 MAR中的是00100100 表示第 36根片选线。MAR中有n位表示一共有$$2^n$$个存储单元。读控制线和写控制线 表示当前是读操作还是写操作 ：两根：$$\overline{WE}$$ （低电平） 允许写，$$\overline{OE}$$允许读。一根表示读写：$$\overline{WE}$$  低电平写，高电平读。片选线：作用是在多块存储芯片构成的存储器中，通过片选线控制读取哪块芯片。</p>
 <p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230530204413534.png" srcset="/img/loading.gif" lazyload alt="DRAM存储芯片的构成"></p>
-<p>求存储芯片的容量： n位地址 2^n 个存储单元，每个存储单元对应一个存储字，例如 8k*8位的存储芯片是 8个存储单元，每个存储单元对应的存储字是8位， <script type="math/tex">2^{13}*8bit</script>  </p>
+<p>求存储芯片的容量： n位地址 2^n 个存储单元，每个存储单元对应一个存储字，例如 8k*8位的存储芯片是 8个存储单元，每个存储单元对应的存储字是8位， $$2^{13}*8bit$$  </p>
 </li>
-<li><p>寻址：现代计算机一般是按字编址【也有按字节寻址，按半字寻址，按双字寻址】，一个存储字就是一个地址，在存储矩阵中一行表示一个字，我们如果按字寻址的话，容量/字长 得到对应的总的地址空间，如果是按半字寻址的话，容量/(0.5*字长）= 地址空间大小。按双字寻址就是 容量/(2*字长)。 </p>
-<p>例如： 按字寻址，字长为4B，容量为1KB，1KB/4B = 2^8 个地址空间。按字节寻址：1KB/1B = 2^10 个地址空间，按双字寻址 1KB/8B = 2^7 个地址空间。根据地址空间大小确定地址的长度 例如按字寻址的地址是 可以算术移位得到下一个地址的起始地址：1 —&gt; 100 相当于左移2位 （4/2）。—根据个人理解得出的结论</p>
+<li><p>寻址：现代计算机一般是按字编址【也有按字节寻址，按半字寻址，按双字寻址】，一个存储字就是一个地址，在存储矩阵中一行表示一个字，我们如果按字寻址的话，容量&#x2F;字长 得到对应的总的地址空间，如果是按半字寻址的话，容量&#x2F;(0.5*字长）&#x3D; 地址空间大小。按双字寻址就是 容量&#x2F;(2*字长)。 </p>
+<p>例如： 按字寻址，字长为4B，容量为1KB，1KB&#x2F;4B &#x3D; 2^8 个地址空间。按字节寻址：1KB&#x2F;1B &#x3D; 2^10 个地址空间，按双字寻址 1KB&#x2F;8B &#x3D; 2^7 个地址空间。根据地址空间大小确定地址的长度 例如按字寻址的地址是 可以算术移位得到下一个地址的起始地址：1 –&gt; 100 相当于左移2位 （4&#x2F;2）。–根据个人理解得出的结论</p>
 </li>
 <li><p>DRAM用于制作主存，是用电容保存电荷来存储数据，每次读取数据时就导出里面的电荷，当然也要重写回去。当计算机掉电后主存存储的内容就会失去，因为电容中的电荷会泄漏，所以要周期性刷新。SRAM是用于制作Cache的芯片，它是电荷存储方式，也是易失性存储器。但是它是非破坏性读出，不需要重写。【SRAM的缺点是每个存储元制造成本更高，集成度低，功耗高，但是读写非常快；DRAM的缺点是读写速度慢，还要刷新，但是每个存储元制造成本更低，集成度高，功耗低】</p>
 <p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230530224841984.png" srcset="/img/loading.gif" lazyload alt="SRAM和DRAM"></p>
 </li>
-<li><p>上面的DRAM有一个非常大的弊端，就是MAR位数大的时候，译码器要连接非常多根选通线，n = 10， 2^10 = 1024 根选通线，于是我们把一维的地址转变成2维的，将存储单元排列成矩阵的形式，地址前半部分为行地址，后半部分为列地址，行地址由行地址译码器译码，列地址由列地址译码器译码，这样就能大大缩小译码器的选线数量：8位 = 256根 4+4 = 行16+列16=32根选通线 </p>
+<li><p>上面的DRAM有一个非常大的弊端，就是MAR位数大的时候，译码器要连接非常多根选通线，n &#x3D; 10， 2^10 &#x3D; 1024 根选通线，于是我们把一维的地址转变成2维的，将存储单元排列成矩阵的形式，地址前半部分为行地址，后半部分为列地址，行地址由行地址译码器译码，列地址由列地址译码器译码，这样就能大大缩小译码器的选线数量：8位 &#x3D; 256根 4+4 &#x3D; 行16+列16&#x3D;32根选通线 </p>
 <p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230530225001867.png" srcset="/img/loading.gif" lazyload alt="DRAM模型"></p>
 </li>
-<li><p>DRAM的刷新 大约是2ms一次，我们一般以行为单位，一次刷新一整行，先读出后写入，所用时间是一个读/写周期。</p>
+<li><p>DRAM的刷新 大约是2ms一次，我们一般以行为单位，一次刷新一整行，先读出后写入，所用时间是一个读&#x2F;写周期。</p>
 <blockquote>
-<p>刷新方式</p>
-<p>分散刷新：每次读写完都刷新一行 </p>
-<p>集中刷新：在2ms内最后一部分时间里安排全部刷新</p>
-<p>异步刷新：为保证2ms内全部n行都能刷新，那么2ms/n = x ms，这样我们只需要在x ms 内刷新一行，即可保证2ms内所有的行都被刷新过。</p>
-<p>假设DRAM 是128*128的结构，读写周期是0.5us，在2ms内 采用：</p>
-<p>1, 集中分散刷新：存取周期变成原来的2倍</p>
-<p>2, 集中刷新2ms最后有 128*0.5 = 64 us 用于刷新，剩下的 2000 - 64 = 1936 us 可以用于读/写数据。64us也称为死区，不能读写数据</p>
-<p>3, 异步刷新：2ms / 128 = 15.6 us，每15.6 us内拿出0.5 us用于刷新</p>
+<p>刷新方式<br>分散刷新：每次读写完都刷新一行<br>集中刷新：在2ms内最后一部分时间里安排全部刷新<br>异步刷新：为保证2ms内全部n行都能刷新，那么2ms&#x2F;n &#x3D; x ms，这样我们只需要在x ms 内刷新一行，即可保证2ms内所有的行都被刷新过。<br>假设DRAM 是128*128的结构，读写周期是0.5us，在2ms内 采用：<br>1, 集中分散刷新：存取周期变成原来的2倍<br>2, 集中刷新2ms最后有 128*0.5 &#x3D; 64 us 用于刷新，剩下的 2000 - 64 &#x3D; 1936 us 可以用于读&#x2F;写数据。64us也称为死区，不能读写数据<br>3, 异步刷新：2ms &#x2F; 128 &#x3D; 15.6 us，每15.6 us内拿出0.5 us用于刷新</p>
 </blockquote>
 </li>
 </ol>
