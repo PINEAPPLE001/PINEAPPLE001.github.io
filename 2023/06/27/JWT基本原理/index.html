@@ -16,25 +16,24 @@
   <meta name="author" content="Juncheng">
   <meta name="keywords" content="">
   
-    <meta name="description" content="差分数组：在一些题目中，需要对数组的某个区间进行加减同一个数的操作，如果我们取遍历它，依次对它进行增加和减去，当操作次数非常多，操作区间非常长时，时间复杂度将会非常高。所以我们需要转换思路，用一个辅助描绘这个数组相邻两个数之间的差值，例如：  [ 8,2,6,3,1] &#x3D;&#x3D;&gt; 转换为：[8,-6,4,-3,-2]  diff[i] 就是 nums[i]与nums[i-1]">
+    <meta name="description" content="JWT基本使用方法jwt 是用于用户登录验证的工具，原理是 用户提交用户名和密码，服务端验证成功后返回token，客户端存储返回的token，每次向服务端发送请求时携带该token，服务端只需要验证该token而不用访问数据库，就能允许用户进行操作。至于jwt的优势和好处：详见csdn jwt 的结构 jwt由3部分组成：header 标头、 payload 载荷 和 signature 签名 1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="1094拼车">
-<meta property="og:url" content="http://blog.codingxiaofu.com/2023/04/04/1094%E6%8B%BC%E8%BD%A6/index.html">
+<meta property="og:title" content="JWT基本原理">
+<meta property="og:url" content="http://blog.codingxiaofu.com/2023/06/27/JWT%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/index.html">
 <meta property="og:site_name" content="Junchengの小站">
-<meta property="og:description" content="差分数组：在一些题目中，需要对数组的某个区间进行加减同一个数的操作，如果我们取遍历它，依次对它进行增加和减去，当操作次数非常多，操作区间非常长时，时间复杂度将会非常高。所以我们需要转换思路，用一个辅助描绘这个数组相邻两个数之间的差值，例如：  [ 8,2,6,3,1] &#x3D;&#x3D;&gt; 转换为：[8,-6,4,-3,-2]  diff[i] 就是 nums[i]与nums[i-1]">
+<meta property="og:description" content="JWT基本使用方法jwt 是用于用户登录验证的工具，原理是 用户提交用户名和密码，服务端验证成功后返回token，客户端存储返回的token，每次向服务端发送请求时携带该token，服务端只需要验证该token而不用访问数据库，就能允许用户进行操作。至于jwt的优势和好处：详见csdn jwt 的结构 jwt由3部分组成：header 标头、 payload 载荷 和 signature 签名 1">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://blog.codingxiaofu.com/2023/04/04/1094%E6%8B%BC%E8%BD%A6/image-20230404213404582.png">
-<meta property="article:published_time" content="2023-04-04T13:24:11.000Z">
-<meta property="article:modified_time" content="2023-04-05T06:53:45.457Z">
+<meta property="og:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230627220428936.png">
+<meta property="article:published_time" content="2023-06-27T13:37:10.000Z">
+<meta property="article:modified_time" content="2023-06-27T15:17:00.127Z">
 <meta property="article:author" content="Juncheng">
-<meta property="article:tag" content="LeetCode">
-<meta property="article:tag" content="差分数组">
+<meta property="article:tag" content="JWT">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://blog.codingxiaofu.com/2023/04/04/1094%E6%8B%BC%E8%BD%A6/image-20230404213404582.png">
+<meta name="twitter:image" content="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230627220428936.png">
   
   
   
-  <title>1094拼车 - Junchengの小站</title>
+  <title>JWT基本原理 - Junchengの小站</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -212,7 +211,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="1094拼车"></span>
+            <span id="subtitle" data-typed-text="JWT基本原理"></span>
           
         </div>
 
@@ -223,8 +222,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-04-04 21:24" pubdate>
-          2023年4月4日 晚上
+        <time datetime="2023-06-27 21:37" pubdate>
+          2023年6月27日 晚上
         </time>
       </span>
     
@@ -235,7 +234,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.2k 字
+          2.3k 字
         
       </span>
     
@@ -246,7 +245,7 @@
         
         
         
-          11 分钟
+          19 分钟
         
       </span>
     
@@ -284,35 +283,29 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">1094拼车</h1>
+            <h1 style="display: none">JWT基本原理</h1>
             
             
               <div class="markdown-body">
                 
-                <h4 id="差分数组："><a href="#差分数组：" class="headerlink" title="差分数组："></a>差分数组：</h4><p>在一些题目中，需要对数组的某个区间进行加减同一个数的操作，如果我们取遍历它，依次对它进行增加和减去，当操作次数非常多，操作区间非常长时，时间复杂度将会非常高。所以我们需要转换思路，用一个辅助描绘这个数组相邻两个数之间的差值，例如：</p>
-<blockquote>
-<p>[ 8,2,6,3,1] &#x3D;&#x3D;&gt; 转换为：[8,-6,4,-3,-2]  <strong>diff[i] 就是 nums[i]与nums[i-1]的差值</strong>，这里我们规定 i从1开始，并且diff[0] 第一个元素取原数组的第一个元素。</p>
-<img src="/2023/04/04/1094%E6%8B%BC%E8%BD%A6/image-20230404213404582.png" srcset="/img/loading.gif" lazyload class="" title="image-20230404213404582">
-</blockquote>
-<p>因为是对一个小区间 [l,r] 进行操作，所以我们构造了差分数组后，对一个区间进行加减操作时，就只需要两个操作：</p>
-<p>$ diff[l] +&#x3D; val; \  diff[r+1] -&#x3D; val ;$</p>
-<p>第一个操作对于将来的查询而言，带来的影响是对于所有的下标大于等于 $ l $ 的位置都增加了值 $val$；</p>
-<p>由于我们期望只对 区间 $[l,r]$产生影响，因此需要对下标大于 $r$ 的位置进行减值操作，从而抵消“影响”。</p>
-<h4 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h4><p>车上最初有 <code>capacity</code> 个空座位。车 <strong>只能</strong> 向一个方向行驶（也就是说，<strong>不允许掉头或改变方向</strong>）</p>
-<p>给定整数 <code>capacity</code> 和一个数组 <code>trips</code> ,  <code>trip[i] = [numPassengersi, fromi, toi]</code> 表示第 <code>i</code> 次旅行有 <code>numPassengersi</code> 乘客，接他们和放他们的位置分别是 <code>fromi</code> 和 <code>toi</code> 。这些位置是从汽车的初始位置向东的公里数。</p>
-<p>当且仅当你可以在所有给定的行程中接送所有乘客时，返回 <code>true</code>，否则请返回 <code>false</code>。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs lua">输入：trips = <span class="hljs-string">[[2,1,5],[3,3,7]]</span>, capacity = <span class="hljs-number">4</span><br>输出：<span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
+                <h1 id="JWT基本使用方法"><a href="#JWT基本使用方法" class="headerlink" title="JWT基本使用方法"></a>JWT基本使用方法</h1><p>jwt 是用于用户登录验证的工具，原理是 用户提交用户名和密码，服务端验证成功后返回token，客户端存储返回的token，每次向服务端发送请求时携带该token，服务端只需要验证该token而不用访问数据库，就能允许用户进行操作。至于jwt的优势和好处：详见csdn</p>
+<p>jwt 的结构</p>
+<p>jwt由3部分组成：header 标头、 payload 载荷 和 signature 签名</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript">header 部分，alg表示签名部分使用的算法，typ属性表示令牌的类型 都写成<span class="hljs-variable constant_">JWT</span><br>&#123;<br>  <span class="hljs-string">&quot;alg&quot;</span>: <span class="hljs-string">&quot;HS256&quot;</span>,<br>  <span class="hljs-string">&quot;typ&quot;</span>: <span class="hljs-string">&quot;JWT&quot;</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p><strong>示例 2：</strong></p>
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs lua">输入：trips = <span class="hljs-string">[[2,1,5],[3,3,7]]</span>, capacity = <span class="hljs-number">5</span><br>输出：<span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
+<p>payload 保存了信息内容：例如 sub 主题、exp 到期时间、也可以自己定义：username  用户名，pwd 密码等等。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js">&#123;<br>  <span class="hljs-string">&quot;sub&quot;</span>: <span class="hljs-string">&quot;login-test&quot;</span>,<br>  <span class="hljs-string">&quot;username&quot;</span>: <span class="hljs-string">&quot;Tom&quot;</span>,<br>  <span class="hljs-string">&quot;pwd&quot;</span>: <span class="hljs-string">&quot;12345&quot;</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h4 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">carPooling</span><span class="hljs-params">(<span class="hljs-type">int</span>[][] trip, <span class="hljs-type">int</span> c)</span> &#123;<br>        <span class="hljs-type">int</span>[] diff = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">1001</span>]; <br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span>[] t : trip)&#123;<br>            diff[t[<span class="hljs-number">1</span>]]+=t[<span class="hljs-number">0</span>];<br>            diff[t[<span class="hljs-number">2</span>]]-=t[<span class="hljs-number">0</span>];<br>        &#125;<br>        <span class="hljs-comment">//对差分数组求前缀和即可得到原数组(每站乘客的数量)（原来为0，每一站车上乘客上车，数量就变化 t[0],然后下车就减少t[0],这样我们遍历求前缀和就能得到哪一站超载了，这里没必要求出一个数组，我们要的是结果）</span><br>        <span class="hljs-type">int</span> <span class="hljs-variable">passenger</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span><span class="hljs-number">0</span>;i&lt;<span class="hljs-number">1001</span>;i++)&#123;<span class="hljs-comment">//初始值为0，遍历求值</span><br>            passenger += diff[i];<br>            <span class="hljs-keyword">if</span>(passenger&gt;c)<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        &#125;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>signature 签名：将上述两部分进行数据签名，防止数据被篡改。在这一部分中，要指定一个secret 密钥（仅保存在服务器端），然后，将header 和 payload部分 分别用base64 编码格式编码，”.” 分隔，使用header中的签名算法，利用密钥进行签名。</p>
+<p><img src="https://hexo-blog-pic-1312550851.cos.ap-guangzhou.myqcloud.com/image-20230627220428936.png" srcset="/img/loading.gif" lazyload alt="image-20230627220428936"></p>
+<p>实践：</p>
+<p>导入依赖 jdk1.8：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>io.jsonwebtoken<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>jjwt<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>0.9.1<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br></code></pre></td></tr></table></figure>
 
+<p>生成token和解密token：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">JwtTest</span> &#123;<br>    <br>    <span class="hljs-keyword">private</span> <span class="hljs-type">long</span> <span class="hljs-variable">exp</span> <span class="hljs-operator">=</span> <span class="hljs-number">1000</span>*<span class="hljs-number">60</span>*<span class="hljs-number">60</span>*<span class="hljs-number">24</span>;<br>    <span class="hljs-keyword">private</span> <span class="hljs-type">String</span> <span class="hljs-variable">signature</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;qianming&quot;</span>;<br>    <span class="hljs-meta">@Test</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">jwtTest</span><span class="hljs-params">()</span>&#123;<br>        <span class="hljs-type">JwtBuilder</span> <span class="hljs-variable">jwtBuilder</span> <span class="hljs-operator">=</span> Jwts.builder();<br>        <span class="hljs-type">String</span> <span class="hljs-variable">token</span> <span class="hljs-operator">=</span> jwtBuilder<br>            <span class="hljs-comment">//设置header部分</span><br>                .setHeaderParam(<span class="hljs-string">&quot;typ&quot;</span>,<span class="hljs-string">&quot;JWT&quot;</span>)<br>                .setHeaderParam(<span class="hljs-string">&quot;alg&quot;</span>,<span class="hljs-string">&quot;HS256&quot;</span>)<br>            <span class="hljs-comment">//设置payload部分 username pwd 以及主题 和过期时间 id</span><br>                .claim(<span class="hljs-string">&quot;username&quot;</span>,<span class="hljs-string">&quot;ZhangSan&quot;</span>)<br>                .claim(<span class="hljs-string">&quot;pwd&quot;</span>,<span class="hljs-string">&quot;111111&quot;</span>)<br>                .setSubject(<span class="hljs-string">&quot;login-test&quot;</span>)<br>                .setExpiration(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(System.currentTimeMillis()+exp))<br>                .setId(UUID.randomUUID().toString())<br>            <span class="hljs-comment">//使用HS256 进行签名 signature 作为密钥 = &quot;qianming&quot;</span><br>                .signWith(SignatureAlgorithm.HS256,signature)<br>            <span class="hljs-comment">//将三个部分组装起来</span><br>                .compact();<br>        System.out.println(token);<br>    &#125;<br><br>    <span class="hljs-meta">@Test</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">parse</span><span class="hljs-params">()</span>&#123;<br>        <span class="hljs-type">String</span> <span class="hljs-variable">token</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IlpoYW5nU2FuIiwicHdkIjoiMTExMTExIiwic3ViIjoibG9naW4tdGVzdCIsImV4cCI6MTY4Nzk2MzQ0MywianRpIjoiOTQ4ZWFiZTctMjA4NS00ZTZhLTk5OGItNWE1MzRhZTZlMjFiIn0.5u9uVCkrpcW9uen9I373y727OuTDNMmVKrTMOZpkXKU&quot;</span>;<br>        <span class="hljs-type">JwtParser</span> <span class="hljs-variable">parser</span> <span class="hljs-operator">=</span> Jwts.parser(); <span class="hljs-comment">//对获取到的token进行解密</span><br>        Jws&lt;Claims&gt; claimsJws = parser.setSigningKey(signature).parseClaimsJws(token);<span class="hljs-comment">//使用密钥解密</span><br>        <span class="hljs-type">Claims</span> <span class="hljs-variable">body</span> <span class="hljs-operator">=</span> claimsJws.getBody();<span class="hljs-comment">//Claims 包含了header和payload部分的信息可以直接get方法获取。</span><br>        System.out.println(body.get(<span class="hljs-string">&quot;username&quot;</span>));<br>        System.out.println(body.get(<span class="hljs-string">&quot;pwd&quot;</span>));<br>        System.out.println(body.getSubject());<br>        System.out.println(body.getExpiration());<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-
-<p>注：该题主要是从问题中抽象出差分的概念，通过修改相邻元素之间差值的大小，来修改一整个区间的大小</p>
-<p>参考：<a target="_blank" rel="noopener" href="https://labuladong.github.io/algo/di-yi-zhan-da78c/shou-ba-sh-48c1d/xiao-er-me-c304e/">小而美的算法技巧：差分数组 :: labuladong的算法小抄</a> </p>
+<p>参考：<a target="_blank" rel="noopener" href="http://t.csdn.cn/7W5Oq">jwt详解</a></p>
 <script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
                 
               </div>
@@ -321,34 +314,11 @@
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/LeetCode/" class="category-chain-item">LeetCode</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
   
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/LeetCode/">#LeetCode</a>
-      
-        <a href="/tags/%E5%B7%AE%E5%88%86%E6%95%B0%E7%BB%84/">#差分数组</a>
+        <a href="/tags/JWT/">#JWT</a>
       
     </div>
   
@@ -360,8 +330,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>1094拼车</div>
-      <div>http://blog.codingxiaofu.com/2023/04/04/1094拼车/</div>
+      <div>JWT基本原理</div>
+      <div>http://blog.codingxiaofu.com/2023/06/27/JWT基本原理/</div>
     </div>
     <div class="license-meta">
       
@@ -373,7 +343,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年4月4日</div>
+          <div>2023年6月27日</div>
         </div>
       
       
@@ -405,18 +375,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" title="计算机组成原理">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">计算机组成原理</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/04/04/1109-%E8%88%AA%E7%8F%AD%E9%A2%84%E8%AE%A2%E7%BB%9F%E8%AE%A1/" title="1109. 航班预订统计">
-                        <span class="hidden-mobile">1109. 航班预订统计</span>
+                      <a href="/2023/06/09/SSM%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E6%98%93%E9%94%99%E7%82%B9/" title="SSM项目中的易错点">
+                        <span class="hidden-mobile">SSM项目中的易错点</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
